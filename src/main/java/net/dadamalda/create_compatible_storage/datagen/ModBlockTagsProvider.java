@@ -10,6 +10,7 @@ import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -37,6 +38,90 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             "azalea",
             "blossom"
     );
+
+    List<String> EVERY_COMPAT_WOOD_TYPES = Arrays.asList("""
+            mynethersdelight,powdery
+            quark,azalea
+            regions_unexplored,baobab
+            regions_unexplored,blackwood
+            regions_unexplored,blue_bioshroom
+            regions_unexplored,brimwood
+            regions_unexplored,cobalt
+            regions_unexplored,cypress
+            regions_unexplored,dead
+            regions_unexplored,eucalyptus
+            regions_unexplored,green_bioshroom
+            regions_unexplored,joshua
+            regions_unexplored,kapok
+            regions_unexplored,larch
+            regions_unexplored,magnolia
+            regions_unexplored,maple
+            regions_unexplored,mauve
+            regions_unexplored,palm
+            regions_unexplored,pine
+            regions_unexplored,pink_bioshroom
+            regions_unexplored,redwood
+            regions_unexplored,socotra
+            regions_unexplored,willow
+            regions_unexplored,yellow_bioshroom
+            biomeswevegone,aspen
+            biomeswevegone,baobab
+            biomeswevegone,blue_enchanted
+            biomeswevegone,cika
+            biomeswevegone,cypress
+            biomeswevegone,ebony
+            biomeswevegone,fir
+            biomeswevegone,florus
+            biomeswevegone,green_enchanted
+            biomeswevegone,holly
+            biomeswevegone,ironwood
+            biomeswevegone,jacaranda
+            biomeswevegone,mahogany
+            biomeswevegone,maple
+            biomeswevegone,palm
+            biomeswevegone,pine
+            biomeswevegone,rainbow_eucalyptus
+            biomeswevegone,redwood
+            biomeswevegone,sakura
+            biomeswevegone,skyris
+            biomeswevegone,white_mangrove
+            biomeswevegone,willow
+            biomeswevegone,witch_hazel
+            biomeswevegone,zelkova
+            biomesoplenty,fir
+            biomesoplenty,pine
+            biomesoplenty,maple
+            biomesoplenty,redwood
+            biomesoplenty,mahogany
+            biomesoplenty,jacaranda
+            biomesoplenty,palm
+            biomesoplenty,willow
+            biomesoplenty,dead
+            biomesoplenty,magic
+            biomesoplenty,umbran
+            biomesoplenty,hellbark
+            biomesoplenty,empyreal
+            sullysmod,petrified
+            quark,ancient
+            quark,blossom
+            natures_spirit,redwood
+            natures_spirit,sugi
+            natures_spirit,wisteria
+            natures_spirit,fir
+            natures_spirit,willow
+            natures_spirit,aspen
+            natures_spirit,maple
+            natures_spirit,cypress
+            natures_spirit,olive
+            natures_spirit,joshua
+            natures_spirit,ghaf
+            natures_spirit,palo_verde
+            natures_spirit,coconut
+            natures_spirit,cedar
+            natures_spirit,larch
+            natures_spirit,mahogany
+            natures_spirit,saxual
+            """.split("\n"));
 
     TagKey<Block> CHEST_MOUNTED_STORAGE = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), new ResourceLocation("create", "chest_mounted_storage"));
     TagKey<Block> SIMPLE_MOUNTED_STORAGE = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), new ResourceLocation("create", "simple_mounted_storage"));
@@ -73,6 +158,31 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addSimples(List.of(
                 "farmersdelight:basket"
         ));
+
+        EVERY_COMPAT_WOOD_TYPES.forEach((wood_type) -> {
+            String namespace = wood_type.split(",")[0];
+            String id = wood_type.split(",")[1];
+
+            addChests(List.of(
+                    "everycomp:q/"+namespace+"/"+id+"_chest",
+                    "everycomp:q/"+namespace+"/"+id+"_trapped_chest",
+                    "everycomp:mcv/"+namespace+"/"+id+"_chest",
+                    "everycomp:mcv/"+namespace+"/"+id+"_trapped_chest",
+                    "everycomp:abnww/"+namespace+"/"+id+"_chest",
+                    "everycomp:abnww/"+namespace+"/trapped_"+id+"_chest"
+            ));
+
+            addSimples(List.of(
+                    "everycomp:fd/"+namespace+"/"+id+"_cabinet"
+            ));
+
+            if (namespace.equals("biomesoplenty")) {
+                addChests(List.of(
+                        "lolmcvbop:"+id+"_chest",
+                        "lolmcvbop:"+id+"_trapped_chest"
+                ));
+            }
+        });
     }
 
     private void addChest(String id) {
