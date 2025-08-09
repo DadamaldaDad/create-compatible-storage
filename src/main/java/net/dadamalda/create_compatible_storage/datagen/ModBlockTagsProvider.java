@@ -10,7 +10,6 @@ import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -39,6 +38,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             "blossom"
     );
 
+    /*
     List<String> EVERY_COMPAT_WOOD_TYPES = Arrays.asList("""
             mynethersdelight,powdery
             quark,azalea
@@ -120,8 +120,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             natures_spirit,cedar
             natures_spirit,larch
             natures_spirit,mahogany
-            natures_spirit,saxual
             """.split("\n"));
+     */
 
     TagKey<Block> CHEST_MOUNTED_STORAGE = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), new ResourceLocation("create", "chest_mounted_storage"));
     TagKey<Block> SIMPLE_MOUNTED_STORAGE = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), new ResourceLocation("create", "simple_mounted_storage"));
@@ -159,6 +159,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 "farmersdelight:basket"
         ));
 
+        /*
         EVERY_COMPAT_WOOD_TYPES.forEach((wood_type) -> {
             String namespace = wood_type.split(",")[0];
             String id = wood_type.split(",")[1];
@@ -183,6 +184,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 ));
             }
         });
+        */
     }
 
     private void addChest(String id) {
