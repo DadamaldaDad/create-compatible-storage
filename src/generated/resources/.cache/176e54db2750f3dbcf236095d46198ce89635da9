@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-09T08:00:48.705232753	Tags for minecraft:block mod id create_compatible_storage
-2d230353db06270118ac0475bbedb894520a5d5b data/create/tags/blocks/chest_mounted_storage.json
+// 1.20.1	2025-08-09T11:06:55.879039071	Tags for minecraft:block mod id create_compatible_storage
+933016625b1138f93219ca18277a8d8d3e8ad122 data/create/tags/blocks/chest_mounted_storage.json
 02be0dbb6306178db309cc5273d2f45ac5899eb9 data/create/tags/blocks/simple_mounted_storage.json
 02be0dbb6306178db309cc5273d2f45ac5899eb9 data/create/tags/blocks/single_block_inventories.json

@@ -2,11 +2,9 @@ package net.dadamalda.create_compatible_storage;
 
 import com.mojang.logging.LogUtils;
 import net.dadamalda.create_compatible_storage.datagen.ModBlockTagsProvider;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -30,9 +28,11 @@ public class Create_compatible_storage {
         modEventBus.addListener(this::gatherData);
 
         // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
+        // MinecraftForge.EVENT_BUS.register(this);
 
-        DynamicTags.init();
+        if(!ModList.get().isLoaded("everycomp")) {
+            DynamicTags.init();
+        }
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -47,12 +47,13 @@ public class Create_compatible_storage {
 
     }
 
+    /*
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
     }
-
+    */
 
 }

@@ -1,5 +1,6 @@
 package net.dadamalda.create_compatible_storage.datagen;
 
+import cpw.mods.modlauncher.api.INameMappingService;
 import net.dadamalda.create_compatible_storage.Create_compatible_storage;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -36,6 +37,24 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             "ancient",
             "azalea",
             "blossom"
+    );
+
+    List<String> WOODWORKS_WOOD_TYPES = List.of(
+            "autumnity,maple",
+            "atmospheric,rosewood",
+            "atmospheric,morado",
+            "atmospheric,yucca",
+            "atmospheric,laurel",
+            "atmospheric,aspen",
+            "atmospheric,kousa",
+            "atmospheric,grimwood",
+            "environmental,willow",
+            "environmental,pine",
+            "environmental,plum",
+            "environmental,wisteria",
+            "upgrade_aquatic,driftwood",
+            "upgrade_aquatic,river",
+            "endergetic,poise"
     );
 
     /*
@@ -145,6 +164,15 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
             addSimples(List.of(
                     "farmersdelight:"+wood_type+"_cabinet"
+            ));
+        });
+
+        WOODWORKS_WOOD_TYPES.forEach(wood_type -> {
+            String namespace = wood_type.split(",")[0];
+            String id = wood_type.split(",")[1];
+            addChests(List.of(
+                    namespace+":"+id+"_chest",
+                    namespace+":trapped_"+id+"_chest"
             ));
         });
 
