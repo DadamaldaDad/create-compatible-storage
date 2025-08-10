@@ -76,8 +76,8 @@ minecraft {
             // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             property 'forge.logging.console.level', 'debug'
 
-            property "mixin.env.remapRefMap", "true"
-            property "mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg"
+            // property "mixin.env.remapRefMap", "true"
+            // property "mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg"
 
             mods {
                 "${mod_id}" {
@@ -191,51 +191,4 @@ tasks.named('jar', Jar).configure {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
-}
-
-def datagenOutput = file("src/generated/resources/data/create/tags/blocks")
-def copyTargetDir1 = file("build/datapack/files/data/create/tags/blocks")
-def copyTargetDir2 = file("build/datapack/files/data/create/tags/block")
-def zipTargetFile = file("build/datapack/create_compatible_storage-${mod_version}-datapack.zip")
-def copyTargetDir3 = file("neoforge/src/generated/resources/data/create/tags/block")
-
-tasks.register("copyDatagenOutput1", Copy) {
-    from datagenOutput
-    into copyTargetDir1
-    includeEmptyDirs = false
-    doFirst {
-        println "Copying datagen output to $copyTargetDir1"
-    }
-}
-
-tasks.register("copyDatagenOutput2", Copy) {
-    from datagenOutput
-    into copyTargetDir2
-    includeEmptyDirs = false
-    doFirst {
-        println "Copying datagen output to $copyTargetDir2"
-    }
-}
-
-tasks.register("buildDatapack", Zip) {
-    group = "build"
-    dependsOn "copyDatagenOutput1"
-    dependsOn "copyDatagenOutput2"
-    from("build/datapack/files")
-    from file("datapack")
-    destinationDirectory.set(zipTargetFile.parentFile)
-    archiveFileName.set(zipTargetFile.name)
-    doFirst {
-        println "Zipping datagen output to $zipTargetFile"
-    }
-}
-
-tasks.register("copyDatagenNeoforge", Copy) {
-    group = "build"
-    from datagenOutput
-    into copyTargetDir3
-    includeEmptyDirs = false
-    doFirst {
-        println "Copying datagen output to $copyTargetDir3"
-    }
 }
