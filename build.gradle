@@ -151,7 +151,7 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-    implementation fg.deobf("maven.modrinth:moonlight:${moonlight_version}-forge")
+    compileOnly fg.deobf("maven.modrinth:moonlight:${moonlight_version}-forge")
 
 }
 
