@@ -1,3 +1,1 @@
-- Added support for Iron Chests (chest tiers, partial crystal chest support)
-- Fixed a crash with repositories and Create 6.0.7 or higher
-- Set a proper minimum Forge version for clearer error messages
+- Fixed schematicannons not taking items from uncooperative storages
