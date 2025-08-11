@@ -2,13 +2,13 @@ package net.dadamalda.create_compatible_storage.datagen;
 
 import net.dadamalda.create_compatible_storage.Create_compatible_storage;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.data.BlockTagsProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -88,9 +88,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             "tuff"
     );
 
-    TagKey<Block> CHEST_MOUNTED_STORAGE = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:chest_mounted_storage"));
-    TagKey<Block> SIMPLE_MOUNTED_STORAGE = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:simple_mounted_storage"));
-    TagKey<Block> SINGLE_BLOCK_INVENTORIES = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:single_block_inventories"));
+    TagKey<Block> CHEST_MOUNTED_STORAGE = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create:chest_mounted_storage"));
+    TagKey<Block> SIMPLE_MOUNTED_STORAGE = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create:simple_mounted_storage"));
+    TagKey<Block> SINGLE_BLOCK_INVENTORIES = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create:single_block_inventories"));
 
     public ModBlockTagsProvider(DataGenerator generator, CompletableFuture<HolderLookup.Provider> registries, ExistingFileHelper existingFileHelper) {
         super(generator.getPackOutput(), registries, Create_compatible_storage.MODID, existingFileHelper);
