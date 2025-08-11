@@ -45,43 +45,15 @@
       "required": false
     },
     {
-      "id": "#create_compatible_storage:fd/cabinets",
+      "id": "#create_compatible_storage:silent_mounted_storage",
       "required": false
     },
     {
-      "id": "farmersdelight:basket",
+      "id": "#create_compatible_storage:barrel_sound",
       "required": false
     },
     {
-      "id": "alexscaves:metal_barrel",
-      "required": false
-    },
-    {
-      "id": "alexscaves:rusty_barrel",
-      "required": false
-    },
-    {
-      "id": "alexscaves:gingerbarrel",
-      "required": false
-    },
-    {
-      "id": "brewery:sideboard",
-      "required": false
-    },
-    {
-      "id": "candlelight:sideboard",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:sd/drawers",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:sd/small_drawers",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:sd/drawers_with_books",
+      "id": "#create_compatible_storage:sd/cabinet_sound",
       "required": false
     },
     {
@@ -105,7 +77,7 @@
       "required": false
     },
     {
-      "id": "#another_furniture:drawers",
+      "id": "#create_compatible_storage:fr/storage_cabinets",
       "required": false
     },
     {
@@ -113,11 +85,27 @@
       "required": false
     },
     {
+      "id": "#create_compatible_storage:fr/drawers",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/kitchen_drawers",
+      "required": false
+    },
+    {
       "id": "#create_compatible_storage:fr/crates",
       "required": false
     },
     {
-      "id": "#create_compatible_storage:fr/mailboxes",
+      "id": "#create_compatible_storage:ic/iron_chest_mounted_storage",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ic/crystal_chest",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:isb/iron_shulker_box_mounted_storage",
       "required": false
     },
     {
@@ -141,22 +129,6 @@
       "required": false
     },
     {
-      "id": "#create_compatible_storage:ldba/cabinets",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:ldba/drawer",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:ldbr/cabinets",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:ldbr/drawer",
-      "required": false
-    },
-    {
       "id": "#create_compatible_storage:ldm/shelf",
       "required": false
     },
@@ -177,31 +149,31 @@
       "required": false
     },
     {
-      "id": "#handcrafted:desks",
+      "id": "ars_nouveau:repository",
       "required": false
     },
     {
-      "id": "#handcrafted:nightstands",
+      "id": "alexscaves:metal_barrel",
       "required": false
     },
     {
-      "id": "#handcrafted:counters",
+      "id": "alexscaves:rusty_barrel",
       "required": false
     },
     {
-      "id": "#handcrafted:cupboards",
+      "id": "alexscaves:gingerbarrel",
       "required": false
     },
     {
-      "id": "#handcrafted:drawers",
+      "id": "candlelight:sideboard",
       "required": false
     },
     {
-      "id": "#handcrafted:shelves",
+      "id": "meadow:pine_cabinet",
       "required": false
     },
     {
-      "id": "#handcrafted:side_tables",
+      "id": "meadow:pine_dresser",
       "required": false
     },
     {

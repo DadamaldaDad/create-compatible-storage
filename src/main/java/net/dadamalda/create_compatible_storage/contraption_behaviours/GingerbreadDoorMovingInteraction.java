@@ -1,6 +1,6 @@
 package net.dadamalda.create_compatible_storage.contraption_behaviours;
 
-import com.github.alexmodguy.alexscaves.server.block.GingerbreadDoorBlock;
+// import com.github.alexmodguy.alexscaves.server.block.GingerbreadDoorBlock;
 import com.simibubi.create.api.contraption.BlockMovementChecks;
 import com.simibubi.create.content.contraptions.Contraption;
 import com.simibubi.create.content.contraptions.behaviour.SimpleBlockMovingInteraction;
@@ -19,8 +19,8 @@ public class GingerbreadDoorMovingInteraction extends SimpleBlockMovingInteracti
 
     @Override
     protected BlockState handle(Player player, Contraption contraption, BlockPos pos, BlockState currentState) {
-        if (!(currentState.getBlock() instanceof GingerbreadDoorBlock))
-            return currentState;
+        /* if (!(currentState.getBlock() instanceof GingerbreadDoorBlock))
+            return currentState */;
 
         currentState = currentState.cycle(DoorBlock.OPEN);
 

@@ -1,59 +1,31 @@
 {
   "values": [
     {
-      "id": "carved_wood:oak_barrel",
+      "id": "candlelight:sideboard",
       "required": false
     },
     {
-      "id": "carved_wood:spruce_barrel",
+      "id": "brewery:sideboard",
       "required": false
     },
     {
-      "id": "carved_wood:birch_barrel",
+      "id": "meadow:pine_cabinet",
       "required": false
     },
     {
-      "id": "carved_wood:jungle_barrel",
+      "id": "meadow:pine_dresser",
       "required": false
     },
     {
-      "id": "carved_wood:acacia_barrel",
+      "id": "#create_compatible_storage:sd/drawers",
       "required": false
     },
     {
-      "id": "carved_wood:dark_oak_barrel",
+      "id": "#create_compatible_storage:sd/small_drawers",
       "required": false
     },
     {
-      "id": "carved_wood:crimson_barrel",
-      "required": false
-    },
-    {
-      "id": "carved_wood:warped_barrel",
-      "required": false
-    },
-    {
-      "id": "carved_wood:mangrove_barrel",
-      "required": false
-    },
-    {
-      "id": "carved_wood:bamboo_barrel",
-      "required": false
-    },
-    {
-      "id": "carved_wood:cherry_barrel",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:silent_mounted_storage",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:barrel_sound",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:sd/cabinet_sound",
+      "id": "#create_compatible_storage:sd/drawers_with_books",
       "required": false
     },
     {
@@ -77,6 +49,10 @@
       "required": false
     },
     {
+      "id": "#another_furniture:drawers",
+      "required": false
+    },
+    {
       "id": "#create_compatible_storage:fr/storage_cabinets",
       "required": false
     },
@@ -97,27 +73,7 @@
       "required": false
     },
     {
-      "id": "#create_compatible_storage:ic/iron_chest_mounted_storage",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:ic/crystal_chest",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:isb/iron_shulker_box_mounted_storage",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:ldv/cabinet",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:ldv/drawer",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:ldv/storage_pot",
+      "id": "#create_compatible_storage:fr/mailboxes",
       "required": false
     },
     {
@@ -125,7 +81,35 @@
       "required": false
     },
     {
+      "id": "#create_compatible_storage:ldv/drawer",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldv/cabinet",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldv/storage_pot",
+      "required": false
+    },
+    {
       "id": "#create_compatible_storage:ldbp/palm_cabinet",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldba/cabinets",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldba/drawer",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldbr/cabinets",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldbr/drawer",
       "required": false
     },
     {
@@ -149,23 +133,31 @@
       "required": false
     },
     {
-      "id": "ars_nouveau:repository",
+      "id": "#handcrafted:desks",
       "required": false
     },
     {
-      "id": "alexscaves:metal_barrel",
+      "id": "#handcrafted:nightstands",
       "required": false
     },
     {
-      "id": "alexscaves:rusty_barrel",
+      "id": "#handcrafted:counters",
       "required": false
     },
     {
-      "id": "alexscaves:gingerbarrel",
+      "id": "#handcrafted:cupboards",
       "required": false
     },
     {
-      "id": "candlelight:sideboard",
+      "id": "#handcrafted:drawers",
+      "required": false
+    },
+    {
+      "id": "#handcrafted:shelves",
+      "required": false
+    },
+    {
+      "id": "#handcrafted:side_tables",
       "required": false
     },
     {

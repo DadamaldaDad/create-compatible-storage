@@ -9,6 +9,10 @@
       "required": false
     },
     {
+      "id": "#create_compatible_storage:ldv/barrels",
+      "required": false
+    },
+    {
       "id": "#handcrafted:desks",
       "required": false
     },
@@ -38,6 +42,14 @@
     },
     {
       "id": "ars_nouveau:repository",
+      "required": false
+    },
+    {
+      "id": "meadow:pine_cabinet",
+      "required": false
+    },
+    {
+      "id": "meadow:pine_dresser",
       "required": false
     },
     {
