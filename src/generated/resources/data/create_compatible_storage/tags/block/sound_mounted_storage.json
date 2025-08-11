@@ -5,7 +5,7 @@
       "required": false
     },
     {
-      "id": "#create_compatible_storage:barrel_sound",
+      "id": "#create_compatible_storage:fd/cabinets",
       "required": false
     },
     {
@@ -34,34 +34,6 @@
     },
     {
       "id": "#create_compatible_storage:fr/crates",
-      "required": false
-    },
-    {
-      "id": "#handcrafted:desks",
-      "required": false
-    },
-    {
-      "id": "#handcrafted:nightstands",
-      "required": false
-    },
-    {
-      "id": "#handcrafted:counters",
-      "required": false
-    },
-    {
-      "id": "#handcrafted:cupboards",
-      "required": false
-    },
-    {
-      "id": "#handcrafted:drawers",
-      "required": false
-    },
-    {
-      "id": "#handcrafted:shelves",
-      "required": false
-    },
-    {
-      "id": "#handcrafted:side_tables",
       "required": false
     }
   ]

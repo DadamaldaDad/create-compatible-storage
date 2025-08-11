@@ -7,8 +7,8 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.data.BlockTagsProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -160,10 +160,14 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addTagsToTag(CCSTags.SINGLE_BLOCK_INVENTORIES, CCSTags.SOUND_MOUNTED_STORAGE, CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
                 CCSTags.SOUND_UNCOOPERATIVE_MOUNTED_STORAGE);
 
-        addTagsToTag(CCSTags.SOUND_MOUNTED_STORAGE, CCSTags.BARREL_SOUND, CCSTags.SD_CABINET_SOUND,
+        addTagsToTag(CCSTags.SOUND_MOUNTED_STORAGE, CCSTags.FD_CABINETS, CCSTags.SD_CABINET_SOUND,
                 CCSTags.FR_MAILBOXES, CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_COOLERS, CCSTags.FR_DRAWERS,
                 CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES);
-        addTagsToTag(CCSTags.SOUND_MOUNTED_STORAGE, "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
+        addTagsToTag(CCSTags.SOUND_UNCOOPERATIVE_MOUNTED_STORAGE, CCSTags.SD_CABINET_SOUND,
+                CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS,
+                CCSTags.FR_MAILBOXES, CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_COOLERS, CCSTags.FR_DRAWERS,
+                CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES);
+        addTagsToTag(CCSTags.SOUND_UNCOOPERATIVE_MOUNTED_STORAGE, "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
                 "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables");
         addTagsToTag(CCSTags.BARREL_SOUND, CCSTags.FD_CABINETS, CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS);
 
