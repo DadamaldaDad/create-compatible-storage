@@ -1,6 +1,7 @@
 package net.dadamalda.create_compatible_storage.storage_types;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.api.contraption.storage.item.MountedItemStorageType;
 import com.simibubi.create.api.contraption.storage.item.simple.SimpleMountedStorage;
 import net.dadamalda.create_compatible_storage.CCSMountedStorageTypes;
@@ -8,15 +9,15 @@ import net.dadamalda.create_compatible_storage.menus.IronChestMenuProvider;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class IronChestMountedStorage extends SimpleMountedStorage {
-    public static final Codec<IronChestMountedStorage> CODEC = SimpleMountedStorage.codec(IronChestMountedStorage::new);
+    public static final MapCodec<IronChestMountedStorage> CODEC = SimpleMountedStorage.codec(IronChestMountedStorage::new);
 
     protected IronChestMountedStorage(MountedItemStorageType<?> type, IItemHandler handler) {
         super(type, handler);

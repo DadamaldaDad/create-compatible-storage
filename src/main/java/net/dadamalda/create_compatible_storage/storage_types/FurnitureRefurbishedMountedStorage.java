@@ -1,6 +1,6 @@
 package net.dadamalda.create_compatible_storage.storage_types;
 
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.api.contraption.storage.item.MountedItemStorageType;
 import com.simibubi.create.api.contraption.storage.item.simple.SimpleMountedStorage;
 import com.simibubi.create.content.contraptions.Contraption;
@@ -19,11 +19,11 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.items.IItemHandler;
+import net.neoforged.neoforge.items.IItemHandler;
 import org.jetbrains.annotations.Nullable;
 
 public class FurnitureRefurbishedMountedStorage extends SimpleMountedStorage {
-    public static final Codec<FurnitureRefurbishedMountedStorage> CODEC = SimpleMountedStorage.codec(FurnitureRefurbishedMountedStorage::new);
+    public static final MapCodec<FurnitureRefurbishedMountedStorage> CODEC = SimpleMountedStorage.codec(FurnitureRefurbishedMountedStorage::new);
 
     protected FurnitureRefurbishedMountedStorage(MountedItemStorageType<?> type, IItemHandler handler) {
         super(type, handler);
@@ -66,5 +66,14 @@ public class FurnitureRefurbishedMountedStorage extends SimpleMountedStorage {
         }
 
         return super.handleInteraction(player, contraption, info);
+    }
+
+    @Override
+    public void unmount(Level level, BlockState state, BlockPos pos, @Nullable BlockEntity be) {
+        if(be == null) return;
+        for (int i = 0; i < wrapped.getSlots(); i++) {
+            ((BaseContainerBlockEntity) be).setItem(i, wrapped.getStackInSlot(i));
+            be.setChanged();
+        }
     }
 }
