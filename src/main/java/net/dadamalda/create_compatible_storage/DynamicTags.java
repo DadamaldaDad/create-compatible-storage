@@ -1,16 +1,17 @@
 package net.dadamalda.create_compatible_storage;
 
+import com.mojang.logging.LogUtils;
 import net.mehvahdjukaar.moonlight.api.resources.SimpleTagBuilder;
 import net.mehvahdjukaar.moonlight.api.resources.pack.DynServerResourcesGenerator;
 import net.mehvahdjukaar.moonlight.api.resources.pack.DynamicDataPack;
 import net.mehvahdjukaar.moonlight.api.resources.pack.ResourceGenTask;
 import net.mehvahdjukaar.moonlight.core.Moonlight;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.fml.ModList;
 import org.apache.logging.log4j.Logger;
 
 import java.util.function.Consumer;
@@ -36,11 +37,6 @@ public class DynamicTags {
         }
 
         @Override
-        public boolean dependsOnLoadedPacks() {
-            return true;
-        }
-
-        @Override
         public void regenerateDynamicAssets(Consumer<ResourceGenTask> executor) {
             super.regenerateDynamicAssets(executor);
 
@@ -55,19 +51,19 @@ public class DynamicTags {
             boolean isFurnitureRefurbishedLoaded = ModList.get().isLoaded("refurbished_furniture");
 
             executor.accept((resourceManager, resourceSink) -> {
-                TagKey<Block> tagKey = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:chest_mounted_storage"));
+                TagKey<Block> tagKey = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create:chest_mounted_storage"));
 
                 SimpleTagBuilder tag = SimpleTagBuilder.of(tagKey);
 
                 Pattern pattern1 = Pattern.compile("^(?:q|mcv|abnww)/.*_chest$");
                 Pattern pattern2 = Pattern.compile("^sc/.*$");
 
-                for (Block b : ForgeRegistries.BLOCKS) {
-                    ResourceLocation key = ForgeRegistries.BLOCKS.getKey(b);
-                    if (isChestModLoaded && key != null && key.getNamespace().equals("everycomp") && pattern1.matcher(key.getPath()).matches()) {
+                for (Block b : BuiltInRegistries.BLOCK) {
+                    ResourceLocation key = BuiltInRegistries.BLOCK.getKey(b);
+                    if (isChestModLoaded && key.getNamespace().equals("everycomp") && pattern1.matcher(key.getPath()).matches()) {
                         tag.add(key);
                     }
-                    if (isStoneChestsLoaded && key != null && key.getNamespace().equals("stonezone") && pattern2.matcher(key.getPath()).matches()) {
+                    if (isStoneChestsLoaded && key.getNamespace().equals("stonezone") && pattern2.matcher(key.getPath()).matches()) {
                         tag.add(key);
                     }
                 }
@@ -76,30 +72,34 @@ public class DynamicTags {
             });
 
             executor.accept((resourceManager, resourceSink) -> {
-                TagKey<Block> tagKey1 = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:simple_mounted_storage"));
-                TagKey<Block> tagKey2 = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:single_block_inventories"));
+                TagKey<Block> tagKey1 = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create:simple_mounted_storage"));
+                TagKey<Block> tagKey2 = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create:single_block_inventories"));
+
+                TagKey<Block> tagKey3 = TagKey.create(Registries.BLOCK, ResourceLocation.parse(Create_compatible_storage.MODID+":uncooperative_mounted_storage"));
 
                 SimpleTagBuilder tag1 = SimpleTagBuilder.of(tagKey1);
                 SimpleTagBuilder tag2 = SimpleTagBuilder.of(tagKey2);
+                SimpleTagBuilder tag3 = SimpleTagBuilder.of(tagKey3);
 
                 Pattern pattern1 = Pattern.compile("^fd/.*_cabinet$");
 
                 Pattern pattern2 = Pattern.compile("^rfm/.*_(?:storage_cabinet|drawer|kitchen_drawwer|kitchen_storage_cabinet|crate|mail_box)$");
 
-                for (Block b : ForgeRegistries.BLOCKS) {
-                    ResourceLocation key = ForgeRegistries.BLOCKS.getKey(b);
-                    if (isFarmersDelightLoaded && key != null && key.getNamespace().equals("everycomp") && pattern1.matcher(key.getPath()).matches()) {
+                for (Block b : BuiltInRegistries.BLOCK) {
+                    ResourceLocation key = BuiltInRegistries.BLOCK.getKey(b);
+                    if (isFarmersDelightLoaded && key.getNamespace().equals("everycomp") && pattern1.matcher(key.getPath()).matches()) {
                         tag1.add(key);
                         tag2.add(key);
                     }
-                    if (isFurnitureRefurbishedLoaded && key != null && key.getNamespace().equals("everycomp") && pattern2.matcher(key.getPath()).matches()) {
-                        tag1.add(key);
+                    if (isFurnitureRefurbishedLoaded && key.getNamespace().equals("everycomp") && pattern2.matcher(key.getPath()).matches()) {
+                        tag3.add(key);
                         tag2.add(key);
                     }
                 }
 
                 resourceSink.addTag(tag1, Registries.BLOCK);
                 resourceSink.addTag(tag2, Registries.BLOCK);
+                resourceSink.addTag(tag3, Registries.BLOCK);
             });
         }
     }
