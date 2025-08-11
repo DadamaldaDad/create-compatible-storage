@@ -5,12 +5,11 @@ import net.mehvahdjukaar.moonlight.api.resources.pack.DynServerResourcesGenerato
 import net.mehvahdjukaar.moonlight.api.resources.pack.DynamicDataPack;
 import net.mehvahdjukaar.moonlight.api.resources.pack.ResourceGenTask;
 import net.mehvahdjukaar.moonlight.core.Moonlight;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.fml.ModList;
 import org.apache.logging.log4j.Logger;
 
 import java.util.function.Consumer;
@@ -36,11 +35,6 @@ public class DynamicTags {
         }
 
         @Override
-        public boolean dependsOnLoadedPacks() {
-            return true;
-        }
-
-        @Override
         public void regenerateDynamicAssets(Consumer<ResourceGenTask> executor) {
             super.regenerateDynamicAssets(executor);
 
@@ -62,9 +56,9 @@ public class DynamicTags {
                 Pattern pattern1 = Pattern.compile("^(?:abnww|mcv|q)/[\\w/]+_chest$");
                 Pattern pattern2 = Pattern.compile("^sc/[\\w/]+$");
 
-                for (Block b : ForgeRegistries.BLOCKS) {
-                    ResourceLocation key = ForgeRegistries.BLOCKS.getKey(b);
-                    if (isChestModLoaded && key != null && key.getNamespace().equals("everycomp") && pattern1.matcher(key.getPath()).matches()) {
+                for (Block b : BuiltInRegistries.BLOCK) {
+                    ResourceLocation key = BuiltInRegistries.BLOCK.getKey(b);
+                    if (isChestModLoaded && key.getNamespace().equals("everycomp") && pattern1.matcher(key.getPath()).matches()) {
                         chestMountedStorage.add(key);
                     }
                     if (isStoneChestsLoaded && key != null && key.getNamespace().equals("stonezone") && pattern2.matcher(key.getPath()).matches()) {
@@ -81,6 +75,8 @@ public class DynamicTags {
 
                 SimpleTagBuilder simpleMountedStorage = SimpleTagBuilder.of(CCSTags.SIMPLE_MOUNTED_STORAGE);
                 SimpleTagBuilder singleBlockInventories = SimpleTagBuilder.of(CCSTags.SINGLE_BLOCK_INVENTORIES);
+
+                SimpleTagBuilder uncooperativeMountedStorage = SimpleTagBuilder.of(CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE);
 
                 SimpleTagBuilder fdCabinets = SimpleTagBuilder.of(CCSTags.FD_CABINETS);
 
@@ -119,17 +115,16 @@ public class DynamicTags {
                 Pattern frCratePattern = Pattern.compile("^rfm/\\w+/\\w+_crate$");
                 Pattern frMailboxPattern = Pattern.compile("^rfm/\\w+/\\w+_mail_box$");
 
-                for (Block b : ForgeRegistries.BLOCKS) {
-                    ResourceLocation key = ForgeRegistries.BLOCKS.getKey(b);
-
-                    if (isFarmersDelightLoaded && key != null && key.getNamespace().equals("everycomp") && fdCabinetPattern.matcher(key.getPath()).matches()) {
+                for (Block b : BuiltInRegistries.BLOCK) {
+                    ResourceLocation key = BuiltInRegistries.BLOCK.getKey(b);
+                    if (isFarmersDelightLoaded && key.getNamespace().equals("everycomp") && fdCabinetPattern.matcher(key.getPath()).matches()) {
                         simpleMountedStorage.add(key);
                         singleBlockInventories.add(key);
                         fdCabinets.add(key);
                     }
                     // Storage Delight
                     if(isStorageDelightLoaded && key != null && key.getNamespace().equals("everycomp") && storageDelightPattern.matcher(key.getPath()).matches()) {
-                        simpleMountedStorage.add(key);
+                        uncooperativeMountedStorage.add(key);
                         singleBlockInventories.add(key);
 
                         if(sdCabinetVariantPattern.matcher(key.getPath()).matches()) {
@@ -150,7 +145,7 @@ public class DynamicTags {
                     }
                     // Furniture Refurbished
                     if (isFurnitureRefurbishedLoaded && key != null && key.getNamespace().equals("everycomp") && furnitureRefurbishedPattern.matcher(key.getPath()).matches()) {
-                        simpleMountedStorage.add(key);
+                        uncooperativeMountedStorage.add(key);
                         singleBlockInventories.add(key);
 
                         if(frKitchenDrawerPattern.matcher(key.getPath()).matches()) {
@@ -169,6 +164,8 @@ public class DynamicTags {
 
                 resourceSink.addTag(simpleMountedStorage, Registries.BLOCK);
                 resourceSink.addTag(singleBlockInventories, Registries.BLOCK);
+
+                resourceSink.addTag(uncooperativeMountedStorage, Registries.BLOCK);
 
                 resourceSink.addTag(fdCabinets, Registries.BLOCK);
 

@@ -193,10 +193,6 @@
       "required": false
     },
     {
-      "id": "farmersdelight:oak_cabinet",
-      "required": false
-    },
-    {
       "id": "storagedelight:oak_single_door_cabinet",
       "required": false
     },
@@ -250,10 +246,6 @@
     },
     {
       "id": "refurbished_furniture:oak_mail_box",
-      "required": false
-    },
-    {
-      "id": "farmersdelight:spruce_cabinet",
       "required": false
     },
     {
@@ -313,10 +305,6 @@
       "required": false
     },
     {
-      "id": "farmersdelight:birch_cabinet",
-      "required": false
-    },
-    {
       "id": "storagedelight:birch_single_door_cabinet",
       "required": false
     },
@@ -370,10 +358,6 @@
     },
     {
       "id": "refurbished_furniture:birch_mail_box",
-      "required": false
-    },
-    {
-      "id": "farmersdelight:jungle_cabinet",
       "required": false
     },
     {
@@ -433,10 +417,6 @@
       "required": false
     },
     {
-      "id": "farmersdelight:acacia_cabinet",
-      "required": false
-    },
-    {
       "id": "storagedelight:acacia_single_door_cabinet",
       "required": false
     },
@@ -490,10 +470,6 @@
     },
     {
       "id": "refurbished_furniture:acacia_mail_box",
-      "required": false
-    },
-    {
-      "id": "farmersdelight:dark_oak_cabinet",
       "required": false
     },
     {
@@ -553,10 +529,6 @@
       "required": false
     },
     {
-      "id": "farmersdelight:crimson_cabinet",
-      "required": false
-    },
-    {
       "id": "storagedelight:crimson_single_door_cabinet",
       "required": false
     },
@@ -610,10 +582,6 @@
     },
     {
       "id": "refurbished_furniture:crimson_mail_box",
-      "required": false
-    },
-    {
-      "id": "farmersdelight:warped_cabinet",
       "required": false
     },
     {
@@ -673,10 +641,6 @@
       "required": false
     },
     {
-      "id": "farmersdelight:mangrove_cabinet",
-      "required": false
-    },
-    {
       "id": "storagedelight:mangrove_single_door_cabinet",
       "required": false
     },
@@ -730,10 +694,6 @@
     },
     {
       "id": "refurbished_furniture:mangrove_mail_box",
-      "required": false
-    },
-    {
-      "id": "farmersdelight:bamboo_cabinet",
       "required": false
     },
     {
@@ -793,10 +753,6 @@
       "required": false
     },
     {
-      "id": "farmersdelight:cherry_cabinet",
-      "required": false
-    },
-    {
       "id": "storagedelight:cherry_single_door_cabinet",
       "required": false
     },
@@ -850,10 +806,6 @@
     },
     {
       "id": "refurbished_furniture:cherry_mail_box",
-      "required": false
-    },
-    {
-      "id": "farmersdelight:basket",
       "required": false
     },
     {

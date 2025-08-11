@@ -10,6 +10,8 @@ public class CCSTags {
     public static TagKey<Block> SIMPLE_MOUNTED_STORAGE = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create:simple_mounted_storage"));
     public static TagKey<Block> SINGLE_BLOCK_INVENTORIES = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create:single_block_inventories"));
 
+    public static TagKey<Block> UNCOOPERATIVE_MOUNTED_STORAGE = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create_compatible_storage:uncooperative_mounted_storage"));
+
     // Farmer's Delight
     public static TagKey<Block> FD_CABINETS = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create_compatible_storage:fd/cabinets"));
     // Storage Delight

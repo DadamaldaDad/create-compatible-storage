@@ -1,5 +1,6 @@
 package net.dadamalda.create_compatible_storage;
 
+import com.simibubi.create.api.contraption.storage.item.MountedItemStorageType;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 
 import com.tterrag.registrate.util.entry.RegistryEntry;
@@ -9,12 +10,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
+import java.util.function.Supplier;
+
 public class CCSMountedStorageTypes {
     private static final CreateRegistrate REGISTRATE = Create_compatible_storage.REGISTRATE;
 
     public static final TagKey<Block> UNCOOPERATIVE_TAG = TagKey.create(Registries.BLOCK, ResourceLocation.parse(Create_compatible_storage.MODID+":uncooperative_mounted_storage"));
 
-    public static final RegistryEntry<UncooperativeMountedStorageType> UNCOOPERATIVE = REGISTRATE.mountedItemStorage("uncooperative", UncooperativeMountedStorageType::new)
+    public static final RegistryEntry<MountedItemStorageType<?>, UncooperativeMountedStorageType> UNCOOPERATIVE = REGISTRATE.mountedItemStorage("uncooperative", UncooperativeMountedStorageType::new)
             .associateBlockTag(UNCOOPERATIVE_TAG)
             .register();
 
