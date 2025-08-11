@@ -7,8 +7,8 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.data.BlockTagsProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -55,16 +55,6 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             "ancient",
             "azalea",
             "blossom"
-    );
-
-    List<String> GOETY_CHEST_TYPES = List.of(
-            "raiding",
-            "haunted",
-            "rotten",
-            "windswept",
-            "pine",
-            "chorus",
-            "corrupt_chorus"
     );
 
     List<String> WOODWORKS_WOOD_TYPES = List.of(
@@ -116,6 +106,22 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             "transformation",
             "mining",
             "sorting"
+    );
+
+    List<String> LETS_DO_WOOD_TYPES = List.of(
+            "aspen",
+            "larch",
+            "baobab",
+            "cypress",
+            "ebony",
+            "chestnut",
+            "fan_palm",
+            "pine",
+            "fir",
+            "swamp_oak",
+            "swamp_cypress",
+            "palm",
+            "dark_cherry"
     );
 
     List<String> TFC_WOOD_TYPES = List.of(
@@ -240,13 +246,6 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                     "furniture:"+wood_type+"_cabinet", "furniture:"+wood_type+"_dresser");
         });
 
-        GOETY_CHEST_TYPES.forEach(chest_type -> {
-            addChests(List.of(
-                    "goety:"+chest_type+"_chest",
-                    "goety:trapped_"+chest_type+"_chest"
-            ));
-        });
-
         WOODWORKS_WOOD_TYPES.forEach(wood_type -> {
             String namespace = wood_type.split(",")[0];
             String id = wood_type.split(",")[1];
@@ -286,6 +285,12 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             ));
         });
 
+        LETS_DO_WOOD_TYPES.forEach(wood_type -> {
+            addBlocksToTag(CCSTags.LDF_CABINETS,
+                    "furniture:"+wood_type+"_cabinet",
+                    "furniture:"+wood_type+"_dresser");
+        });
+
         TFC_WOOD_TYPES.forEach(wood_type -> {
             String namespace = wood_type.split(",")[0];
             String id = wood_type.split(",")[1];
@@ -320,9 +325,12 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.FD_CABINETS);
         addBlocksToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 "farmersdelight:basket",
-                "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel",
+                "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel");
+
+        addBlocksToTag(CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
+                "candlelight:sideboard",
                 "brewery:sideboard",
-                "candlelight:sideboard");
+                "meadow:pine_cabinet", "meadow:pine_dresser");
 
         addBlocksToTag(CCSTags.IC_CRYSTAL_CHEST, "ironchest:crystal_chest", "ironchest:trapped_crystal_chest");
         addBlocksToTag(CCSTags.IC_DIRT_CHEST, "ironchest:dirt_chest", "ironchest:trapped_dirt_chest");
@@ -335,26 +343,28 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addBlocksToTag(CCSTags.AC_GINGERBREAD_DOORS,
                 "alexscaves:gingerbread_door", "alexscaves:frosted_gingerbread_door");
 
-        addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
+        addTagsToTag(CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
                 CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS,
                 CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,  CCSTags.SD_BOOKSHELVES_WITH_DOOR, CCSTags.SD_DRAWERS_WITH_DOOR, CCSTags.SD_CABINETS_WITH_COUNTERTOPS,
                 CCSTags.AF_DRAWERS,
-                CCSTags.FR_COOLERS, CCSTags.FR_CRATES, CCSTags.FR_MAILBOXES,
-                CCSTags.LDV_CABINET, CCSTags.LDV_DRAWER, CCSTags.LDV_STORAGE_POT, CCSTags.LDV_BARRELS,
+                CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_COOLERS, CCSTags.FR_DRAWERS,
+                CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES, CCSTags.FR_MAILBOXES,
+                CCSTags.LDV_BARRELS, CCSTags.LDV_DRAWER, CCSTags.LDV_CABINET, CCSTags.LDV_STORAGE_POT,
                 CCSTags.LDBP_PALM_CABINET,
                 CCSTags.LDBA_CABINETS, CCSTags.LDBA_DRAWER,
                 CCSTags.LDBR_CABINETS, CCSTags.LDBR_DRAWER,
                 CCSTags.LDM_SHELF,
                 CCSTags.LDCL_CABINETS, CCSTags.LDCL_DRAWERS,
                 CCSTags.LDF_CABINETS, CCSTags.LDF_COFFER);
-        addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
+        addTagsToTag(CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
                 "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
                 "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables",
                 "chipped:barrel");
 
         addTagsToTag(CCSTags.UNCOOPERATIVE_STATIONARY_STORAGE,
                 CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
-                CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS);
+                CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS,
+                CCSTags.WW_CLOSETS);
 
         addTagsToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
                 CCSTags.SILENT_MOUNTED_STORAGE, CCSTags.BARREL_SOUND, CCSTags.SD_CABINET_SOUND,
@@ -372,29 +382,29 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addBlocksToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
                 "ars_nouveau:repository",
                 "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel",
-                "candlelight:sideboard");
+                "candlelight:sideboard",
+                "meadow:pine_cabinet", "meadow:pine_dresser");
         addTagsToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
                 "chipped:barrel");
 
         addTagsToTag(CCSTags.SILENT_MOUNTED_STORAGE,
-                CCSTags.FR_MAILBOXES);
+                CCSTags.FR_MAILBOXES,
+                CCSTags.LDV_BARRELS);
         addTagsToTag(CCSTags.SILENT_MOUNTED_STORAGE,
                 "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
                 "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables");
         addBlocksToTag(CCSTags.SILENT_MOUNTED_STORAGE,
-                "ars_nouveau:repository");
+                "ars_nouveau:repository",
+                "meadow:pine_cabinet", "meadow:pine_dresser");
         addBlocksToTag(CCSTags.SILENT_MOUNTED_STORAGE, "brewery:sideboard");
         addTagsToTag(CCSTags.SILENT_MOUNTED_STORAGE, CCSTags.IE_CRATES);
 
         addTagsToTag(CCSTags.BARREL_SOUND,
                 CCSTags.FD_CABINETS,
                 CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS, CCSTags.SD_CABINETS_WITH_COUNTERTOPS,
-                CCSTags.AF_DRAWERS,
-                CCSTags.LDV_BARRELS);
+                CCSTags.AF_DRAWERS);
         addTagsToTag(CCSTags.BARREL_SOUND,
                 "chipped:barrel");
-        addTagsToTag(CCSTags.BARREL_NAME,
-                CCSTags.LDV_BARRELS);
         addTagsToTag(CCSTags.BARREL_NAME,
                 "chipped:barrel");
 

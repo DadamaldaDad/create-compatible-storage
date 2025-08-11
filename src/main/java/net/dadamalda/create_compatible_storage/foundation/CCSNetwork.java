@@ -1,26 +1,22 @@
 package net.dadamalda.create_compatible_storage.foundation;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.network.NetworkDirection;
-import net.minecraftforge.network.NetworkRegistry;
-import net.minecraftforge.network.simple.SimpleChannel;
+import net.dadamalda.create_compatible_storage.Create_compatible_storage;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
+import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 
-public class CCSNetwork {
+@EventBusSubscriber(modid = Create_compatible_storage.MODID, bus = EventBusSubscriber.Bus.MOD)
+public final class CCSNetwork {
     private static final String PROTOCOL = "1";
-    public static final SimpleChannel CHANNEL = NetworkRegistry.ChannelBuilder
-            .named(ResourceLocation.parse("create_compatible_storage:main"))
-            .networkProtocolVersion(() -> PROTOCOL)
-            .clientAcceptedVersions(PROTOCOL::equals)
-            .serverAcceptedVersions(PROTOCOL::equals)
-            .simpleChannel();
 
-    private static int index = 0;
-
-    public static void register() {
-        CHANNEL.messageBuilder(PreciseContraptionInteractionPacket.class, index++, NetworkDirection.PLAY_TO_SERVER)
-                .decoder(PreciseContraptionInteractionPacket::new)
-                .encoder(PreciseContraptionInteractionPacket::encode)
-                .consumerMainThread(PreciseContraptionInteractionPacket::handle)
-                .add();
+    @SubscribeEvent
+    public static void onRegisterPayloads(RegisterPayloadHandlersEvent event) {
+        PayloadRegistrar registrar = event.registrar(PROTOCOL);
+        registrar.playToServer(
+            PreciseContraptionInteractionPacket.TYPE,
+                PreciseContraptionInteractionPacket.STREAM_CODEC,
+                PreciseContraptionInteractionStore::handle
+        );
     }
 }

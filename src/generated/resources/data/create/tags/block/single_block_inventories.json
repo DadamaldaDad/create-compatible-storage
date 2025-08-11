@@ -173,6 +173,14 @@
       "required": false
     },
     {
+      "id": "meadow:pine_cabinet",
+      "required": false
+    },
+    {
+      "id": "meadow:pine_dresser",
+      "required": false
+    },
+    {
       "id": "#chipped:barrel",
       "required": false
     }

@@ -1,7 +1,7 @@
 package net.dadamalda.create_compatible_storage.storage_types;
 
 import com.simibubi.create.api.contraption.storage.item.simple.SimpleMountedStorageType;
-import net.minecraftforge.items.IItemHandler;
+import net.neoforged.neoforge.items.IItemHandler;
 
 public class IronChestMountedStorageType extends SimpleMountedStorageType<IronChestMountedStorage> {
 

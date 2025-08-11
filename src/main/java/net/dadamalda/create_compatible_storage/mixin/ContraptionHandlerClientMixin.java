@@ -2,10 +2,10 @@ package net.dadamalda.create_compatible_storage.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import com.simibubi.create.content.contraptions.ContraptionHandlerClient;
-import net.dadamalda.create_compatible_storage.foundation.CCSNetwork;
 import net.dadamalda.create_compatible_storage.foundation.PreciseContraptionInteractionPacket;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraftforge.client.event.InputEvent;
+import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.network.PacketDistributor;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -15,13 +15,19 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ContraptionHandlerClientMixin {
     @Inject(method = "rightClickingOnContraptionsGetsHandledLocally",
             at = @At(value = "INVOKE",
-                    target = "Lcom/simibubi/create/AllPackets;getChannel()Lnet/minecraftforge/network/simple/SimpleChannel;",
+                    target = "Lnet/createmod/catnip/platform/services/NetworkHelper;sendToServer(Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;)V",
                     shift = At.Shift.BEFORE),
             remap = false
     )
-    private static void rightClickingOnContraptionHandledLocally(InputEvent.InteractionKeyMappingTriggered event,
-                                                                 CallbackInfo ci, @Local(ordinal = 0) BlockHitResult raycastHit)
+    private static void rightClickingOnContraptionHandledLocally(
+            net.neoforged.neoforge.client.event.InputEvent.InteractionKeyMappingTriggered event, CallbackInfo ci, @Local(ordinal = 0) BlockHitResult raycastHit)
     {
-        CCSNetwork.CHANNEL.sendToServer(new PreciseContraptionInteractionPacket(raycastHit.getLocation()));
+        Vec3 location = raycastHit.getLocation();
+
+        PacketDistributor.sendToServer(
+                new PreciseContraptionInteractionPacket(
+                        location.x, location.y, location.z
+                )
+        );
     }
 }

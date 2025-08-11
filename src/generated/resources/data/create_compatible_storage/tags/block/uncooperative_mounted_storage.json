@@ -1,67 +1,7 @@
 {
   "values": [
     {
-      "id": "carved_wood:oak_barrel",
-      "required": false
-    },
-    {
-      "id": "carved_wood:spruce_barrel",
-      "required": false
-    },
-    {
-      "id": "carved_wood:birch_barrel",
-      "required": false
-    },
-    {
-      "id": "carved_wood:jungle_barrel",
-      "required": false
-    },
-    {
-      "id": "carved_wood:acacia_barrel",
-      "required": false
-    },
-    {
-      "id": "carved_wood:dark_oak_barrel",
-      "required": false
-    },
-    {
-      "id": "carved_wood:crimson_barrel",
-      "required": false
-    },
-    {
-      "id": "carved_wood:warped_barrel",
-      "required": false
-    },
-    {
-      "id": "carved_wood:mangrove_barrel",
-      "required": false
-    },
-    {
-      "id": "carved_wood:bamboo_barrel",
-      "required": false
-    },
-    {
-      "id": "carved_wood:cherry_barrel",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:fd/cabinets",
-      "required": false
-    },
-    {
-      "id": "farmersdelight:basket",
-      "required": false
-    },
-    {
-      "id": "alexscaves:metal_barrel",
-      "required": false
-    },
-    {
-      "id": "alexscaves:rusty_barrel",
-      "required": false
-    },
-    {
-      "id": "alexscaves:gingerbarrel",
+      "id": "candlelight:sideboard",
       "required": false
     },
     {
@@ -69,7 +9,11 @@
       "required": false
     },
     {
-      "id": "candlelight:sideboard",
+      "id": "meadow:pine_cabinet",
+      "required": false
+    },
+    {
+      "id": "meadow:pine_dresser",
       "required": false
     },
     {
@@ -109,7 +53,19 @@
       "required": false
     },
     {
+      "id": "#create_compatible_storage:fr/storage_cabinets",
+      "required": false
+    },
+    {
       "id": "#create_compatible_storage:fr/coolers",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/drawers",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/kitchen_drawers",
       "required": false
     },
     {
@@ -121,7 +77,7 @@
       "required": false
     },
     {
-      "id": "#create_compatible_storage:ldv/cabinet",
+      "id": "#create_compatible_storage:ldv/barrels",
       "required": false
     },
     {
@@ -129,11 +85,11 @@
       "required": false
     },
     {
-      "id": "#create_compatible_storage:ldv/storage_pot",
+      "id": "#create_compatible_storage:ldv/cabinet",
       "required": false
     },
     {
-      "id": "#create_compatible_storage:ldv/barrels",
+      "id": "#create_compatible_storage:ldv/storage_pot",
       "required": false
     },
     {
