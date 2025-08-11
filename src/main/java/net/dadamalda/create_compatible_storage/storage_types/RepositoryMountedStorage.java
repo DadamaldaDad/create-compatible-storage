@@ -1,28 +1,28 @@
 package net.dadamalda.create_compatible_storage.storage_types;
 
 import com.hollingsworth.arsnouveau.common.block.tile.RepositoryTile;
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.api.contraption.storage.SyncedMountedStorage;
 import com.simibubi.create.api.contraption.storage.item.MountedItemStorageType;
 import com.simibubi.create.api.contraption.storage.item.WrapperMountedItemStorage;
 import com.simibubi.create.content.contraptions.Contraption;
-import com.simibubi.create.foundation.utility.CreateCodecs;
+import com.simibubi.create.foundation.codec.CreateCodecs;
 import net.dadamalda.create_compatible_storage.CCSMountedStorageTypes;
 import net.dadamalda.create_compatible_storage.foundation.ContraptionUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.items.ItemStackHandler;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.Nullable;
 
 public class RepositoryMountedStorage extends WrapperMountedItemStorage<RepositoryMountedStorage.Handler> implements SyncedMountedStorage {
-    public static final Codec<RepositoryMountedStorage> CODEC = CreateCodecs.ITEM_STACK_HANDLER.xmap(
+    public static final MapCodec<RepositoryMountedStorage> CODEC = CreateCodecs.ITEM_STACK_HANDLER.xmap(
             RepositoryMountedStorage::new, storage -> storage.wrapped
-    );
+    ).fieldOf("value");
 
     private boolean dirty;
 
@@ -66,7 +66,11 @@ public class RepositoryMountedStorage extends WrapperMountedItemStorage<Reposito
 
     public static @Nullable RepositoryMountedStorage fromRepository(BlockEntity be) {
         if(be instanceof RepositoryTile repository) {
-            IItemHandler handler = be.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null);
+            Level level = be.getLevel();
+            if(level == null) return null;
+            BlockPos pos = be.getBlockPos();
+
+            IItemHandler handler = level.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
             // make sure the handler is modifiable so new contents can be moved over on disassembly
             return handler instanceof IItemHandlerModifiable modifiable ? new RepositoryMountedStorage(modifiable) : null;
         }

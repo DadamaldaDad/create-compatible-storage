@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#create_compatible_storage:fd/cabinets",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:basket",
+      "required": false
+    }
+  ]
+}

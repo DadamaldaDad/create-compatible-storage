@@ -1,13 +1,12 @@
 package net.dadamalda.create_compatible_storage.storage_types;
 
-import com.mojang.logging.LogUtils;
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.progwml6.ironchest.common.block.regular.entity.CrystalChestBlockEntity;
 import com.simibubi.create.api.contraption.storage.SyncedMountedStorage;
 import com.simibubi.create.api.contraption.storage.item.MountedItemStorageType;
 import com.simibubi.create.api.contraption.storage.item.WrapperMountedItemStorage;
 import com.simibubi.create.content.contraptions.Contraption;
-import com.simibubi.create.foundation.utility.CreateCodecs;
+import com.simibubi.create.foundation.codec.CreateCodecs;
 import net.dadamalda.create_compatible_storage.CCSMountedStorageTypes;
 import net.dadamalda.create_compatible_storage.foundation.ContraptionUtils;
 import net.dadamalda.create_compatible_storage.menus.IronChestMenuProvider;
@@ -18,24 +17,21 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.items.ItemStackHandler;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class CrystalChestMountedStorage extends WrapperMountedItemStorage<CrystalChestMountedStorage.Handler> implements SyncedMountedStorage {
-    public static final Codec<CrystalChestMountedStorage> CODEC = CreateCodecs.ITEM_STACK_HANDLER.xmap(
+    public static final MapCodec<CrystalChestMountedStorage> CODEC = CreateCodecs.ITEM_STACK_HANDLER.xmap(
             CrystalChestMountedStorage::new, storage -> storage.wrapped
-    );
+    ).fieldOf("value");;
 
     private boolean dirty;
 
@@ -90,7 +86,11 @@ public class CrystalChestMountedStorage extends WrapperMountedItemStorage<Crysta
 
     public static @Nullable CrystalChestMountedStorage fromCrystalChest(BlockEntity be) {
         if(be instanceof CrystalChestBlockEntity) {
-            IItemHandler handler = be.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null);
+            Level level = be.getLevel();
+            if(level == null) return null;
+            BlockPos pos = be.getBlockPos();
+
+            IItemHandler handler = level.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
             // make sure the handler is modifiable so new contents can be moved over on disassembly
             return handler instanceof IItemHandlerModifiable modifiable ? new CrystalChestMountedStorage(modifiable) : null;
         }

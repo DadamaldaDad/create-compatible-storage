@@ -1,6 +1,6 @@
 package net.dadamalda.create_compatible_storage.storage_types;
 
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.api.contraption.storage.item.MountedItemStorage;
 import com.simibubi.create.api.contraption.storage.item.MountedItemStorageType;
 import com.simibubi.create.api.contraption.storage.item.simple.SimpleMountedStorage;
@@ -17,14 +17,14 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.ChestType;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.items.wrapper.CombinedInvWrapper;
-import net.minecraftforge.items.wrapper.InvWrapper;
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.items.wrapper.CombinedInvWrapper;
+import net.neoforged.neoforge.items.wrapper.InvWrapper;
 import org.jetbrains.annotations.Nullable;
 
 public class ClosetMountedStorage extends SimpleMountedStorage {
-    public static final Codec<ClosetMountedStorage> CODEC = SimpleMountedStorage.codec(ClosetMountedStorage::new);
+    public static final MapCodec<ClosetMountedStorage> CODEC = SimpleMountedStorage.codec(ClosetMountedStorage::new);
 
     protected ClosetMountedStorage(MountedItemStorageType<?> type, IItemHandler handler) {
         super(type, handler);

@@ -1,14 +1,6 @@
 {
   "values": [
     {
-      "id": "#create_compatible_storage:fd/cabinets",
-      "required": false
-    },
-    {
-      "id": "farmersdelight:basket",
-      "required": false
-    },
-    {
       "id": "#create_compatible_storage:sd/drawers",
       "required": false
     },
@@ -41,7 +33,19 @@
       "required": false
     },
     {
+      "id": "#create_compatible_storage:fr/storage_cabinets",
+      "required": false
+    },
+    {
       "id": "#create_compatible_storage:fr/coolers",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/drawers",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/kitchen_drawers",
       "required": false
     },
     {

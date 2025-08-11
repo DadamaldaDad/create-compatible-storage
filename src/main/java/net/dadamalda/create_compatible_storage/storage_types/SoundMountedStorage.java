@@ -1,6 +1,6 @@
 package net.dadamalda.create_compatible_storage.storage_types;
 
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.api.contraption.storage.item.MountedItemStorageType;
 import com.simibubi.create.api.contraption.storage.item.simple.SimpleMountedStorage;
 import com.simibubi.create.content.contraptions.Contraption;
@@ -12,11 +12,11 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.items.IItemHandler;
+import net.neoforged.neoforge.items.IItemHandler;
 
 @Deprecated
 public class SoundMountedStorage extends SimpleMountedStorage {
-    public static final Codec<SoundMountedStorage> CODEC = SimpleMountedStorage.codec(SoundMountedStorage::new);
+    public static final MapCodec<SoundMountedStorage> CODEC = SimpleMountedStorage.codec(SoundMountedStorage::new);
 
     private MountedStorageSound sound;
 

@@ -7,6 +7,10 @@
     {
       "id": "#create_compatible_storage:uncooperative_stationary_chests",
       "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ww/closets",
+      "required": false
     }
   ]
 }
