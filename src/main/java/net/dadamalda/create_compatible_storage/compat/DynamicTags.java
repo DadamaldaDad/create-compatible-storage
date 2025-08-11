@@ -6,7 +6,7 @@ import net.mehvahdjukaar.moonlight.api.resources.pack.DynamicDataPack;
 import net.mehvahdjukaar.moonlight.api.resources.pack.ResourceGenTask;
 import net.mehvahdjukaar.moonlight.core.Moonlight;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.fml.ModList;
+import net.neoforged.fml.ModList;
 import org.apache.logging.log4j.Logger;
 
 import java.util.function.Consumer;
@@ -28,11 +28,6 @@ public class DynamicTags {
         @Override
         public Logger getLogger() {
             return Moonlight.LOGGER;
-        }
-
-        @Override
-        public boolean dependsOnLoadedPacks() {
-            return true;
         }
 
         @Override

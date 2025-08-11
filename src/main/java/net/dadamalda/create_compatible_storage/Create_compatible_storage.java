@@ -1,20 +1,18 @@
 package net.dadamalda.create_compatible_storage;
 
-import com.llamalad7.mixinextras.MixinExtrasBootstrap;
 import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.dadamalda.create_compatible_storage.compat.DynamicTags;
 import net.dadamalda.create_compatible_storage.datagen.ModBlockTagsProvider;
-import net.dadamalda.create_compatible_storage.foundation.CCSNetwork;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.ModList;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
+// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Create_compatible_storage.MODID)
 public class Create_compatible_storage {
 
@@ -26,10 +24,12 @@ public class Create_compatible_storage {
     public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(MODID);
 
 
-    public Create_compatible_storage() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public Create_compatible_storage(IEventBus modEventBus, ModContainer modContainer) {
+        // IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        MixinExtrasBootstrap.init();
+        if(ModList.get().isLoaded("moonlight")) {
+            MoonlightRegistration.register(modEventBus);
+        }
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -43,13 +43,16 @@ public class Create_compatible_storage {
         // Register ourselves for server and other game events we are interested in
         // MinecraftForge.EVENT_BUS.register(this);
 
-        if(ModList.get().isLoaded("everycomp")) {
+        if(ModList.get().isLoaded("moonlight")) {
+            MoonlightRegistration.register(modEventBus);
+        }
+
+        if(ModList.get().isLoaded("everycomp") || ModList.get().isLoaded("stonezone")) {
             DynamicTags.init();
         }
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(CCSNetwork::register);
     }
 
     private void gatherData(final GatherDataEvent event) {
