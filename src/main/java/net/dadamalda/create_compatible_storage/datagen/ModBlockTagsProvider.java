@@ -7,8 +7,8 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.data.BlockTagsProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -169,18 +169,20 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addBlocksToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 "farmersdelight:basket");
 
-        addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
+        addTagsToTag(CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
                 CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS,
                 CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,  CCSTags.SD_BOOKSHELVES_WITH_DOOR, CCSTags.SD_DRAWERS_WITH_DOOR,
                 CCSTags.AF_DRAWERS,
-                CCSTags.FR_COOLERS, CCSTags.FR_CRATES, CCSTags.FR_MAILBOXES);
-        addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
+                CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_COOLERS, CCSTags.FR_DRAWERS,
+                CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES, CCSTags.FR_MAILBOXES);
+        addTagsToTag(CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
                 "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
                 "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables");
 
         addTagsToTag(CCSTags.UNCOOPERATIVE_STATIONARY_STORAGE,
                 CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
-                CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS);
+                CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS,
+                CCSTags.WW_CLOSETS);
 
         addTagsToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
                 CCSTags.SILENT_MOUNTED_STORAGE, CCSTags.BARREL_SOUND, CCSTags.SD_CABINET_SOUND,
