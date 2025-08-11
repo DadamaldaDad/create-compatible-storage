@@ -142,9 +142,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             """.split("\n"));
      */
 
-    TagKey<Block> CHEST_MOUNTED_STORAGE = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), new ResourceLocation("create", "chest_mounted_storage"));
-    TagKey<Block> SIMPLE_MOUNTED_STORAGE = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), new ResourceLocation("create", "simple_mounted_storage"));
-    TagKey<Block> SINGLE_BLOCK_INVENTORIES = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), new ResourceLocation("create", "single_block_inventories"));
+    TagKey<Block> CHEST_MOUNTED_STORAGE = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:chest_mounted_storage"));
+    TagKey<Block> SIMPLE_MOUNTED_STORAGE = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:simple_mounted_storage"));
+    TagKey<Block> SINGLE_BLOCK_INVENTORIES = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:single_block_inventories"));
 
     public ModBlockTagsProvider(DataGenerator generator, CompletableFuture<HolderLookup.Provider> registries, ExistingFileHelper existingFileHelper) {
         super(generator.getPackOutput(), registries, Create_compatible_storage.MODID, existingFileHelper);

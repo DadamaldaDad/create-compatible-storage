@@ -116,5 +116,9 @@ run/
 run-data/
 runs/
 
+neoforge-run/
+neoforge-run-data/
+neoforge-build/
+
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
