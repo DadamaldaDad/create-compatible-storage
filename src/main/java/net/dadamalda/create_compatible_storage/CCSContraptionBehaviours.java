@@ -8,14 +8,14 @@ import com.simibubi.create.content.contraptions.behaviour.CampfireMovementBehavi
 import net.dadamalda.create_compatible_storage.contraption_behaviours.GingerbreadDoorMovingInteraction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.fml.ModList;
+import net.neoforged.fml.ModList;
 
 import java.util.List;
 
 public class CCSContraptionBehaviours {
     public static void register() {
         if(ModList.get().isLoaded("carved_wood")) registerCarvedWood();
-        if(ModList.get().isLoaded("alexscaves")) registerAlexsCaves();
+        // if(ModList.get().isLoaded("alexscaves")) registerAlexsCaves();
     }
 
     public static void registerCarvedWood() {

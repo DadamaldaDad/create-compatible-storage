@@ -22,12 +22,18 @@ public class WoodGoodCompat {
             addTag(CCSTags.CHEST_MOUNTED_STORAGE, woodType,
                     "quark:chest", "quark:trapped_chest",
                     "woodworks:chest", "woodworks:trapped_chest",
-                    "lolmcv:chest", "lolmcv:trapped_chest");
+                    "lolmcv:chest", "lolmcv:trapped_chest",
+                    "carved_wood:chest", "carved_wood:trapped_chest");
 
             addTag(CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS, woodType,
                     "woodworks:chest", "woodworks:trapped_chest",
                     "quark:chest", "quark:trapped_chest"
             );
+
+            addTag(CCSTags.SIMPLE_MOUNTED_STORAGE, woodType, "carved_wood:barrel");
+            addTag(CCSTags.SINGLE_BLOCK_INVENTORIES, woodType, "carved_wood:barrel");
+            addTag(CCSTags.BARREL_SOUND, woodType, "carved_wood:barrel");
+            addTag(CCSTags.BARREL_NAME, woodType, "carved_wood:barrel");
 
             addTag(CCSTags.FD_CABINETS, woodType, "farmersdelight:cabinet");
 
