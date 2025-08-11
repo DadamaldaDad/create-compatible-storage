@@ -1,15 +1,16 @@
 package net.dadamalda.create_compatible_storage;
 
+import com.mojang.logging.LogUtils;
 import net.mehvahdjukaar.moonlight.api.resources.SimpleTagBuilder;
 import net.mehvahdjukaar.moonlight.api.resources.pack.DynServerResourcesGenerator;
 import net.mehvahdjukaar.moonlight.api.resources.pack.DynamicDataPack;
 import net.mehvahdjukaar.moonlight.api.resources.pack.ResourceGenTask;
 import net.mehvahdjukaar.moonlight.core.Moonlight;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.Logger;
 
 import java.util.function.Consumer;
@@ -34,24 +35,20 @@ public class DynamicTags {
         }
 
         @Override
-        public boolean dependsOnLoadedPacks() {
-            return false;
-        }
-
-        @Override
         public void regenerateDynamicAssets(Consumer<ResourceGenTask> executor) {
             super.regenerateDynamicAssets(executor);
 
             executor.accept((resourceManager, resourceSink) -> {
-                TagKey<Block> tagKey = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:chest_mounted_storage"));
+                TagKey<Block> tagKey = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create:chest_mounted_storage"));
 
                 SimpleTagBuilder tag = SimpleTagBuilder.of(tagKey);
 
-                Pattern pattern = Pattern.compile("^everycomp:(?:q|mcv|abnww)/.*_chest$");
+                Pattern pattern = Pattern.compile("^(?:q|mcv|abnww)/.*_chest$");
 
-                for (Block b : ForgeRegistries.BLOCKS) {
-                    ResourceLocation key = ForgeRegistries.BLOCKS.getKey(b);
-                    if (key != null && pattern.matcher(key.getPath()).matches()) {
+                for (Block b : BuiltInRegistries.BLOCK) {
+                    ResourceLocation key = BuiltInRegistries.BLOCK.getKey(b);
+                    // LogUtils.getLogger().info(key.getNamespace()+":"+key.getPath());
+                    if (key.getNamespace().equals("everycomp") && pattern.matcher(key.getPath()).matches()) {
                         tag.add(key);
                     }
                 }
@@ -60,17 +57,17 @@ public class DynamicTags {
             });
 
             executor.accept((resourceManager, resourceSink) -> {
-                TagKey<Block> tagKey1 = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:simple_mounted_storage"));
-                TagKey<Block> tagKey2 = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:single_block_inventories"));
+                TagKey<Block> tagKey1 = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create:simple_mounted_storage"));
+                TagKey<Block> tagKey2 = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create:single_block_inventories"));
 
                 SimpleTagBuilder tag1 = SimpleTagBuilder.of(tagKey1);
                 SimpleTagBuilder tag2 = SimpleTagBuilder.of(tagKey2);
 
-                Pattern pattern = Pattern.compile("^everycomp:fd/.*_cabinet$");
+                Pattern pattern = Pattern.compile("^fd/.*_cabinet$");
 
-                for (Block b : ForgeRegistries.BLOCKS) {
-                    ResourceLocation key = ForgeRegistries.BLOCKS.getKey(b);
-                    if (key != null && pattern.matcher(key.getPath()).matches()) {
+                for (Block b : BuiltInRegistries.BLOCK) {
+                    ResourceLocation key = BuiltInRegistries.BLOCK.getKey(b);
+                    if (key.getNamespace().equals("everycomp") && pattern.matcher(key.getPath()).matches()) {
                         tag1.add(key);
                         tag2.add(key);
                     }
