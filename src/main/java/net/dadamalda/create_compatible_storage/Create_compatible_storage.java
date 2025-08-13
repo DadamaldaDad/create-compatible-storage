@@ -30,7 +30,7 @@ public class Create_compatible_storage {
         // Register ourselves for server and other game events we are interested in
         // MinecraftForge.EVENT_BUS.register(this);
 
-        if(ModList.get().isLoaded("everycomp")) {
+        if(ModList.get().isLoaded("everycomp") || ModList.get().isLoaded("stonezone")) {
             DynamicTags.init();
         }
     }

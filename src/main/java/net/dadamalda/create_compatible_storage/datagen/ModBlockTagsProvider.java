@@ -1,6 +1,5 @@
 package net.dadamalda.create_compatible_storage.datagen;
 
-import cpw.mods.modlauncher.api.INameMappingService;
 import net.dadamalda.create_compatible_storage.Create_compatible_storage;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -15,6 +14,25 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagsProvider extends BlockTagsProvider {
+
+    List<String> COLOURS = List.of(
+            "white",
+            "light_gray",
+            "gray",
+            "black",
+            "brown",
+            "red",
+            "orange",
+            "yellow",
+            "lime",
+            "green",
+            "cyan",
+            "light_blue",
+            "blue",
+            "purple",
+            "magenta",
+            "pink"
+    );
 
     List<String> WOOD_TYPES = List.of(
             "oak",
@@ -57,90 +75,18 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             "endergetic,poise"
     );
 
-    /*
-    List<String> EVERY_COMPAT_WOOD_TYPES = Arrays.asList("""
-            mynethersdelight,powdery
-            quark,azalea
-            regions_unexplored,baobab
-            regions_unexplored,blackwood
-            regions_unexplored,blue_bioshroom
-            regions_unexplored,brimwood
-            regions_unexplored,cobalt
-            regions_unexplored,cypress
-            regions_unexplored,dead
-            regions_unexplored,eucalyptus
-            regions_unexplored,green_bioshroom
-            regions_unexplored,joshua
-            regions_unexplored,kapok
-            regions_unexplored,larch
-            regions_unexplored,magnolia
-            regions_unexplored,maple
-            regions_unexplored,mauve
-            regions_unexplored,palm
-            regions_unexplored,pine
-            regions_unexplored,pink_bioshroom
-            regions_unexplored,redwood
-            regions_unexplored,socotra
-            regions_unexplored,willow
-            regions_unexplored,yellow_bioshroom
-            biomeswevegone,aspen
-            biomeswevegone,baobab
-            biomeswevegone,blue_enchanted
-            biomeswevegone,cika
-            biomeswevegone,cypress
-            biomeswevegone,ebony
-            biomeswevegone,fir
-            biomeswevegone,florus
-            biomeswevegone,green_enchanted
-            biomeswevegone,holly
-            biomeswevegone,ironwood
-            biomeswevegone,jacaranda
-            biomeswevegone,mahogany
-            biomeswevegone,maple
-            biomeswevegone,palm
-            biomeswevegone,pine
-            biomeswevegone,rainbow_eucalyptus
-            biomeswevegone,redwood
-            biomeswevegone,sakura
-            biomeswevegone,skyris
-            biomeswevegone,white_mangrove
-            biomeswevegone,willow
-            biomeswevegone,witch_hazel
-            biomeswevegone,zelkova
-            biomesoplenty,fir
-            biomesoplenty,pine
-            biomesoplenty,maple
-            biomesoplenty,redwood
-            biomesoplenty,mahogany
-            biomesoplenty,jacaranda
-            biomesoplenty,palm
-            biomesoplenty,willow
-            biomesoplenty,dead
-            biomesoplenty,magic
-            biomesoplenty,umbran
-            biomesoplenty,hellbark
-            biomesoplenty,empyreal
-            sullysmod,petrified
-            quark,ancient
-            quark,blossom
-            natures_spirit,redwood
-            natures_spirit,sugi
-            natures_spirit,wisteria
-            natures_spirit,fir
-            natures_spirit,willow
-            natures_spirit,aspen
-            natures_spirit,maple
-            natures_spirit,cypress
-            natures_spirit,olive
-            natures_spirit,joshua
-            natures_spirit,ghaf
-            natures_spirit,palo_verde
-            natures_spirit,coconut
-            natures_spirit,cedar
-            natures_spirit,larch
-            natures_spirit,mahogany
-            """.split("\n"));
-     */
+    List<String> STONE_CHEST_STONE_TYPES = List.of(
+            "andesite",
+            "calcite",
+            "cobbled_deepslate",
+            "cobblestone",
+            "deepslate",
+            "diorite",
+            "granite",
+            "prismarine",
+            "stone",
+            "tuff"
+    );
 
     TagKey<Block> CHEST_MOUNTED_STORAGE = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:chest_mounted_storage"));
     TagKey<Block> SIMPLE_MOUNTED_STORAGE = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:simple_mounted_storage"));
@@ -152,6 +98,13 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        COLOURS.forEach(colour -> {
+            addSimples(List.of(
+                    "refurbished_furniture:"+colour+"_kitchen_storage_cabinet",
+                    "refurbished_furniture:"+colour+"_cooler"
+            ));
+        });
+
         WOOD_TYPES.forEach((wood_type) -> {
             addChests(List.of(
                     "quark:"+wood_type+"_chest",
@@ -163,7 +116,21 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             ));
 
             addSimples(List.of(
-                    "farmersdelight:"+wood_type+"_cabinet"
+                    "farmersdelight:"+wood_type+"_cabinet",
+                    "storagedelight:"+wood_type+"_single_door_cabinet",
+                    "storagedelight:"+wood_type+"_drawer",
+                    "storagedelight:"+wood_type+"_drawer_with_door",
+                    "storagedelight:"+wood_type+"_drawer_with_books",
+                    "storagedelight:small_"+wood_type+"_drawers",
+                    "storagedelight:"+wood_type+"_bookshelf_with_door",
+                    "storagedelight:glass_"+wood_type+"_cabinet",
+                    "storagedelight:"+wood_type+"_cabinet_with_glass_doors",
+                    "refurbished_furniture:"+wood_type+"_storage_cabinet",
+                    "refurbished_furniture:"+wood_type+"_drawer",
+                    "refurbished_furniture:"+wood_type+"_kitchen_drawer",
+                    "refurbished_furniture:"+wood_type+"_kitchen_storage_cabinet",
+                    "refurbished_furniture:"+wood_type+"_crate",
+                    "refurbished_furniture:"+wood_type+"_mail_box"
             ));
         });
 
@@ -183,36 +150,13 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             ));
         });
 
+        STONE_CHEST_STONE_TYPES.forEach(stone_type -> {
+            addChest("stonechest:chest_"+stone_type);
+        });
+
         addSimples(List.of(
                 "farmersdelight:basket"
         ));
-
-        /*
-        EVERY_COMPAT_WOOD_TYPES.forEach((wood_type) -> {
-            String namespace = wood_type.split(",")[0];
-            String id = wood_type.split(",")[1];
-
-            addChests(List.of(
-                    "everycomp:q/"+namespace+"/"+id+"_chest",
-                    "everycomp:q/"+namespace+"/"+id+"_trapped_chest",
-                    "everycomp:mcv/"+namespace+"/"+id+"_chest",
-                    "everycomp:mcv/"+namespace+"/"+id+"_trapped_chest",
-                    "everycomp:abnww/"+namespace+"/"+id+"_chest",
-                    "everycomp:abnww/"+namespace+"/trapped_"+id+"_chest"
-            ));
-
-            addSimples(List.of(
-                    "everycomp:fd/"+namespace+"/"+id+"_cabinet"
-            ));
-
-            if (namespace.equals("biomesoplenty")) {
-                addChests(List.of(
-                        "lolmcvbop:"+id+"_chest",
-                        "lolmcvbop:"+id+"_trapped_chest"
-                ));
-            }
-        });
-        */
     }
 
     private void addChest(String id) {

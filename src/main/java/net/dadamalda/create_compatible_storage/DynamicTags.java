@@ -9,6 +9,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.Logger;
 
@@ -35,23 +36,37 @@ public class DynamicTags {
 
         @Override
         public boolean dependsOnLoadedPacks() {
-            return false;
+            return true;
         }
 
         @Override
         public void regenerateDynamicAssets(Consumer<ResourceGenTask> executor) {
             super.regenerateDynamicAssets(executor);
 
+            boolean isChestModLoaded = ModList.get().isLoaded("quark")
+                    || ModList.get().isLoaded("lolmcv")
+                    || ModList.get().isLoaded("woodworks");
+
+            boolean isStoneChestsLoaded = ModList.get().isLoaded("stonechest");
+
+            boolean isFarmersDelightLoaded = ModList.get().isLoaded("farmersdelight");
+
+            boolean isFurnitureRefurbishedLoaded = ModList.get().isLoaded("refurbished_furniture");
+
             executor.accept((resourceManager, resourceSink) -> {
                 TagKey<Block> tagKey = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:chest_mounted_storage"));
 
                 SimpleTagBuilder tag = SimpleTagBuilder.of(tagKey);
 
-                Pattern pattern = Pattern.compile("^everycomp:(?:q|mcv|abnww)/.*_chest$");
+                Pattern pattern1 = Pattern.compile("^(?:q|mcv|abnww)/.*_chest$");
+                Pattern pattern2 = Pattern.compile("^sc/.*$");
 
                 for (Block b : ForgeRegistries.BLOCKS) {
                     ResourceLocation key = ForgeRegistries.BLOCKS.getKey(b);
-                    if (key != null && pattern.matcher(key.getPath()).matches()) {
+                    if (isChestModLoaded && key != null && key.getNamespace().equals("everycomp") && pattern1.matcher(key.getPath()).matches()) {
+                        tag.add(key);
+                    }
+                    if (isStoneChestsLoaded && key != null && key.getNamespace().equals("stonezone") && pattern2.matcher(key.getPath()).matches()) {
                         tag.add(key);
                     }
                 }
@@ -66,11 +81,17 @@ public class DynamicTags {
                 SimpleTagBuilder tag1 = SimpleTagBuilder.of(tagKey1);
                 SimpleTagBuilder tag2 = SimpleTagBuilder.of(tagKey2);
 
-                Pattern pattern = Pattern.compile("^everycomp:fd/.*_cabinet$");
+                Pattern pattern1 = Pattern.compile("^fd/.*_cabinet$");
+
+                Pattern pattern2 = Pattern.compile("^rfm/.*_(?:storage_cabinet|drawer|kitchen_drawwer|kitchen_storage_cabinet|crate|mail_box)$");
 
                 for (Block b : ForgeRegistries.BLOCKS) {
                     ResourceLocation key = ForgeRegistries.BLOCKS.getKey(b);
-                    if (key != null && pattern.matcher(key.getPath()).matches()) {
+                    if (isFarmersDelightLoaded && key != null && key.getNamespace().equals("everycomp") && pattern1.matcher(key.getPath()).matches()) {
+                        tag1.add(key);
+                        tag2.add(key);
+                    }
+                    if (isFurnitureRefurbishedLoaded && key != null && key.getNamespace().equals("everycomp") && pattern2.matcher(key.getPath()).matches()) {
                         tag1.add(key);
                         tag2.add(key);
                     }
