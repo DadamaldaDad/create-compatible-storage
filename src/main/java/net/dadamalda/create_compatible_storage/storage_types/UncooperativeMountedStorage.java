@@ -20,7 +20,7 @@ public class UncooperativeMountedStorage extends SimpleMountedStorage {
     }
 
     public UncooperativeMountedStorage(IItemHandler handler) {
-        this(CCSMountedStorageTypes.SIMPLE_3X9.get(), handler);
+        this(CCSMountedStorageTypes.UNCOOPERATIVE.get(), handler);
     }
 
     @Override

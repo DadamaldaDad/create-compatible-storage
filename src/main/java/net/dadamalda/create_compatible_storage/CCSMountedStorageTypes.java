@@ -15,15 +15,11 @@ import java.util.function.Supplier;
 public class CCSMountedStorageTypes {
     private static final CreateRegistrate REGISTRATE = Create_compatible_storage.REGISTRATE;
 
-    public static final TagKey<Block> SIMPLE_3X9_TAG = TagKey.create(Registries.BLOCK, ResourceLocation.parse(Create_compatible_storage.MODID+":uncooperative_mounted_storage"));
+    public static final TagKey<Block> UNCOOPERATIVE_TAG = TagKey.create(Registries.BLOCK, ResourceLocation.parse(Create_compatible_storage.MODID+":uncooperative_mounted_storage"));
 
-    public static final RegistryEntry<MountedItemStorageType<?>, UncooperativeMountedStorageType> SIMPLE_3X9 = REGISTRATE.mountedItemStorage("uncooperative", UncooperativeMountedStorageType::new)
-            .associateBlockTag(SIMPLE_3X9_TAG)
+    public static final RegistryEntry<MountedItemStorageType<?>, UncooperativeMountedStorageType> UNCOOPERATIVE = REGISTRATE.mountedItemStorage("uncooperative", UncooperativeMountedStorageType::new)
+            .associateBlockTag(UNCOOPERATIVE_TAG)
             .register();
-
-    private static <T extends MountedItemStorageType<?>> RegistryEntry<MountedItemStorageType<?>, T> simpleItem(String name, Supplier<T> supplier) {
-        return REGISTRATE.mountedItemStorage(name, supplier).register();
-    }
 
     public static void register() {}
 }
