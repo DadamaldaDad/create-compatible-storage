@@ -73,8 +73,11 @@ public class DynamicTags {
                 TagKey<Block> tagKey1 = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create:simple_mounted_storage"));
                 TagKey<Block> tagKey2 = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create:single_block_inventories"));
 
+                TagKey<Block> tagKey3 = TagKey.create(Registries.BLOCK, ResourceLocation.parse(Create_compatible_storage.MODID+":uncooperative_mounted_storage"));
+
                 SimpleTagBuilder tag1 = SimpleTagBuilder.of(tagKey1);
                 SimpleTagBuilder tag2 = SimpleTagBuilder.of(tagKey2);
+                SimpleTagBuilder tag3 = SimpleTagBuilder.of(tagKey3);
 
                 Pattern pattern1 = Pattern.compile("^fd/.*_cabinet$");
 
@@ -87,13 +90,14 @@ public class DynamicTags {
                         tag2.add(key);
                     }
                     if (isFurnitureRefurbishedLoaded && key.getNamespace().equals("everycomp") && pattern2.matcher(key.getPath()).matches()) {
-                        tag1.add(key);
+                        tag3.add(key);
                         tag2.add(key);
                     }
                 }
 
                 resourceSink.addTag(tag1, Registries.BLOCK);
                 resourceSink.addTag(tag2, Registries.BLOCK);
+                resourceSink.addTag(tag3, Registries.BLOCK);
             });
         }
     }

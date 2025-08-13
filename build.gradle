@@ -210,6 +210,8 @@ repositories {
     // }
     mavenLocal()
     maven { url = "https://api.modrinth.com/maven" }
+    maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
+    maven { url = "https://maven.ithundxr.dev/snapshots" } // Registrate
 }
 
 dependencies {
@@ -236,6 +238,11 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
     compileOnly "maven.modrinth:moonlight:${moonlight_version}-neoforge"
+    implementation("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }
+    implementation("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
+    compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
+    runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
+    implementation("com.tterrag.registrate:Registrate:${registrate_version}")
 
 }
 
@@ -261,7 +268,8 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
                              mod_version            : mod_version,
                              mod_authors            : mod_authors,
                              mod_description        : mod_description,
-                             moonlight_version_range: moonlight_version_range
+                             moonlight_version_range: moonlight_version_range,
+                             create_version_range   : create_version_range
     ]
     inputs.properties replaceProperties
     expand replaceProperties

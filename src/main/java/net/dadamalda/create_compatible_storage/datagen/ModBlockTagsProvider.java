@@ -92,6 +92,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     TagKey<Block> SIMPLE_MOUNTED_STORAGE = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create:simple_mounted_storage"));
     TagKey<Block> SINGLE_BLOCK_INVENTORIES = TagKey.create(Registries.BLOCK, ResourceLocation.parse("create:single_block_inventories"));
 
+    TagKey<Block> UNCOOPERATIVE_MOUNTED_STORAGE = TagKey.create(Registries.BLOCK, ResourceLocation.parse(Create_compatible_storage.MODID+":uncooperative_mounted_storage"));
+
     public ModBlockTagsProvider(DataGenerator generator, CompletableFuture<HolderLookup.Provider> registries, ExistingFileHelper existingFileHelper) {
         super(generator.getPackOutput(), registries, Create_compatible_storage.MODID, existingFileHelper);
     }
@@ -99,7 +101,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         COLOURS.forEach(colour -> {
-            addSimples(List.of(
+            addUncooperatives(List.of(
                     "refurbished_furniture:"+colour+"_kitchen_storage_cabinet",
                     "refurbished_furniture:"+colour+"_cooler"
             ));
@@ -116,7 +118,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             ));
 
             addSimples(List.of(
-                    "farmersdelight:"+wood_type+"_cabinet",
+                    "farmersdelight:"+wood_type+"_cabinet"
+            ));
+
+            addUncooperatives(List.of(
                     "storagedelight:"+wood_type+"_single_door_cabinet",
                     "storagedelight:"+wood_type+"_drawer",
                     "storagedelight:"+wood_type+"_drawer_with_door",
@@ -166,6 +171,15 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     private void addSimple(String id) {
         this.tag(SIMPLE_MOUNTED_STORAGE).addOptional(ResourceLocation.parse(id));
         this.tag(SINGLE_BLOCK_INVENTORIES).addOptional(ResourceLocation.parse(id));
+    }
+
+    private void addUncooperative(String id) {
+        this.tag(UNCOOPERATIVE_MOUNTED_STORAGE).addOptional(ResourceLocation.parse(id));
+        this.tag(SINGLE_BLOCK_INVENTORIES).addOptional(ResourceLocation.parse(id));
+    }
+
+    private void addUncooperatives(List<String> ids) {
+        ids.forEach(this::addUncooperative);
     }
 
     private void addChests(List<String> ids) {
