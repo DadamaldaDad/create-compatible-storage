@@ -27,6 +27,7 @@ public class DynamicTags {
             super(new DynamicDataPack(ResourceLocation.parse(Create_compatible_storage.MODID+":everycomp_tags")));
 
             getPack().addNamespaces("create");
+            getPack().addNamespaces(Create_compatible_storage.MODID);
         }
 
         @Override

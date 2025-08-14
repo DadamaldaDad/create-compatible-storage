@@ -1,6 +1,7 @@
 package net.dadamalda.create_compatible_storage;
 
 import com.mojang.logging.LogUtils;
+import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.dadamalda.create_compatible_storage.datagen.ModBlockTagsProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -19,6 +20,9 @@ public class Create_compatible_storage {
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
+    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(MODID);
+
+
     public Create_compatible_storage() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -26,6 +30,10 @@ public class Create_compatible_storage {
         modEventBus.addListener(this::commonSetup);
 
         modEventBus.addListener(this::gatherData);
+
+        CCSMountedStorageTypes.register();
+
+        REGISTRATE.registerEventListeners(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         // MinecraftForge.EVENT_BUS.register(this);
