@@ -3,6 +3,7 @@ package net.dadamalda.create_compatible_storage;
 import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.dadamalda.create_compatible_storage.datagen.ModBlockTagsProvider;
+import net.mehvahdjukaar.moonlight.api.platform.RegHelper;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.ModList;
@@ -25,6 +26,8 @@ public class Create_compatible_storage {
 
     public Create_compatible_storage(IEventBus modEventBus, ModContainer modContainer) {
         // IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        RegHelper.startRegisteringFor(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
