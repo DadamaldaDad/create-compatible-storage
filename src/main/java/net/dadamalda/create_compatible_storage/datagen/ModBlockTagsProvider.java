@@ -157,6 +157,16 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addSimples(List.of(
                 "farmersdelight:basket"
         ));
+
+        addSimpleTags(List.of(
+                "handcrafted:desks",
+                "handcrafted:nightstands",
+                "handcrafted:counters",
+                "handcrafted:cupboards",
+                "handcrafted:drawers",
+                "handcrafted:shelves",
+                "handcrafted:side_tables"
+        ));
     }
 
     private void addChest(String id) {
@@ -168,11 +178,20 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(SINGLE_BLOCK_INVENTORIES).addOptional(ResourceLocation.parse(id));
     }
 
+    private void addSimpleTag(String tag) {
+        this.tag(SIMPLE_MOUNTED_STORAGE).addOptionalTag(ResourceLocation.parse(tag));
+        this.tag(SINGLE_BLOCK_INVENTORIES).addOptionalTag(ResourceLocation.parse(tag));
+    }
+
     private void addChests(List<String> ids) {
         ids.forEach(this::addChest);
     }
 
     private void addSimples(List<String> ids) {
         ids.forEach(this::addSimple);
+    }
+
+    private void addSimpleTags(List<String> tags) {
+        tags.forEach(this::addSimpleTag);
     }
 }
