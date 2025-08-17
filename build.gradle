@@ -3,8 +3,9 @@ plugins {
     id 'idea'
     id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+    id 'com.modrinth.minotaur' version '2.+'
+    id 'com.matthewprenger.cursegradle' version '1.4.0'
 }
-
 
 group = mod_group_id
 version = mod_version
@@ -120,6 +121,8 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    gradlePluginPortal()
+    mavenLocal()
     // Put repositories for dependencies here
     // ForgeGradle automatically adds the Forge maven and Maven Central for you
 
@@ -206,4 +209,60 @@ tasks.named('jar', Jar).configure {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
+modrinth {
+    token = project.hasProperty("modrinthToken") ? project.property("modrinthToken") : ""
+    projectId = "create-compatible-storage"
+    versionNumber = project.version
+    versionName = project.version
+    uploadFile = jar
+    gameVersions = ["1.20.1"]
+    loaders = ["forge"]
+    changelog = file("changelog.md").text
+
+    dependencies {
+        required.project("create")
+        optional.project("moonlight")
+        optional.project("every-compat")
+        optional.project("stone-zone")
+        optional.project("quark")
+        optional.project("woodworks")
+        optional.project("more-chest-variants-lieonlion")
+        optional.project("farmers-delight")
+        optional.project("storage-delight")
+        optional.project("stone-chest")
+        optional.project("handcrafted")
+    }
+}
+
+curseforge {
+    apiKey = project.hasProperty("curseforgeToken") ? project.property("curseforgeToken") : ""
+    project {
+        id = "1247573"
+        changelog = file("changelog.md")
+        releaseType = "release"
+        addGameVersion "1.20.1"
+        addGameVersion "Forge"
+        addGameVersion "Java 17"
+        mainArtifact(jar) {
+            displayName = project.version
+        }
+        relations {
+            requiredDependency "create"
+            optionalDependency "selene"
+            optionalDependency "quark"
+            optionalDependency "woodworks"
+            optionalDependency "more-chest-variants-lieonlion"
+            optionalDependency "farmers-delight"
+            optionalDependency "storage-delight-forge"
+            optionalDependency "stone-chest"
+            optionalDependency "refurbished-furniture"
+            optionalDependency "handcrafted"
+        }
+    }
+}
+
+tasks.register("publishAll") {
+    dependsOn "modrinth", "curseforge"
 }
