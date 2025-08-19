@@ -1,1 +1,1 @@
-- Added support for Handcrafted
+- Fix minor dupe with Handcrafted
