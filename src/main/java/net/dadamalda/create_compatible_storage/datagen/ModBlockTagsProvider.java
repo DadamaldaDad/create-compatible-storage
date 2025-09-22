@@ -72,7 +72,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             "environmental,wisteria",
             "upgrade_aquatic,driftwood",
             "upgrade_aquatic,river",
-            "endergetic,poise"
+            "endergetic,poise",
+            "windswept,holly",
+            "windswept,chestnut",
+            "windswept,pine"
     );
 
     List<String> STONE_CHEST_STONE_TYPES = List.of(

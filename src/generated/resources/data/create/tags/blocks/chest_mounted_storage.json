@@ -385,6 +385,30 @@
       "required": false
     },
     {
+      "id": "windswept:holly_chest",
+      "required": false
+    },
+    {
+      "id": "windswept:trapped_holly_chest",
+      "required": false
+    },
+    {
+      "id": "windswept:chestnut_chest",
+      "required": false
+    },
+    {
+      "id": "windswept:trapped_chestnut_chest",
+      "required": false
+    },
+    {
+      "id": "windswept:pine_chest",
+      "required": false
+    },
+    {
+      "id": "windswept:trapped_pine_chest",
+      "required": false
+    },
+    {
       "id": "quark:nether_brick_chest",
       "required": false
     },
