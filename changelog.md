@@ -1,1 +1,2 @@
-- Fix minor dupe with Handcrafted
+- Added support for Windswept chests with Woodworks
+- Optimization
