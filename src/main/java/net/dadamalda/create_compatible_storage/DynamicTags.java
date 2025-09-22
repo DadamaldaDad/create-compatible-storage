@@ -59,8 +59,8 @@ public class DynamicTags {
 
                 SimpleTagBuilder tag = SimpleTagBuilder.of(tagKey);
 
-                Pattern pattern1 = Pattern.compile("^(?:q|mcv|abnww)/.*_chest$");
-                Pattern pattern2 = Pattern.compile("^sc/.*$");
+                Pattern pattern1 = Pattern.compile("^(?:abnww|mcv|q)/[\\w/]+_chest$");
+                Pattern pattern2 = Pattern.compile("^sc/[\\w/]+$");
 
                 for (Block b : ForgeRegistries.BLOCKS) {
                     ResourceLocation key = ForgeRegistries.BLOCKS.getKey(b);
@@ -82,9 +82,9 @@ public class DynamicTags {
                 SimpleTagBuilder tag1 = SimpleTagBuilder.of(tagKey1);
                 SimpleTagBuilder tag2 = SimpleTagBuilder.of(tagKey2);
 
-                Pattern pattern1 = Pattern.compile("^fd/.*_cabinet$");
+                Pattern pattern1 = Pattern.compile("^fd/[\\w/]+_cabinet$");
 
-                Pattern pattern2 = Pattern.compile("^rfm/.*_(?:storage_cabinet|drawer|kitchen_drawwer|kitchen_storage_cabinet|crate|mail_box)$");
+                Pattern pattern2 = Pattern.compile("^rfm/[\\w/]+_(?:drawer|storage_cabinet|crate|mail_box)$");
 
                 for (Block b : ForgeRegistries.BLOCKS) {
                     ResourceLocation key = ForgeRegistries.BLOCKS.getKey(b);
