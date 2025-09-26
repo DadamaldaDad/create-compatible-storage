@@ -5,11 +5,19 @@
       "required": false
     },
     {
+      "id": "refurbished_furniture:white_kitchen_drawer",
+      "required": false
+    },
+    {
       "id": "refurbished_furniture:white_cooler",
       "required": false
     },
     {
       "id": "refurbished_furniture:light_gray_kitchen_storage_cabinet",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:light_gray_kitchen_drawer",
       "required": false
     },
     {
@@ -21,11 +29,19 @@
       "required": false
     },
     {
+      "id": "refurbished_furniture:gray_kitchen_drawer",
+      "required": false
+    },
+    {
       "id": "refurbished_furniture:gray_cooler",
       "required": false
     },
     {
       "id": "refurbished_furniture:black_kitchen_storage_cabinet",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:black_kitchen_drawer",
       "required": false
     },
     {
@@ -37,11 +53,19 @@
       "required": false
     },
     {
+      "id": "refurbished_furniture:brown_kitchen_drawer",
+      "required": false
+    },
+    {
       "id": "refurbished_furniture:brown_cooler",
       "required": false
     },
     {
       "id": "refurbished_furniture:red_kitchen_storage_cabinet",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:red_kitchen_drawer",
       "required": false
     },
     {
@@ -53,11 +77,19 @@
       "required": false
     },
     {
+      "id": "refurbished_furniture:orange_kitchen_drawer",
+      "required": false
+    },
+    {
       "id": "refurbished_furniture:orange_cooler",
       "required": false
     },
     {
       "id": "refurbished_furniture:yellow_kitchen_storage_cabinet",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:yellow_kitchen_drawer",
       "required": false
     },
     {
@@ -69,11 +101,19 @@
       "required": false
     },
     {
+      "id": "refurbished_furniture:lime_kitchen_drawer",
+      "required": false
+    },
+    {
       "id": "refurbished_furniture:lime_cooler",
       "required": false
     },
     {
       "id": "refurbished_furniture:green_kitchen_storage_cabinet",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:green_kitchen_drawer",
       "required": false
     },
     {
@@ -85,11 +125,19 @@
       "required": false
     },
     {
+      "id": "refurbished_furniture:cyan_kitchen_drawer",
+      "required": false
+    },
+    {
       "id": "refurbished_furniture:cyan_cooler",
       "required": false
     },
     {
       "id": "refurbished_furniture:light_blue_kitchen_storage_cabinet",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:light_blue_kitchen_drawer",
       "required": false
     },
     {
@@ -101,11 +149,19 @@
       "required": false
     },
     {
+      "id": "refurbished_furniture:blue_kitchen_drawer",
+      "required": false
+    },
+    {
       "id": "refurbished_furniture:blue_cooler",
       "required": false
     },
     {
       "id": "refurbished_furniture:purple_kitchen_storage_cabinet",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:purple_kitchen_drawer",
       "required": false
     },
     {
@@ -117,11 +173,19 @@
       "required": false
     },
     {
+      "id": "refurbished_furniture:magenta_kitchen_drawer",
+      "required": false
+    },
+    {
       "id": "refurbished_furniture:magenta_cooler",
       "required": false
     },
     {
       "id": "refurbished_furniture:pink_kitchen_storage_cabinet",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:pink_kitchen_drawer",
       "required": false
     },
     {

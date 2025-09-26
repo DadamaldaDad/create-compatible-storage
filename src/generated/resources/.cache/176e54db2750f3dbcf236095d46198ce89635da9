@@ -1,4 +1,18 @@
-// 1.20.1	2025-09-22T14:48:52.653508779	Tags for minecraft:block mod id create_compatible_storage
+// 1.20.1	2025-09-26T01:54:30.213491352	Tags for minecraft:block mod id create_compatible_storage
 69cd0a32603d926c3a3efeeaaeac9e831b932b77 data/create/tags/blocks/chest_mounted_storage.json
-61fb27685837108457334f0c716dcd67223ec1e1 data/create/tags/blocks/simple_mounted_storage.json
-61fb27685837108457334f0c716dcd67223ec1e1 data/create/tags/blocks/single_block_inventories.json
+4660457c9f1c899ab2e9192d1040e2449bd70593 data/create/tags/blocks/simple_mounted_storage.json
+4660457c9f1c899ab2e9192d1040e2449bd70593 data/create/tags/blocks/single_block_inventories.json
+920b2c3423319e982c7e0ba98970abc85b3138a5 data/create_compatible_storage/tags/blocks/fd/cabinets.json
+c758956e1a56cc1db069419d22285ab09199d380 data/create_compatible_storage/tags/blocks/fr/coolers.json
+2a711714db8f6e4a5d8c9ee9af4a890dcdb38d60 data/create_compatible_storage/tags/blocks/fr/crates.json
+096c0c89ee0f4a3078c9dea5c5f2b494f6683414 data/create_compatible_storage/tags/blocks/fr/drawers.json
+761110db96f6103ecbcd7d7987ab0ab6eb5f3835 data/create_compatible_storage/tags/blocks/fr/kitchen_drawers.json
+8ecc26a5f8d5969a77d5109d03268523d2242de5 data/create_compatible_storage/tags/blocks/fr/mailboxes.json
+8f59295ed28a8f06c8f1a098be0cd07c5ee41b3f data/create_compatible_storage/tags/blocks/fr/storage_cabinets.json
+a556e9c86cd49967430c225ae65bf0d60c8bcf7b data/create_compatible_storage/tags/blocks/sd/bookshelves_with_door.json
+25c0294f9444599627b77ed7a8fc2d7120d28d19 data/create_compatible_storage/tags/blocks/sd/cabinet_variants.json
+808e6e9437c62018a2878c415b5361a6062cc928 data/create_compatible_storage/tags/blocks/sd/drawers.json
+422f9861b79ef044737c719d38da9c8b36acaffd data/create_compatible_storage/tags/blocks/sd/drawers_with_books.json
+6f6f40ec4f7fa50bf80e36fd61723bdd55ef7552 data/create_compatible_storage/tags/blocks/sd/drawers_with_door.json
+adae3f54ac2ded489835fa992cea46bb772b0d8a data/create_compatible_storage/tags/blocks/sd/glass_cabinets.json
+5ac9756f5e91f1f9742bc3c3e06aee55ed9a7357 data/create_compatible_storage/tags/blocks/sd/small_drawers.json

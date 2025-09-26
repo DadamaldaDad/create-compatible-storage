@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "create_compatible_storage.refmap.json",
   "mixins": [
+    "MountedItemStorageMixin",
     "CounterBlockMixin"
   ],
   "server": [

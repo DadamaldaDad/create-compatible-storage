@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "refurbished_furniture:white_kitchen_cooler",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:light_gray_kitchen_cooler",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:gray_kitchen_cooler",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:black_kitchen_cooler",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:brown_kitchen_cooler",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:red_kitchen_cooler",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:orange_kitchen_cooler",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:yellow_kitchen_cooler",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:lime_kitchen_cooler",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:green_kitchen_cooler",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:cyan_kitchen_cooler",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:light_blue_kitchen_cooler",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:blue_kitchen_cooler",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:purple_kitchen_cooler",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:magenta_kitchen_cooler",
+      "required": false
+    },
+    {
+      "id": "refurbished_furniture:pink_kitchen_cooler",
+      "required": false
+    }
+  ]
+}

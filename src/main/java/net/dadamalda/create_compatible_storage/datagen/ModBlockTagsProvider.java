@@ -1,14 +1,12 @@
 package net.dadamalda.create_compatible_storage.datagen;
 
+import net.dadamalda.create_compatible_storage.CCSTags;
 import net.dadamalda.create_compatible_storage.Create_compatible_storage;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -91,10 +89,6 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             "tuff"
     );
 
-    TagKey<Block> CHEST_MOUNTED_STORAGE = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:chest_mounted_storage"));
-    TagKey<Block> SIMPLE_MOUNTED_STORAGE = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:simple_mounted_storage"));
-    TagKey<Block> SINGLE_BLOCK_INVENTORIES = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), ResourceLocation.parse("create:single_block_inventories"));
-
     public ModBlockTagsProvider(DataGenerator generator, CompletableFuture<HolderLookup.Provider> registries, ExistingFileHelper existingFileHelper) {
         super(generator.getPackOutput(), registries, Create_compatible_storage.MODID, existingFileHelper);
     }
@@ -104,8 +98,13 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         COLOURS.forEach(colour -> {
             addSimples(List.of(
                     "refurbished_furniture:"+colour+"_kitchen_storage_cabinet",
+                    "refurbished_furniture:"+colour+"_kitchen_drawer",
                     "refurbished_furniture:"+colour+"_cooler"
             ));
+
+            this.tag(CCSTags.FR_KITCHEN_DRAWERS).addOptional(ResourceLocation.parse("refurbished_furniture:"+colour+"_kitchen_drawer"));
+            this.tag(CCSTags.FR_STORAGE_CABINETS).addOptional(ResourceLocation.parse("refurbished_furniture:"+colour+"_kitchen_storage_cabinet"));
+            this.tag(CCSTags.FR_COOLERS).addOptional(ResourceLocation.parse("refurbished_furniture:"+colour+"_kitchen_cooler"));
         });
 
         WOOD_TYPES.forEach((wood_type) -> {
@@ -135,6 +134,24 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                     "refurbished_furniture:"+wood_type+"_crate",
                     "refurbished_furniture:"+wood_type+"_mail_box"
             ));
+
+            this.tag(CCSTags.FD_CABINETS).addOptional(ResourceLocation.parse("farmersdelight:"+wood_type+"_cabinet"));
+
+            this.tag(CCSTags.SD_CABINET_VARIANTS).addOptional(ResourceLocation.parse("storagedelight:"+wood_type+"_single_door_cabinet"));
+            this.tag(CCSTags.SD_CABINET_VARIANTS).addOptional(ResourceLocation.parse("storagedelight:"+wood_type+"_cabinet_with_glass_doors"));
+            this.tag(CCSTags.SD_GLASS_CABINETS).addOptional(ResourceLocation.parse("storagedelight:glass_"+wood_type+"_cabinet"));
+            this.tag(CCSTags.SD_BOOKSHELVES_WITH_DOOR).addOptional(ResourceLocation.parse("storagedelight:"+wood_type+"_bookshelf_with_door"));
+            this.tag(CCSTags.SD_SMALL_DRAWERS).addOptional(ResourceLocation.parse("storagedelight:small_"+wood_type+"_drawers"));
+            this.tag(CCSTags.SD_DRAWERS_WITH_BOOKS).addOptional(ResourceLocation.parse("storagedelight:"+wood_type+"_drawer_with_books"));
+            this.tag(CCSTags.SD_DRAWERS_WITH_DOOR).addOptional(ResourceLocation.parse("storagedelight:"+wood_type+"_drawer_with_door"));
+            this.tag(CCSTags.SD_DRAWERS).addOptional(ResourceLocation.parse("storagedelight:"+wood_type+"_drawer"));
+
+            this.tag(CCSTags.FR_DRAWERS).addOptional(ResourceLocation.parse("refurbished_furniture:"+wood_type+"_drawer"));
+            this.tag(CCSTags.FR_KITCHEN_DRAWERS).addOptional(ResourceLocation.parse("refurbished_furniture:"+wood_type+"_kitchen_drawer"));
+            this.tag(CCSTags.FR_STORAGE_CABINETS).addOptional(ResourceLocation.parse("refurbished_furniture:"+wood_type+"_storage_cabinet"));
+            this.tag(CCSTags.FR_STORAGE_CABINETS).addOptional(ResourceLocation.parse("refurbished_furniture:"+wood_type+"_kitchen_storage_cabinet"));
+            this.tag(CCSTags.FR_CRATES).addOptional(ResourceLocation.parse("refurbished_furniture:"+wood_type+"_crate"));
+            this.tag(CCSTags.FR_MAILBOXES).addOptional(ResourceLocation.parse("refurbished_furniture:"+wood_type+"_mail_box"));
         });
 
         WOODWORKS_WOOD_TYPES.forEach(wood_type -> {
@@ -173,17 +190,17 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     }
 
     private void addChest(String id) {
-        this.tag(CHEST_MOUNTED_STORAGE).addOptional(ResourceLocation.parse(id));
+        this.tag(CCSTags.CHEST_MOUNTED_STORAGE).addOptional(ResourceLocation.parse(id));
     }
 
     private void addSimple(String id) {
-        this.tag(SIMPLE_MOUNTED_STORAGE).addOptional(ResourceLocation.parse(id));
-        this.tag(SINGLE_BLOCK_INVENTORIES).addOptional(ResourceLocation.parse(id));
+        this.tag(CCSTags.SIMPLE_MOUNTED_STORAGE).addOptional(ResourceLocation.parse(id));
+        this.tag(CCSTags.SINGLE_BLOCK_INVENTORIES).addOptional(ResourceLocation.parse(id));
     }
 
     private void addSimpleTag(String tag) {
-        this.tag(SIMPLE_MOUNTED_STORAGE).addOptionalTag(ResourceLocation.parse(tag));
-        this.tag(SINGLE_BLOCK_INVENTORIES).addOptionalTag(ResourceLocation.parse(tag));
+        this.tag(CCSTags.SIMPLE_MOUNTED_STORAGE).addOptionalTag(ResourceLocation.parse(tag));
+        this.tag(CCSTags.SINGLE_BLOCK_INVENTORIES).addOptionalTag(ResourceLocation.parse(tag));
     }
 
     private void addChests(List<String> ids) {

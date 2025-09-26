@@ -1,2 +1,4 @@
-- Added support for Windswept chests with Woodworks
-- Optimization
+- Fixed coloured kitchen drawers from Furniture Refurbished
+- Fixed Storage Delight not working with Every Compat wood types
+- Made container screen names more consistent
+- Rewrote some parts of code to be more concise and modern
