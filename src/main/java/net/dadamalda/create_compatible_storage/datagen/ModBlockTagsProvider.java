@@ -5,6 +5,8 @@ import net.dadamalda.create_compatible_storage.Create_compatible_storage;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -96,15 +98,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         COLOURS.forEach(colour -> {
-            addSimples(List.of(
-                    "refurbished_furniture:"+colour+"_kitchen_storage_cabinet",
-                    "refurbished_furniture:"+colour+"_kitchen_drawer",
-                    "refurbished_furniture:"+colour+"_cooler"
-            ));
-
-            this.tag(CCSTags.FR_KITCHEN_DRAWERS).addOptional(ResourceLocation.parse("refurbished_furniture:"+colour+"_kitchen_drawer"));
-            this.tag(CCSTags.FR_STORAGE_CABINETS).addOptional(ResourceLocation.parse("refurbished_furniture:"+colour+"_kitchen_storage_cabinet"));
-            this.tag(CCSTags.FR_COOLERS).addOptional(ResourceLocation.parse("refurbished_furniture:"+colour+"_kitchen_cooler"));
+            addBlocksToTag(CCSTags.FR_KITCHEN_DRAWERS, "refurbished_furniture:"+colour+"_kitchen_drawer");
+            addBlocksToTag(CCSTags.FR_STORAGE_CABINETS, "refurbished_furniture:"+colour+"_kitchen_storage_cabinet");
+            addBlocksToTag(CCSTags.FR_COOLERS, "refurbished_furniture:"+colour+"_cooler");
         });
 
         WOOD_TYPES.forEach((wood_type) -> {
@@ -117,41 +113,23 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                     "lolmcv:"+wood_type+"_trapped_chest"
             ));
 
-            addSimples(List.of(
-                    "farmersdelight:"+wood_type+"_cabinet",
-                    "storagedelight:"+wood_type+"_single_door_cabinet",
-                    "storagedelight:"+wood_type+"_drawer",
-                    "storagedelight:"+wood_type+"_drawer_with_door",
-                    "storagedelight:"+wood_type+"_drawer_with_books",
-                    "storagedelight:small_"+wood_type+"_drawers",
-                    "storagedelight:"+wood_type+"_bookshelf_with_door",
-                    "storagedelight:glass_"+wood_type+"_cabinet",
-                    "storagedelight:"+wood_type+"_cabinet_with_glass_doors",
-                    "refurbished_furniture:"+wood_type+"_storage_cabinet",
-                    "refurbished_furniture:"+wood_type+"_drawer",
-                    "refurbished_furniture:"+wood_type+"_kitchen_drawer",
-                    "refurbished_furniture:"+wood_type+"_kitchen_storage_cabinet",
-                    "refurbished_furniture:"+wood_type+"_crate",
-                    "refurbished_furniture:"+wood_type+"_mail_box"
-            ));
+            addBlocksToTag(CCSTags.FD_CABINETS, "farmersdelight:"+wood_type+"_cabinet");
 
-            this.tag(CCSTags.FD_CABINETS).addOptional(ResourceLocation.parse("farmersdelight:"+wood_type+"_cabinet"));
+            addBlocksToTag(CCSTags.SD_CABINET_VARIANTS, "storagedelight:"+wood_type+"_single_door_cabinet",
+                    "storagedelight:"+wood_type+"_cabinet_with_glass_doors");
+            addBlocksToTag(CCSTags.SD_GLASS_CABINETS, "storagedelight:glass_"+wood_type+"_cabinet");
+            addBlocksToTag(CCSTags.SD_BOOKSHELVES_WITH_DOOR, "storagedelight:"+wood_type+"_bookshelf_with_door");
+            addBlocksToTag(CCSTags.SD_SMALL_DRAWERS, "storagedelight:small_"+wood_type+"_drawers");
+            addBlocksToTag(CCSTags.SD_DRAWERS_WITH_BOOKS, "storagedelight:"+wood_type+"_drawer_with_books");
+            addBlocksToTag(CCSTags.SD_DRAWERS_WITH_DOOR, "storagedelight:"+wood_type+"_drawer_with_door");
+            addBlocksToTag(CCSTags.SD_DRAWERS, "storagedelight:"+wood_type+"_drawer");
 
-            this.tag(CCSTags.SD_CABINET_VARIANTS).addOptional(ResourceLocation.parse("storagedelight:"+wood_type+"_single_door_cabinet"));
-            this.tag(CCSTags.SD_CABINET_VARIANTS).addOptional(ResourceLocation.parse("storagedelight:"+wood_type+"_cabinet_with_glass_doors"));
-            this.tag(CCSTags.SD_GLASS_CABINETS).addOptional(ResourceLocation.parse("storagedelight:glass_"+wood_type+"_cabinet"));
-            this.tag(CCSTags.SD_BOOKSHELVES_WITH_DOOR).addOptional(ResourceLocation.parse("storagedelight:"+wood_type+"_bookshelf_with_door"));
-            this.tag(CCSTags.SD_SMALL_DRAWERS).addOptional(ResourceLocation.parse("storagedelight:small_"+wood_type+"_drawers"));
-            this.tag(CCSTags.SD_DRAWERS_WITH_BOOKS).addOptional(ResourceLocation.parse("storagedelight:"+wood_type+"_drawer_with_books"));
-            this.tag(CCSTags.SD_DRAWERS_WITH_DOOR).addOptional(ResourceLocation.parse("storagedelight:"+wood_type+"_drawer_with_door"));
-            this.tag(CCSTags.SD_DRAWERS).addOptional(ResourceLocation.parse("storagedelight:"+wood_type+"_drawer"));
-
-            this.tag(CCSTags.FR_DRAWERS).addOptional(ResourceLocation.parse("refurbished_furniture:"+wood_type+"_drawer"));
-            this.tag(CCSTags.FR_KITCHEN_DRAWERS).addOptional(ResourceLocation.parse("refurbished_furniture:"+wood_type+"_kitchen_drawer"));
-            this.tag(CCSTags.FR_STORAGE_CABINETS).addOptional(ResourceLocation.parse("refurbished_furniture:"+wood_type+"_storage_cabinet"));
-            this.tag(CCSTags.FR_STORAGE_CABINETS).addOptional(ResourceLocation.parse("refurbished_furniture:"+wood_type+"_kitchen_storage_cabinet"));
-            this.tag(CCSTags.FR_CRATES).addOptional(ResourceLocation.parse("refurbished_furniture:"+wood_type+"_crate"));
-            this.tag(CCSTags.FR_MAILBOXES).addOptional(ResourceLocation.parse("refurbished_furniture:"+wood_type+"_mail_box"));
+            addBlocksToTag(CCSTags.FR_DRAWERS, "refurbished_furniture:"+wood_type+"_drawer");
+            addBlocksToTag(CCSTags.FR_KITCHEN_DRAWERS, "refurbished_furniture:"+wood_type+"_kitchen_drawer");
+            addBlocksToTag(CCSTags.FR_STORAGE_CABINETS, "refurbished_furniture:"+wood_type+"_storage_cabinet",
+                    "refurbished_furniture:"+wood_type+"_kitchen_storage_cabinet");
+            addBlocksToTag(CCSTags.FR_CRATES, "refurbished_furniture:"+wood_type+"_crate");
+            addBlocksToTag(CCSTags.FR_MAILBOXES, "refurbished_furniture:"+wood_type+"_mail_box");
         });
 
         WOODWORKS_WOOD_TYPES.forEach(wood_type -> {
@@ -174,44 +152,49 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             addChest("stonechest:chest_"+stone_type);
         });
 
-        addSimples(List.of(
-                "farmersdelight:basket"
-        ));
+        addBlocksToTag(CCSTags.FD_CABINETS, "mynethersdelight:red_nether_bricks_cabinet", "mynethersdelight:nether_bricks_cabinet",
+                "mynethersdelight:blackstone_bricks_cabinet", "mynethersdelight:powdery_cabinet");
 
-        addSimpleTags(List.of(
-                "handcrafted:desks",
-                "handcrafted:nightstands",
-                "handcrafted:counters",
-                "handcrafted:cupboards",
-                "handcrafted:drawers",
-                "handcrafted:shelves",
-                "handcrafted:side_tables"
-        ));
+        addBlocksToTag(CCSTags.SOUND_MOUNTED_STORAGE, "farmersdelight:basket");
+
+        addTagsToTag(CCSTags.SINGLE_BLOCK_INVENTORIES, CCSTags.SOUND_MOUNTED_STORAGE, CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
+                CCSTags.SOUND_UNCOOPERATIVE_MOUNTED_STORAGE);
+
+        addTagsToTag(CCSTags.SOUND_MOUNTED_STORAGE, CCSTags.BARREL_SOUND, CCSTags.SD_CABINET_SOUND,
+                CCSTags.FR_MAILBOXES, CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_COOLERS, CCSTags.FR_DRAWERS,
+                CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES);
+        addTagsToTag(CCSTags.SOUND_MOUNTED_STORAGE, "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
+                "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables");
+        addTagsToTag(CCSTags.BARREL_SOUND, CCSTags.FD_CABINETS, CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS);
+
+        addTagsToTag(CCSTags.SD_CABINET_SOUND, CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,
+                CCSTags.SD_BOOKSHELVES_WITH_DOOR, CCSTags.SD_DRAWERS_WITH_DOOR);
     }
 
     private void addChest(String id) {
         this.tag(CCSTags.CHEST_MOUNTED_STORAGE).addOptional(ResourceLocation.parse(id));
     }
 
-    private void addSimple(String id) {
-        this.tag(CCSTags.SIMPLE_MOUNTED_STORAGE).addOptional(ResourceLocation.parse(id));
-        this.tag(CCSTags.SINGLE_BLOCK_INVENTORIES).addOptional(ResourceLocation.parse(id));
-    }
-
-    private void addSimpleTag(String tag) {
-        this.tag(CCSTags.SIMPLE_MOUNTED_STORAGE).addOptionalTag(ResourceLocation.parse(tag));
-        this.tag(CCSTags.SINGLE_BLOCK_INVENTORIES).addOptionalTag(ResourceLocation.parse(tag));
-    }
-
     private void addChests(List<String> ids) {
         ids.forEach(this::addChest);
     }
 
-    private void addSimples(List<String> ids) {
-        ids.forEach(this::addSimple);
+    @SafeVarargs
+    private void addTagsToTag(TagKey<Block> tag, TagKey<Block>... tags) {
+        for (TagKey<Block> tag2 : tags) {
+            this.tag(tag).addOptionalTag(tag2);
+        }
     }
 
-    private void addSimpleTags(List<String> tags) {
-        tags.forEach(this::addSimpleTag);
+    private void addTagsToTag(TagKey<Block> tag, String... tags) {
+        for (String tag2 : tags) {
+            this.tag(tag).addOptionalTag(ResourceLocation.parse(tag2));
+        }
+    }
+
+    private void addBlocksToTag(TagKey<Block> tag, String... blocks) {
+        for(String block : blocks) {
+            this.tag(tag).addOptional(ResourceLocation.parse(block));
+        }
     }
 }

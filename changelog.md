@@ -1,4 +1,4 @@
-- Fixed coloured kitchen drawers from Furniture Refurbished
-- Fixed Storage Delight not working with Every Compat wood types
-- Made container screen names more consistent
-- Rewrote some parts of code to be more concise and modern
+- Added support for My Nether's Delight cabinets
+- Added sounds
+- Faster world loading with Every Compat for large modpacks
+- Rewrote the majority of the codebase to be cleane

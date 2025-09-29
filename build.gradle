@@ -181,6 +181,9 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
     compileOnly fg.deobf("maven.modrinth:moonlight:${moonlight_version}-forge")
+    compileOnly fg.deobf("maven.modrinth:every-compat:${wood_good_version}-forge")
+    compileOnly fg.deobf("maven.modrinth:stone-zone:${stone_zone_version}-forge")
+
     implementation(fg.deobf("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false })
     implementation(fg.deobf("net.createmod.ponder:Ponder-Forge-${minecraft_version}:${ponder_version}"))
     compileOnly(fg.deobf("dev.engine-room.flywheel:flywheel-forge-api-${minecraft_version}:${flywheel_version}"))

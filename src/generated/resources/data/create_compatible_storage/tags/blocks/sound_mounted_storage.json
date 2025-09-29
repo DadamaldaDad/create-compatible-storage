@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "farmersdelight:basket",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:barrel_sound",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:sd/cabinet_sound",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/mailboxes",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/storage_cabinets",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/coolers",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/drawers",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/kitchen_drawers",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/crates",
+      "required": false
+    },
+    {
+      "id": "#handcrafted:desks",
+      "required": false
+    },
+    {
+      "id": "#handcrafted:nightstands",
+      "required": false
+    },
+    {
+      "id": "#handcrafted:counters",
+      "required": false
+    },
+    {
+      "id": "#handcrafted:cupboards",
+      "required": false
+    },
+    {
+      "id": "#handcrafted:drawers",
+      "required": false
+    },
+    {
+      "id": "#handcrafted:shelves",
+      "required": false
+    },
+    {
+      "id": "#handcrafted:side_tables",
+      "required": false
+    }
+  ]
+}

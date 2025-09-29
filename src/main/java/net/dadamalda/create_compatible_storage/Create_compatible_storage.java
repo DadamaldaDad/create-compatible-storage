@@ -2,6 +2,7 @@ package net.dadamalda.create_compatible_storage;
 
 import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import net.dadamalda.create_compatible_storage.compat.DynamicTags;
 import net.dadamalda.create_compatible_storage.datagen.ModBlockTagsProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -38,7 +39,7 @@ public class Create_compatible_storage {
         // Register ourselves for server and other game events we are interested in
         // MinecraftForge.EVENT_BUS.register(this);
 
-        if(ModList.get().isLoaded("everycomp") || ModList.get().isLoaded("stonezone")) {
+        if(ModList.get().isLoaded("everycomp")) {
             DynamicTags.init();
         }
     }

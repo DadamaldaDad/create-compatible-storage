@@ -43,6 +43,22 @@
     {
       "id": "farmersdelight:cherry_cabinet",
       "required": false
+    },
+    {
+      "id": "mynethersdelight:red_nether_bricks_cabinet",
+      "required": false
+    },
+    {
+      "id": "mynethersdelight:nether_bricks_cabinet",
+      "required": false
+    },
+    {
+      "id": "mynethersdelight:blackstone_bricks_cabinet",
+      "required": false
+    },
+    {
+      "id": "mynethersdelight:powdery_cabinet",
+      "required": false
     }
   ]
 }
