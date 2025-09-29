@@ -1,4 +1,4 @@
 - Added support for My Nether's Delight cabinets
-- Added sounds
+- Added sounds when opening and closing storages
 - Faster world loading with Every Compat for large modpacks
-- Rewrote the majority of the codebase to be cleane
+- Rewrote the majority of the codebase to be cleaner
