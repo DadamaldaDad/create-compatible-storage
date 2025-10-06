@@ -15,6 +15,10 @@
     {
       "id": "#create_compatible_storage:sd/drawers_with_books",
       "required": false
+    },
+    {
+      "id": "#another_furniture:drawers",
+      "required": false
     }
   ]
 }

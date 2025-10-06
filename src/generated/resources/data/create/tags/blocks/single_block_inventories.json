@@ -1,15 +1,35 @@
 {
   "values": [
     {
-      "id": "#create_compatible_storage:sound_mounted_storage",
+      "id": "#create_compatible_storage:silent_mounted_storage",
       "required": false
     },
     {
-      "id": "#create_compatible_storage:uncooperative_mounted_storage",
+      "id": "#create_compatible_storage:barrel_sound",
       "required": false
     },
     {
-      "id": "#create_compatible_storage:sound_uncooperative_mounted_storage",
+      "id": "#create_compatible_storage:sd/cabinet_sound",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/storage_cabinets",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/coolers",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/drawers",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/kitchen_drawers",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fr/crates",
       "required": false
     }
   ]

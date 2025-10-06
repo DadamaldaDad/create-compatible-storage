@@ -1,4 +1,4 @@
-- Added support for My Nether's Delight cabinets
-- Added sounds when opening and closing storages
-- Faster world loading with Every Compat for large modpacks
-- Rewrote the majority of the codebase to be cleaner
+- Added consistent container names for shulker boxes¨
+- Added proper sounds for barrels and shulker boxes
+- Added support for Another Furniture (drawers)
+- Sound related code changes

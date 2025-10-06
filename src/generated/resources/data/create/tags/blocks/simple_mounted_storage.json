@@ -1,7 +1,7 @@
 {
   "values": [
     {
-      "id": "farmersdelight:basket",
+      "id": "#create_compatible_storage:silent_mounted_storage",
       "required": false
     },
     {
@@ -10,10 +10,6 @@
     },
     {
       "id": "#create_compatible_storage:sd/cabinet_sound",
-      "required": false
-    },
-    {
-      "id": "#create_compatible_storage:fr/mailboxes",
       "required": false
     },
     {
@@ -34,34 +30,6 @@
     },
     {
       "id": "#create_compatible_storage:fr/crates",
-      "required": false
-    },
-    {
-      "id": "#handcrafted:desks",
-      "required": false
-    },
-    {
-      "id": "#handcrafted:nightstands",
-      "required": false
-    },
-    {
-      "id": "#handcrafted:counters",
-      "required": false
-    },
-    {
-      "id": "#handcrafted:cupboards",
-      "required": false
-    },
-    {
-      "id": "#handcrafted:drawers",
-      "required": false
-    },
-    {
-      "id": "#handcrafted:shelves",
-      "required": false
-    },
-    {
-      "id": "#handcrafted:side_tables",
       "required": false
     }
   ]

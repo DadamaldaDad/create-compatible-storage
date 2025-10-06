@@ -13,12 +13,13 @@ public class CCSMountedStorageTypes {
     public static final RegistryEntry<UncooperativeMountedStorageType> UNCOOPERATIVE = REGISTRATE.mountedItemStorage("uncooperative", UncooperativeMountedStorageType::new)
             .associateBlockTag(CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE)
             .register();
+
+    @Deprecated
     public static final RegistryEntry<SoundMountedStorageType> SOUND = REGISTRATE.mountedItemStorage("sound", SoundMountedStorageType::new)
-            .associateBlockTag(CCSTags.SOUND_MOUNTED_STORAGE)
             .register();
 
+    @Deprecated
     public static final RegistryEntry<SoundUncooperativeMountedStorageType> SOUND_UNCOOPERATIVE = REGISTRATE.mountedItemStorage("sound_uncooperative", SoundUncooperativeMountedStorageType::new)
-            .associateBlockTag(CCSTags.SOUND_UNCOOPERATIVE_MOUNTED_STORAGE)
             .register();
 
 

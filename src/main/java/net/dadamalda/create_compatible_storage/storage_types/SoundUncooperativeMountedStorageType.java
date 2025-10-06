@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
+@Deprecated
 public class SoundUncooperativeMountedStorageType extends SimpleMountedStorageType<SoundUncooperativeMountedStorage> {
 
     public SoundUncooperativeMountedStorageType() {

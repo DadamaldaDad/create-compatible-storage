@@ -155,17 +155,20 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addBlocksToTag(CCSTags.FD_CABINETS, "mynethersdelight:red_nether_bricks_cabinet", "mynethersdelight:nether_bricks_cabinet",
                 "mynethersdelight:blackstone_bricks_cabinet", "mynethersdelight:powdery_cabinet");
 
-        addBlocksToTag(CCSTags.SOUND_MOUNTED_STORAGE, "farmersdelight:basket");
+        addBlocksToTag(CCSTags.SILENT_MOUNTED_STORAGE, "farmersdelight:basket");
 
-        addTagsToTag(CCSTags.SINGLE_BLOCK_INVENTORIES, CCSTags.SOUND_MOUNTED_STORAGE, CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
-                CCSTags.SOUND_UNCOOPERATIVE_MOUNTED_STORAGE);
-
-        addTagsToTag(CCSTags.SOUND_MOUNTED_STORAGE, CCSTags.BARREL_SOUND, CCSTags.SD_CABINET_SOUND,
-                CCSTags.FR_MAILBOXES, CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_COOLERS, CCSTags.FR_DRAWERS,
+        addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE, CCSTags.SILENT_MOUNTED_STORAGE, CCSTags.BARREL_SOUND, CCSTags.SD_CABINET_SOUND,
+                CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_COOLERS, CCSTags.FR_DRAWERS,
                 CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES);
-        addTagsToTag(CCSTags.SOUND_MOUNTED_STORAGE, "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
+
+        addTagsToTag(CCSTags.SINGLE_BLOCK_INVENTORIES, CCSTags.SILENT_MOUNTED_STORAGE, CCSTags.BARREL_SOUND, CCSTags.SD_CABINET_SOUND,
+                CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_COOLERS, CCSTags.FR_DRAWERS,
+                CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES);
+
+        addTagsToTag(CCSTags.SILENT_MOUNTED_STORAGE, CCSTags.FR_MAILBOXES);
+        addTagsToTag(CCSTags.SILENT_MOUNTED_STORAGE, "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
                 "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables");
-        addTagsToTag(CCSTags.BARREL_SOUND, CCSTags.FD_CABINETS, CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS);
+        addTagsToTag(CCSTags.BARREL_SOUND, CCSTags.FD_CABINETS, CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS, CCSTags.AF_DRAWERS);
 
         addTagsToTag(CCSTags.SD_CABINET_SOUND, CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,
                 CCSTags.SD_BOOKSHELVES_WITH_DOOR, CCSTags.SD_DRAWERS_WITH_DOOR);

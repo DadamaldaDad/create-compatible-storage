@@ -4,18 +4,28 @@ import com.simibubi.create.api.contraption.storage.item.MountedItemStorage;
 import com.simibubi.create.content.contraptions.Contraption;
 import com.simibubi.create.foundation.utility.CreateLang;
 import net.dadamalda.create_compatible_storage.CCSTags;
+import net.dadamalda.create_compatible_storage.sounds.MountedStorageSound;
+import net.dadamalda.create_compatible_storage.sounds.MountedStorageSoundHandler;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.block.ChestBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.ChestType;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
+import net.minecraft.world.phys.Vec3;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(MountedItemStorage.class)
 public abstract class MountedItemStorageMixin {
+    @Unique
+    private MountedStorageSound create_compatible_storage$sound;
+
     @Inject(method = "getMenuName", at = @At("HEAD"), cancellable = true, remap = false)
     protected void getMenuName(StructureTemplate.StructureBlockInfo info, Contraption contraption, CallbackInfoReturnable<Component> cir) {
         BlockState state = info.state();
@@ -23,6 +33,8 @@ public abstract class MountedItemStorageMixin {
         if(state.is(CCSTags.CHEST_MOUNTED_STORAGE)) {
             boolean isSingle = info.state().getValue(ChestBlock.TYPE) == ChestType.SINGLE;
             translationKey = isSingle ? "container.chest" : "container.chestDouble";
+        } else if (state.is(CCSTags.SHULKER_BOXES)) {
+            translationKey = "container.shulkerBox";
             // Farmer's Delight
         } else if (state.is(CCSTags.FD_CABINETS)) {
             translationKey = "farmersdelight.container.cabinet";
@@ -54,12 +66,36 @@ public abstract class MountedItemStorageMixin {
             translationKey = "container.refurbished_furniture.crate";
         } else if (state.is(CCSTags.FR_MAILBOXES)) {
             translationKey = "container.refurbished_furniture.mailbox";
+            // Another Furniture
+        } else if (state.is(CCSTags.AF_DRAWERS)) {
+            translationKey = "container.another_furniture.drawer";
         }
 
         if(!translationKey.isEmpty()) {
             cir.setReturnValue(
                     CreateLang.translateDirect("contraptions.moving_container", Component.translatable(translationKey)));
             cir.cancel();
+        }
+    }
+
+    @Inject(method = "handleInteraction", at = @At("HEAD"), remap = false)
+    public void handleInteraction(ServerPlayer player, Contraption contraption, StructureTemplate.StructureBlockInfo info, CallbackInfoReturnable<Boolean> cir) {
+        create_compatible_storage$sound = MountedStorageSoundHandler.getSoundFromState(info.state());
+    }
+
+    @Inject(method = "playClosingSound", at = @At("HEAD"), cancellable = true, remap = false)
+    public void playClosingSound(ServerLevel level, Vec3 pos, CallbackInfo ci) {
+        if(create_compatible_storage$sound != MountedStorageSound.UNKNOWN) {
+            MountedStorageSoundHandler.playClosingSound(create_compatible_storage$sound, level, pos);
+            ci.cancel();
+        }
+    }
+
+    @Inject(method = "playOpeningSound", at = @At("HEAD"), cancellable = true, remap = false)
+    public void playOpeningSound(ServerLevel level, Vec3 pos, CallbackInfo ci) {
+        if(create_compatible_storage$sound != MountedStorageSound.UNKNOWN) {
+            MountedStorageSoundHandler.playOpeningSound(create_compatible_storage$sound, level, pos);
+            ci.cancel();
         }
     }
 }

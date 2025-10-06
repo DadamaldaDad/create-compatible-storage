@@ -14,6 +14,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemp
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.items.IItemHandler;
 
+@Deprecated
 public class SoundMountedStorage extends SimpleMountedStorage {
     public static final Codec<SoundMountedStorage> CODEC = SimpleMountedStorage.codec(SoundMountedStorage::new);
 

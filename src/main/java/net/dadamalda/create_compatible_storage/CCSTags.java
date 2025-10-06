@@ -6,14 +6,15 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
 public class CCSTags {
+    // Minecraft
+    public static TagKey<Block> SHULKER_BOXES = tag("minecraft:shulker_boxes");
     // Create
     public static TagKey<Block> CHEST_MOUNTED_STORAGE = tag("create:chest_mounted_storage");
     public static TagKey<Block> SIMPLE_MOUNTED_STORAGE = tag("create:simple_mounted_storage");
     public static TagKey<Block> SINGLE_BLOCK_INVENTORIES = tag("create:single_block_inventories");
     // Generic
-    public static TagKey<Block> SOUND_MOUNTED_STORAGE = tag("create_compatible_storage:sound_mounted_storage");
+    public static TagKey<Block> SILENT_MOUNTED_STORAGE = tag("create_compatible_storage:silent_mounted_storage");
     public static TagKey<Block> UNCOOPERATIVE_MOUNTED_STORAGE = tag("create_compatible_storage:uncooperative_mounted_storage");
-    public static TagKey<Block> SOUND_UNCOOPERATIVE_MOUNTED_STORAGE = tag("create_compatible_storage:sound_uncooperative_mounted_storage");
     public static TagKey<Block> BARREL_SOUND = tag("create_compatible_storage:barrel_sound");
     // Farmer's Delight
     public static TagKey<Block> FD_CABINETS = tag("create_compatible_storage:fd/cabinets");
@@ -33,6 +34,8 @@ public class CCSTags {
     public static TagKey<Block> FR_COOLERS = tag("create_compatible_storage:fr/coolers");
     public static TagKey<Block> FR_CRATES = tag("create_compatible_storage:fr/crates");
     public static TagKey<Block> FR_MAILBOXES = tag("create_compatible_storage:fr/mailboxes");
+    // Another Furniture
+    public static TagKey<Block> AF_DRAWERS = tag("another_furniture:drawers");
 
     public static TagKey<Block> tag(String path) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.parse(path));

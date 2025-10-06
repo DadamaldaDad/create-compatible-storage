@@ -19,6 +19,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.items.IItemHandler;
 import org.jetbrains.annotations.Nullable;
 
+@Deprecated
 public class SoundUncooperativeMountedStorage extends SimpleMountedStorage {
     public static final Codec<SoundUncooperativeMountedStorage> CODEC = SimpleMountedStorage.codec(SoundUncooperativeMountedStorage::new);
 
