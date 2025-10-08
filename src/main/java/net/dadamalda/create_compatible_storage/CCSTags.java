@@ -15,6 +15,8 @@ public class CCSTags {
     // Generic
     public static TagKey<Block> SILENT_MOUNTED_STORAGE = tag("create_compatible_storage:silent_mounted_storage");
     public static TagKey<Block> UNCOOPERATIVE_MOUNTED_STORAGE = tag("create_compatible_storage:uncooperative_mounted_storage");
+    public static TagKey<Block> UNCOOPERATIVE_STATIONARY_STORAGE = tag("create_compatible_storage:uncooperative_stationary_storage");
+    public static TagKey<Block> UNCOOPERATIVE_STATIONARY_CHESTS = tag("create_compatible_storage:uncooperative_stationary_chests");
     public static TagKey<Block> BARREL_SOUND = tag("create_compatible_storage:barrel_sound");
     // Farmer's Delight
     public static TagKey<Block> FD_CABINETS = tag("create_compatible_storage:fd/cabinets");

@@ -113,6 +113,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                     "lolmcv:"+wood_type+"_trapped_chest"
             ));
 
+            addBlocksToTag(CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS, "woodworks:"+wood_type+"_chest", "woodworks:trapped_"+wood_type+"_chest");
+
             addBlocksToTag(CCSTags.FD_CABINETS, "farmersdelight:"+wood_type+"_cabinet");
 
             addBlocksToTag(CCSTags.SD_CABINET_VARIANTS, "storagedelight:"+wood_type+"_single_door_cabinet",
@@ -139,6 +141,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                     namespace+":"+id+"_chest",
                     namespace+":trapped_"+id+"_chest"
             ));
+
+            addBlocksToTag(CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS, namespace+":"+id+"_chest", namespace+":trapped_"+id+"_chest");
         });
 
         QUARK_CHEST_TYPES.forEach((chest_type) -> {
@@ -150,6 +154,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         STONE_CHEST_STONE_TYPES.forEach(stone_type -> {
             addChest("stonechest:chest_"+stone_type);
+
+            addBlocksToTag(CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS, "stonechest:chest_"+stone_type);
         });
 
         addBlocksToTag(CCSTags.FD_CABINETS, "mynethersdelight:red_nether_bricks_cabinet", "mynethersdelight:nether_bricks_cabinet",
@@ -172,6 +178,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
                 "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables");
+
+        addTagsToTag(CCSTags.UNCOOPERATIVE_STATIONARY_STORAGE,
+                CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
+                CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS);
 
         addTagsToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
                 CCSTags.SILENT_MOUNTED_STORAGE, CCSTags.BARREL_SOUND, CCSTags.SD_CABINET_SOUND,

@@ -24,6 +24,8 @@ public class WoodGoodCompat {
                     "woodworks:chest", "woodworks:trapped_chest",
                     "lolmcv:chest", "lolmcv:trapped_chest");
 
+            addTag(CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS, woodType, "woodworks:chest", "woodworks:trapped_chest");
+
             addTag(CCSTags.FD_CABINETS, woodType, "farmersdelight:cabinet");
 
             addTag(CCSTags.SD_CABINET_SOUND, woodType, "storagedelight:single_door_cabinet", "storagedelight:cabinet_with_glass_doors",

@@ -1,4 +1,4 @@
-// 1.20.1	2025-10-06T19:22:33.776211151	Tags for minecraft:block mod id create_compatible_storage
+// 1.20.1	2025-10-08T22:09:31.662998648	Tags for minecraft:block mod id create_compatible_storage
 69cd0a32603d926c3a3efeeaaeac9e831b932b77 data/create/tags/blocks/chest_mounted_storage.json
 0d2cc28fae1e37deffbfc9893d9ced451d208713 data/create/tags/blocks/simple_mounted_storage.json
 ced5afd9c9007096b9ce91bd750fc6efe4b80c64 data/create/tags/blocks/single_block_inventories.json
@@ -19,3 +19,5 @@ a556e9c86cd49967430c225ae65bf0d60c8bcf7b data/create_compatible_storage/tags/blo
 adae3f54ac2ded489835fa992cea46bb772b0d8a data/create_compatible_storage/tags/blocks/sd/glass_cabinets.json
 5ac9756f5e91f1f9742bc3c3e06aee55ed9a7357 data/create_compatible_storage/tags/blocks/sd/small_drawers.json
 ea9cfbd5f93fe30dd818e0798969f14167470415 data/create_compatible_storage/tags/blocks/silent_mounted_storage.json
+258ff35ac6114ec5c623ef399d39e3d92e627420 data/create_compatible_storage/tags/blocks/uncooperative_stationary_chests.json
+4ab0d49608d3366c0a576b7cbc682aab3c68d0a7 data/create_compatible_storage/tags/blocks/uncooperative_stationary_storage.json

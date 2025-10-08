@@ -17,6 +17,7 @@ public class StoneZoneCompat {
 
         for(StoneType stoneType : StoneTypeRegistry.INSTANCE.getValues()) {
             addTag(CCSTags.CHEST_MOUNTED_STORAGE, stoneType, "stonechest:chest");
+            addTag(CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS, stoneType, "stonechest:chest");
         }
 
         helper.registerAll(sink);
