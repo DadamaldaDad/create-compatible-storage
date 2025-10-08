@@ -196,6 +196,10 @@ dependencies {
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     implementation 'org.spongepowered:mixin:0.8.5'
+    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.5.0"))
+    implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.5.0")) {
+        jarJar.ranged(it, "[0.5.0,)")
+    }
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -243,10 +247,11 @@ modrinth {
     projectId = "create-compatible-storage"
     versionNumber = project.version
     versionName = project.version
-    uploadFile = jar
+    uploadFile = tasks.named("jarJar").flatMap {it.archiveFile}
     gameVersions = ["1.20.1"]
     loaders = ["forge"]
     changelog = file("changelog.md").text
+    versionType = "alpha"
 
     dependencies {
         required.project("create")
@@ -273,7 +278,7 @@ curseforge {
         addGameVersion "1.20.1"
         addGameVersion "Forge"
         addGameVersion "Java 17"
-        mainArtifact(jar) {
+        mainArtifact(tasks.named("jarJar").flatMap {it.archiveFile}) {
             displayName = project.version
         }
         relations {

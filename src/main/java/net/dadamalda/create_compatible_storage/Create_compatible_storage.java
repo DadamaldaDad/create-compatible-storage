@@ -1,9 +1,11 @@
 package net.dadamalda.create_compatible_storage;
 
+import com.llamalad7.mixinextras.MixinExtrasBootstrap;
 import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.dadamalda.create_compatible_storage.compat.DynamicTags;
 import net.dadamalda.create_compatible_storage.datagen.ModBlockTagsProvider;
+import net.dadamalda.create_compatible_storage.foundation.CCSNetwork;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
@@ -27,6 +29,8 @@ public class Create_compatible_storage {
     public Create_compatible_storage() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        MixinExtrasBootstrap.init();
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -45,7 +49,7 @@ public class Create_compatible_storage {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(CCSNetwork::register);
     }
 
     private void gatherData(final GatherDataEvent event) {
