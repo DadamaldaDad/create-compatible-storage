@@ -30,9 +30,11 @@ public class CCSTags {
     public static TagKey<Block> SD_DRAWERS_WITH_DOOR = tag("create_compatible_storage:sd/drawers_with_door");
     public static TagKey<Block> SD_DRAWERS = tag("create_compatible_storage:sd/drawers");
     // Furniture Refurbished
+    public static TagKey<Block> FR_MOUNTED_STORAGE = tag("create_compatible_storage/fr/mounted_storage");
     public static TagKey<Block> FR_DRAWERS = tag("create_compatible_storage:fr/drawers");
     public static TagKey<Block> FR_KITCHEN_DRAWERS = tag("create_compatible_storage:fr/kitchen_drawers");
     public static TagKey<Block> FR_STORAGE_CABINETS = tag("create_compatible_storage:fr/storage_cabinets");
+    public static TagKey<Block> FR_KITCHEN_STORAGE_CABINETS = tag("create_compatible_storage:fr/kitchen_storage_cabinets");
     public static TagKey<Block> FR_COOLERS = tag("create_compatible_storage:fr/coolers");
     public static TagKey<Block> FR_CRATES = tag("create_compatible_storage:fr/crates");
     public static TagKey<Block> FR_MAILBOXES = tag("create_compatible_storage:fr/mailboxes");

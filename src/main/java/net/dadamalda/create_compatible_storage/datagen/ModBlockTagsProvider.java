@@ -99,7 +99,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         COLOURS.forEach(colour -> {
             addBlocksToTag(CCSTags.FR_KITCHEN_DRAWERS, "refurbished_furniture:"+colour+"_kitchen_drawer");
-            addBlocksToTag(CCSTags.FR_STORAGE_CABINETS, "refurbished_furniture:"+colour+"_kitchen_storage_cabinet");
+            addBlocksToTag(CCSTags.FR_KITCHEN_STORAGE_CABINETS, "refurbished_furniture:"+colour+"_kitchen_storage_cabinet");
             addBlocksToTag(CCSTags.FR_COOLERS, "refurbished_furniture:"+colour+"_cooler");
         });
 
@@ -128,8 +128,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
             addBlocksToTag(CCSTags.FR_DRAWERS, "refurbished_furniture:"+wood_type+"_drawer");
             addBlocksToTag(CCSTags.FR_KITCHEN_DRAWERS, "refurbished_furniture:"+wood_type+"_kitchen_drawer");
-            addBlocksToTag(CCSTags.FR_STORAGE_CABINETS, "refurbished_furniture:"+wood_type+"_storage_cabinet",
-                    "refurbished_furniture:"+wood_type+"_kitchen_storage_cabinet");
+            addBlocksToTag(CCSTags.FR_STORAGE_CABINETS, "refurbished_furniture:"+wood_type+"_storage_cabinet");
+            addBlocksToTag(CCSTags.FR_KITCHEN_STORAGE_CABINETS, "refurbished_furniture:"+wood_type+"_kitchen_storage_cabinet");
             addBlocksToTag(CCSTags.FR_CRATES, "refurbished_furniture:"+wood_type+"_crate");
             addBlocksToTag(CCSTags.FR_MAILBOXES, "refurbished_furniture:"+wood_type+"_mail_box");
         });
@@ -173,8 +173,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS,
                 CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,  CCSTags.SD_BOOKSHELVES_WITH_DOOR, CCSTags.SD_DRAWERS_WITH_DOOR,
                 CCSTags.AF_DRAWERS,
-                CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_COOLERS, CCSTags.FR_DRAWERS,
-                CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES, CCSTags.FR_MAILBOXES);
+                CCSTags.FR_COOLERS, CCSTags.FR_CRATES, CCSTags.FR_MAILBOXES);
         addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
                 "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables");
@@ -199,6 +198,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addTagsToTag(CCSTags.SD_CABINET_SOUND,
                 CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,
                 CCSTags.SD_BOOKSHELVES_WITH_DOOR, CCSTags.SD_DRAWERS_WITH_DOOR);
+
+        addTagsToTag(CCSTags.FR_MOUNTED_STORAGE,
+                CCSTags.FR_DRAWERS, CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_KITCHEN_STORAGE_CABINETS);
     }
 
     private void addChest(String id) {

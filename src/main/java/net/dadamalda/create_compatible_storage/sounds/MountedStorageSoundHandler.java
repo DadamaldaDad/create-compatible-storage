@@ -28,6 +28,8 @@ public class MountedStorageSoundHandler {
             return MountedStorageSound.FR_KITCHEN_DRAWER;
         } else if(state.is(CCSTags.FR_STORAGE_CABINETS)) {
             return MountedStorageSound.FR_STORAGE_CABINET;
+        } else if(state.is(CCSTags.FR_KITCHEN_STORAGE_CABINETS)) {
+            return MountedStorageSound.FR_STORAGE_CABINET;
         } else if(state.is(CCSTags.FR_CRATES)) {
             return MountedStorageSound.FR_CRATE;
         } else if(state.is(CCSTags.FR_COOLERS)) {

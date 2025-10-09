@@ -60,6 +60,8 @@ public abstract class MountedItemStorageMixin {
             translationKey = "container.refurbished_furniture.kitchen_drawer";
         } else if (state.is(CCSTags.FR_STORAGE_CABINETS)) {
             translationKey = "container.refurbished_furniture.storage_cabinet";
+        } else if (state.is(CCSTags.FR_KITCHEN_STORAGE_CABINETS)) {
+            translationKey = "container.refurbished_furniture.storage_cabinet";
         } else if (state.is(CCSTags.FR_COOLERS)) {
             translationKey = "container.refurbished_furniture.cooler";
         } else if (state.is(CCSTags.FR_CRATES)) {

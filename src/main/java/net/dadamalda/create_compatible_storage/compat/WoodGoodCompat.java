@@ -40,7 +40,8 @@ public class WoodGoodCompat {
 
             addTag(CCSTags.FR_KITCHEN_DRAWERS, woodType, "refurbished_furniture:kitchen_drawer");
             addTag(CCSTags.FR_DRAWERS, woodType, "refurbished_furniture:drawer");
-            addTag(CCSTags.FR_STORAGE_CABINETS, woodType, "refurbished_furniture:storage_cabinet", "refurbished_furniture:kitchen_storage_cabinet");
+            addTag(CCSTags.FR_STORAGE_CABINETS, woodType, "refurbished_furniture:storage_cabinet");
+            addTag(CCSTags.FR_KITCHEN_STORAGE_CABINETS, woodType, "refurbished_furniture:kitchen_storage_cabinet");
             addTag(CCSTags.FR_CRATES, woodType, "refurbished_furniture:crate");
             addTag(CCSTags.FR_MAILBOXES, woodType, "refurbished_furniture:mail_box");
         }
