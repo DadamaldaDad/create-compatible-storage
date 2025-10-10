@@ -32,7 +32,7 @@ public class VectorMathUtils {
     }
 
     public static AABB makePixelAABB(int x1, int y1, int z1, int x2, int y2, int z2) {
-        return new AABB(x1/16d, y1/16d, z1/16d, x2/16d, y2/16d, z2/16d).inflate(1/160d);
+        return new AABB(x1/16d, y1/16d, z1/16d, x2/16d, y2/16d, z2/16d).inflate(1/1600d);
     }
 
     @Deprecated
