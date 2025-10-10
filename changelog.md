@@ -1,4 +1,2 @@
-- Added consistent container names for shulker boxes¨
-- Added proper sounds for barrels and shulker boxes
-- Added support for Another Furniture (drawers)
-- Sound related code changes
+- Furniture Refurbished storage blocks no longer open from any side
+- Added support for Ars Nouveau repositories

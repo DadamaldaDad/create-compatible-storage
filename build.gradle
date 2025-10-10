@@ -277,6 +277,7 @@ modrinth {
         optional.project("stone-chest")
         optional.project("handcrafted")
         optional.project("another-furniture")
+        optional.project("ars-nouveau")
     }
 }
 
@@ -306,6 +307,7 @@ curseforge {
             optionalDependency "refurbished-furniture"
             optionalDependency "handcrafted"
             optionalDependency "another-furniture"
+            optionalDependency "ars-nouveau"
         }
     }
 }
