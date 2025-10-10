@@ -35,6 +35,10 @@
     {
       "id": "#handcrafted:side_tables",
       "required": false
+    },
+    {
+      "id": "ars_nouveau:repository",
+      "required": false
     }
   ]
 }

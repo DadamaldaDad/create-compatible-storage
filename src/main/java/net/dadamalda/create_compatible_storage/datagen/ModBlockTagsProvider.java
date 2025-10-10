@@ -186,12 +186,17 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.SILENT_MOUNTED_STORAGE, CCSTags.BARREL_SOUND, CCSTags.SD_CABINET_SOUND,
                 CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_COOLERS, CCSTags.FR_DRAWERS,
                 CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES);
+        addBlocksToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
+                "ars_nouveau:repository");
 
         addTagsToTag(CCSTags.SILENT_MOUNTED_STORAGE,
                 CCSTags.FR_MAILBOXES);
         addTagsToTag(CCSTags.SILENT_MOUNTED_STORAGE,
                 "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
                 "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables");
+        addBlocksToTag(CCSTags.SILENT_MOUNTED_STORAGE,
+                "ars_nouveau:repository");
+
         addTagsToTag(CCSTags.BARREL_SOUND,
                 CCSTags.FD_CABINETS, CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS, CCSTags.AF_DRAWERS);
 
@@ -201,6 +206,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         addTagsToTag(CCSTags.FR_MOUNTED_STORAGE,
                 CCSTags.FR_DRAWERS, CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_KITCHEN_STORAGE_CABINETS);
+
+        addBlocksToTag(CCSTags.AN_REPOSITORY,
+                "ars_nouveau:repository");
     }
 
     private void addChest(String id) {

@@ -1,7 +1,8 @@
-// 1.20.1	2025-10-09T16:26:48.086834997	Tags for minecraft:block mod id create_compatible_storage
+// 1.20.1	2025-10-10T17:37:56.196726038	Tags for minecraft:block mod id create_compatible_storage
 69cd0a32603d926c3a3efeeaaeac9e831b932b77 data/create/tags/blocks/chest_mounted_storage.json
 811072e3bd922b6a646965c8b9f775a681baebb2 data/create/tags/blocks/simple_mounted_storage.json
-ced5afd9c9007096b9ce91bd750fc6efe4b80c64 data/create/tags/blocks/single_block_inventories.json
+921bfbb1dd3bfbcb15bf4c68a13611b0d271cb2f data/create/tags/blocks/single_block_inventories.json
+bd339de1d74b8c2864faa06ded48c0f783150686 data/create_compatible_storage/tags/blocks/an/repository.json
 ebde0f06cecf2afc389cbebc426c7c85c0c3ab80 data/create_compatible_storage/tags/blocks/barrel_sound.json
 6012a1edaad3135675a95c4038e60a83c2516970 data/create_compatible_storage/tags/blocks/fd/cabinets.json
 6fb68ecf001dfb74298016853b6aaae56588f868 data/create_compatible_storage/tags/blocks/fr/coolers.json
@@ -19,7 +20,7 @@ a556e9c86cd49967430c225ae65bf0d60c8bcf7b data/create_compatible_storage/tags/blo
 6f6f40ec4f7fa50bf80e36fd61723bdd55ef7552 data/create_compatible_storage/tags/blocks/sd/drawers_with_door.json
 adae3f54ac2ded489835fa992cea46bb772b0d8a data/create_compatible_storage/tags/blocks/sd/glass_cabinets.json
 5ac9756f5e91f1f9742bc3c3e06aee55ed9a7357 data/create_compatible_storage/tags/blocks/sd/small_drawers.json
-ea9cfbd5f93fe30dd818e0798969f14167470415 data/create_compatible_storage/tags/blocks/silent_mounted_storage.json
+b9c66aaffcf081bceb220f86b83c395c254984d8 data/create_compatible_storage/tags/blocks/silent_mounted_storage.json
 258ff35ac6114ec5c623ef399d39e3d92e627420 data/create_compatible_storage/tags/blocks/uncooperative_stationary_chests.json
 4ab0d49608d3366c0a576b7cbc682aab3c68d0a7 data/create_compatible_storage/tags/blocks/uncooperative_stationary_storage.json
 b3b35b07d0b9a28449d4d735e6f1a0ed33ec0643 data/minecraft/tags/blocks/create_compatible_storage/fr/mounted_storage.json

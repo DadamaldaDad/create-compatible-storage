@@ -31,6 +31,10 @@
     {
       "id": "#create_compatible_storage:fr/crates",
       "required": false
+    },
+    {
+      "id": "ars_nouveau:repository",
+      "required": false
     }
   ]
 }

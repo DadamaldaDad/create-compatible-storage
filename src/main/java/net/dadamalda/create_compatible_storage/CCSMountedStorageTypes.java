@@ -16,6 +16,10 @@ public class CCSMountedStorageTypes {
             .associateBlockTag(CCSTags.FR_MOUNTED_STORAGE)
             .register();
 
+    public static final RegistryEntry<RepositoryMountedStorageType> REPOSITORY = REGISTRATE.mountedItemStorage("repository", RepositoryMountedStorageType::new)
+            .associateBlockTag(CCSTags.AN_REPOSITORY)
+            .register();
+
     @Deprecated
     public static final RegistryEntry<SoundMountedStorageType> SOUND = REGISTRATE.mountedItemStorage("sound", SoundMountedStorageType::new)
             .register();
