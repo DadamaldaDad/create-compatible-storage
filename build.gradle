@@ -262,7 +262,6 @@ modrinth {
     gameVersions = ["1.20.1"]
     loaders = ["forge"]
     changelog = file("changelog.md").text
-    versionType = "alpha"
 
     dependencies {
         required.project("create")
