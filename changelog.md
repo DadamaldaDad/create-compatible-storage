@@ -1,2 +1,2 @@
-- Furniture Refurbished storage blocks no longer open from any side
-- Added support for Ars Nouveau repositories
+- Added support for bamboo closets (Woodworks)
+- Fixed passers (Create: Storage) not working with some storages on NeoForge

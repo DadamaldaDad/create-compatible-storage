@@ -86,7 +86,7 @@ public class MountedStorageSoundHandler {
             case WW_CLOSET -> level.playSound(
                     null, BlockPos.containing(pos),
                     /* getSound("woodworks:block.closet.open") */ SoundEvents.CHEST_OPEN, SoundSource.BLOCKS,
-                    1.0F, level.random.nextFloat() * 0.1F + 0.9F
+                    0.5F, level.random.nextFloat() * 0.1F + 0.9F
             );
         }
     }
@@ -136,7 +136,7 @@ public class MountedStorageSoundHandler {
             case WW_CLOSET -> level.playSound(
                     null, BlockPos.containing(pos),
                     /* getSound("woodworks:block.closet.close") */ SoundEvents.CHEST_CLOSE, SoundSource.BLOCKS,
-                    1.0F, level.random.nextFloat() * 0.1F + 0.9F
+                    0.5F, level.random.nextFloat() * 0.1F + 0.9F
             );
         }
     }
