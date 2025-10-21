@@ -42,6 +42,8 @@ public class CCSTags {
     public static TagKey<Block> AF_DRAWERS = tag("another_furniture:drawers");
     // Ars Nouveau
     public static TagKey<Block> AN_REPOSITORY = tag("create_compatible_storage:an/repository");
+    // Woodworks
+    public static TagKey<Block> WW_CLOSETS = tag("create_compatible_storage:ww/closets");
 
     public static TagKey<Block> tag(String path) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.parse(path));

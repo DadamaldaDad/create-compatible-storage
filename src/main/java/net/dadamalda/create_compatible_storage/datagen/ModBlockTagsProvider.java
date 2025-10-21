@@ -209,6 +209,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         addBlocksToTag(CCSTags.AN_REPOSITORY,
                 "ars_nouveau:repository");
+
+        addBlocksToTag(CCSTags.WW_CLOSETS,
+                "woodworks:bamboo_closet", "woodworks:trapped_bamboo_closet");
     }
 
     private void addChest(String id) {

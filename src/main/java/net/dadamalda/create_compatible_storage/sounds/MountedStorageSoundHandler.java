@@ -34,6 +34,8 @@ public class MountedStorageSoundHandler {
             return MountedStorageSound.FR_CRATE;
         } else if(state.is(CCSTags.FR_COOLERS)) {
             return MountedStorageSound.FR_COOLER;
+        } else if(state.is(CCSTags.WW_CLOSETS)) {
+            return MountedStorageSound.WW_CLOSET;
         } else {
             return MountedStorageSound.UNKNOWN;
         }
@@ -81,6 +83,11 @@ public class MountedStorageSoundHandler {
                     getSound("refurbished_furniture:block.cooler.open"), SoundSource.BLOCKS,
                     1.0F, level.random.nextFloat() * 0.1F + 0.9F
             );
+            case WW_CLOSET -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    /* getSound("woodworks:block.closet.open") */ SoundEvents.CHEST_OPEN, SoundSource.BLOCKS,
+                    1.0F, level.random.nextFloat() * 0.1F + 0.9F
+            );
         }
     }
 
@@ -124,6 +131,11 @@ public class MountedStorageSoundHandler {
             case FR_COOLER -> level.playSound(
                     null, BlockPos.containing(pos),
                     getSound("refurbished_furniture:block.cooler.close"), SoundSource.BLOCKS,
+                    1.0F, level.random.nextFloat() * 0.1F + 0.9F
+            );
+            case WW_CLOSET -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    /* getSound("woodworks:block.closet.close") */ SoundEvents.CHEST_CLOSE, SoundSource.BLOCKS,
                     1.0F, level.random.nextFloat() * 0.1F + 0.9F
             );
         }

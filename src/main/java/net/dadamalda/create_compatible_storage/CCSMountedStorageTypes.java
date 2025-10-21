@@ -20,6 +20,10 @@ public class CCSMountedStorageTypes {
             .associateBlockTag(CCSTags.AN_REPOSITORY)
             .register();
 
+    public static final RegistryEntry<ClosetMountedStorageType> CLOSET = REGISTRATE.mountedItemStorage("closet", ClosetMountedStorageType::new)
+            .associateBlockTag(CCSTags.WW_CLOSETS)
+            .register();
+
     @Deprecated
     public static final RegistryEntry<SoundMountedStorageType> SOUND = REGISTRATE.mountedItemStorage("sound", SoundMountedStorageType::new)
             .register();

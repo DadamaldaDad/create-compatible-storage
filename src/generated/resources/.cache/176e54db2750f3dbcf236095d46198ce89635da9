@@ -1,4 +1,4 @@
-// 1.20.1	2025-10-10T17:37:56.196726038	Tags for minecraft:block mod id create_compatible_storage
+// 1.20.1	2025-10-21T06:22:59.032666402	Tags for minecraft:block mod id create_compatible_storage
 69cd0a32603d926c3a3efeeaaeac9e831b932b77 data/create/tags/blocks/chest_mounted_storage.json
 811072e3bd922b6a646965c8b9f775a681baebb2 data/create/tags/blocks/simple_mounted_storage.json
 921bfbb1dd3bfbcb15bf4c68a13611b0d271cb2f data/create/tags/blocks/single_block_inventories.json
@@ -23,4 +23,5 @@ adae3f54ac2ded489835fa992cea46bb772b0d8a data/create_compatible_storage/tags/blo
 b9c66aaffcf081bceb220f86b83c395c254984d8 data/create_compatible_storage/tags/blocks/silent_mounted_storage.json
 258ff35ac6114ec5c623ef399d39e3d92e627420 data/create_compatible_storage/tags/blocks/uncooperative_stationary_chests.json
 4ab0d49608d3366c0a576b7cbc682aab3c68d0a7 data/create_compatible_storage/tags/blocks/uncooperative_stationary_storage.json
+05b06cc05cf8d472ba43e3fb03217f5386237605 data/create_compatible_storage/tags/blocks/ww/closets.json
 b3b35b07d0b9a28449d4d735e6f1a0ed33ec0643 data/minecraft/tags/blocks/create_compatible_storage/fr/mounted_storage.json

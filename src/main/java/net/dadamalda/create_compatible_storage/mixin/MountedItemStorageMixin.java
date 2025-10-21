@@ -71,8 +71,11 @@ public abstract class MountedItemStorageMixin {
             // Another Furniture
         } else if (state.is(CCSTags.AF_DRAWERS)) {
             translationKey = "container.another_furniture.drawer";
+            // Woodworks
+        } else if(state.is(CCSTags.WW_CLOSETS)) {
+            boolean isSingle = info.state().getValue(ChestBlock.TYPE) == ChestType.SINGLE;
+            translationKey = isSingle ? "container.woodworks.closet" : "container.woodworks.closetDouble";
         }
-
         if(!translationKey.isEmpty()) {
             cir.setReturnValue(
                     CreateLang.translateDirect("contraptions.moving_container", Component.translatable(translationKey)));
