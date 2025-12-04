@@ -57,6 +57,16 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             "blossom"
     );
 
+    List<String> GOETY_CHEST_TYPES = List.of(
+            "raiding",
+            "haunted",
+            "rotten",
+            "windswept",
+            "pine",
+            "chorus",
+            "corrupt_chorus"
+    );
+
     List<String> WOODWORKS_WOOD_TYPES = List.of(
             "autumnity,maple",
             "atmospheric,rosewood",
@@ -132,6 +142,13 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             addBlocksToTag(CCSTags.FR_KITCHEN_STORAGE_CABINETS, "refurbished_furniture:"+wood_type+"_kitchen_storage_cabinet");
             addBlocksToTag(CCSTags.FR_CRATES, "refurbished_furniture:"+wood_type+"_crate");
             addBlocksToTag(CCSTags.FR_MAILBOXES, "refurbished_furniture:"+wood_type+"_mail_box");
+        });
+
+        GOETY_CHEST_TYPES.forEach(chest_type -> {
+            addChests(List.of(
+                    "goety:"+chest_type+"_chest",
+                    "goety:trapped_"+chest_type+"_chest"
+            ));
         });
 
         WOODWORKS_WOOD_TYPES.forEach(wood_type -> {

@@ -265,6 +265,62 @@
       "required": false
     },
     {
+      "id": "goety:raiding_chest",
+      "required": false
+    },
+    {
+      "id": "goety:trapped_raiding_chest",
+      "required": false
+    },
+    {
+      "id": "goety:haunted_chest",
+      "required": false
+    },
+    {
+      "id": "goety:trapped_haunted_chest",
+      "required": false
+    },
+    {
+      "id": "goety:rotten_chest",
+      "required": false
+    },
+    {
+      "id": "goety:trapped_rotten_chest",
+      "required": false
+    },
+    {
+      "id": "goety:windswept_chest",
+      "required": false
+    },
+    {
+      "id": "goety:trapped_windswept_chest",
+      "required": false
+    },
+    {
+      "id": "goety:pine_chest",
+      "required": false
+    },
+    {
+      "id": "goety:trapped_pine_chest",
+      "required": false
+    },
+    {
+      "id": "goety:chorus_chest",
+      "required": false
+    },
+    {
+      "id": "goety:trapped_chorus_chest",
+      "required": false
+    },
+    {
+      "id": "goety:corrupt_chorus_chest",
+      "required": false
+    },
+    {
+      "id": "goety:trapped_corrupt_chorus_chest",
+      "required": false
+    },
+    {
       "id": "autumnity:maple_chest",
       "required": false
     },
