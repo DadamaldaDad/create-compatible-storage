@@ -53,6 +53,14 @@
       "required": false
     },
     {
+      "id": "#create_compatible_storage:fb/framed_secret_storage",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:fb/framed_chest",
+      "required": false
+    },
+    {
       "id": "#handcrafted:desks",
       "required": false
     },

@@ -44,6 +44,9 @@ public class CCSTags {
     public static TagKey<Block> AN_REPOSITORY = tag("create_compatible_storage:an/repository");
     // Woodworks
     public static TagKey<Block> WW_CLOSETS = tag("create_compatible_storage:ww/closets");
+    // Framed Blocks
+    public static TagKey<Block> FB_FRAMED_SECRET_STORAGE = tag("create_compatible_storage:fb/framed_secret_storage");
+    public static TagKey<Block> FB_FRAMED_CHEST = tag("create_compatible_storage:fb/framed_chest");
 
     public static TagKey<Block> tag(String path) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.parse(path));
