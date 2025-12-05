@@ -8,6 +8,7 @@ import com.simibubi.create.api.contraption.storage.item.WrapperMountedItemStorag
 import com.simibubi.create.content.contraptions.Contraption;
 import com.simibubi.create.foundation.utility.CreateCodecs;
 import net.dadamalda.create_compatible_storage.CCSMountedStorageTypes;
+import net.dadamalda.create_compatible_storage.foundation.ContraptionUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -46,7 +47,7 @@ public class RepositoryMountedStorage extends WrapperMountedItemStorage<Reposito
 
     @Override
     public void afterSync(Contraption contraption, BlockPos localPos) {
-        BlockEntity be = contraption.presentBlockEntities.get(localPos);
+        BlockEntity be = ContraptionUtils.getBlockEntity(contraption, localPos);
         if(be instanceof RepositoryTile repository) {
             for(int i = 0; i < 54; i++) {
                 repository.setItem(i, this.wrapped.getStackInSlot(i));
