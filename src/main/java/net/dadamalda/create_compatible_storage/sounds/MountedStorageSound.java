@@ -1,7 +1,7 @@
 package net.dadamalda.create_compatible_storage.sounds;
 
 public enum MountedStorageSound {
-    UNKNOWN, SILENT, BARREL, SHULKER_BOX,
+    UNKNOWN, SILENT, BARREL, SHULKER_BOX, CHEST,
     SD_CABINET_VARIANT,
     FR_DRAWER, FR_KITCHEN_DRAWER, FR_STORAGE_CABINET, FR_CRATE, FR_COOLER,
     WW_CLOSET

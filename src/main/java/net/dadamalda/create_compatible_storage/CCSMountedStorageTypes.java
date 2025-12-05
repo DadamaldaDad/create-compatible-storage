@@ -24,6 +24,14 @@ public class CCSMountedStorageTypes {
             .associateBlockTag(CCSTags.WW_CLOSETS)
             .register();
 
+    public static final RegistryEntry<IronChestMountedStorageType> IRON_CHEST = REGISTRATE.mountedItemStorage("iron_chest", IronChestMountedStorageType::new)
+            .associateBlockTag(CCSTags.IC_IRON_CHEST_MOUNTED_STORAGE)
+            .register();
+
+    public static final RegistryEntry<CrystalChestMountedStorageType> CRYSTAL_CHEST = REGISTRATE.mountedItemStorage("crystal_chest", CrystalChestMountedStorageType::new)
+            .associateBlockTag(CCSTags.IC_CRYSTAL_CHEST)
+            .register();
+
     @Deprecated
     public static final RegistryEntry<SoundMountedStorageType> SOUND = REGISTRATE.mountedItemStorage("sound", SoundMountedStorageType::new)
             .register();

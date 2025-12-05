@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "ironchest:dirt_chest",
+      "required": false
+    },
+    {
+      "id": "ironchest:trapped_dirt_chest",
+      "required": false
+    }
+  ]
+}

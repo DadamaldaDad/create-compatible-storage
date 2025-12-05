@@ -18,6 +18,8 @@ public class MountedStorageSoundHandler {
             return MountedStorageSound.BARREL;
         } else if(state.is(CCSTags.SHULKER_BOXES)) {
             return MountedStorageSound.SHULKER_BOX;
+        } else if(state.is(CCSTags.CHEST_SOUND)) {
+            return MountedStorageSound.CHEST;
         } else if(state.is(CCSTags.SILENT_MOUNTED_STORAGE)) {
             return MountedStorageSound.SILENT;
         } else if(state.is(CCSTags.SD_CABINET_SOUND)) {
@@ -51,6 +53,11 @@ public class MountedStorageSoundHandler {
             case SHULKER_BOX -> level.playSound(
                     null, BlockPos.containing(pos),
                     SoundEvents.SHULKER_BOX_OPEN, SoundSource.BLOCKS,
+                    0.5F, level.random.nextFloat() * 0.1F + 0.9F
+            );
+            case CHEST -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    SoundEvents.CHEST_OPEN, SoundSource.BLOCKS,
                     0.5F, level.random.nextFloat() * 0.1F + 0.9F
             );
             case SD_CABINET_VARIANT -> level.playSound(
@@ -101,6 +108,11 @@ public class MountedStorageSoundHandler {
             case SHULKER_BOX -> level.playSound(
                     null, BlockPos.containing(pos),
                     SoundEvents.SHULKER_BOX_CLOSE, SoundSource.BLOCKS,
+                    0.5F, level.random.nextFloat() * 0.1F + 0.9F
+            );
+            case CHEST -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    SoundEvents.CHEST_CLOSE, SoundSource.BLOCKS,
                     0.5F, level.random.nextFloat() * 0.1F + 0.9F
             );
             case SD_CABINET_VARIANT -> level.playSound(

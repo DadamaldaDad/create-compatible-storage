@@ -75,6 +75,21 @@ public abstract class MountedItemStorageMixin {
         } else if(state.is(CCSTags.WW_CLOSETS)) {
             boolean isSingle = info.state().getValue(ChestBlock.TYPE) == ChestType.SINGLE;
             translationKey = isSingle ? "container.woodworks.closet" : "container.woodworks.closetDouble";
+            // Iron Chests
+        } else if (state.is(CCSTags.IC_CRYSTAL_CHEST)) {
+            translationKey = "ironchest.container.crystal_chest";
+        } else if (state.is(CCSTags.IC_DIRT_CHEST)) {
+            translationKey = "ironchest.container.dirt_chest";
+        } else if (state.is(CCSTags.IC_COPPER_CHEST)) {
+            translationKey = "ironchest.container.copper_chest";
+        } else if (state.is(CCSTags.IC_IRON_CHEST)) {
+            translationKey = "ironchest.container.iron_chest";
+        } else if (state.is(CCSTags.IC_GOLD_CHEST)) {
+            translationKey = "ironchest.container.gold_chest";
+        } else if (state.is(CCSTags.IC_DIAMOND_CHEST)) {
+            translationKey = "ironchest.container.diamond_chest";
+        } else if (state.is(CCSTags.IC_OBSIDIAN_CHEST)) {
+            translationKey = "ironchest.container.obsidian_chest";
         }
         if(!translationKey.isEmpty()) {
             cir.setReturnValue(

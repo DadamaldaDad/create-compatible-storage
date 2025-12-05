@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#create_compatible_storage:ic/iron_chest_mounted_storage",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ic/crystal_chest",
+      "required": false
+    }
+  ]
+}

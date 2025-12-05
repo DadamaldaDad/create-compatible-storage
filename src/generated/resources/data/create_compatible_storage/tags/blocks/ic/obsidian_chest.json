@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "ironchest:obsidian_chest",
+      "required": false
+    },
+    {
+      "id": "ironchest:trapped_obsidian_chest",
+      "required": false
+    }
+  ]
+}

@@ -186,6 +186,14 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addBlocksToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 "farmersdelight:basket");
 
+        addBlocksToTag(CCSTags.IC_CRYSTAL_CHEST, "ironchest:crystal_chest", "ironchest:trapped_crystal_chest");
+        addBlocksToTag(CCSTags.IC_DIRT_CHEST, "ironchest:dirt_chest", "ironchest:trapped_dirt_chest");
+        addBlocksToTag(CCSTags.IC_COPPER_CHEST, "ironchest:copper_chest", "ironchest:trapped_copper_chest");
+        addBlocksToTag(CCSTags.IC_IRON_CHEST, "ironchest:iron_chest", "ironchest:trapped_iron_chest");
+        addBlocksToTag(CCSTags.IC_GOLD_CHEST, "ironchest:gold_chest", "ironchest:trapped_gold_chest");
+        addBlocksToTag(CCSTags.IC_DIAMOND_CHEST, "ironchest:diamond_chest", "ironchest:trapped_diamond_chest");
+        addBlocksToTag(CCSTags.IC_OBSIDIAN_CHEST, "ironchest:obsidian_chest", "ironchest:trapped_obsidian_chest");
+
         addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS,
                 CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,  CCSTags.SD_BOOKSHELVES_WITH_DOOR, CCSTags.SD_DRAWERS_WITH_DOOR,
@@ -229,6 +237,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         addBlocksToTag(CCSTags.WW_CLOSETS,
                 "woodworks:bamboo_closet", "woodworks:trapped_bamboo_closet");
+
+        addTagsToTag(CCSTags.IC_IRON_CHEST_MOUNTED_STORAGE,
+                CCSTags.IC_DIRT_CHEST, CCSTags.IC_COPPER_CHEST, CCSTags.IC_IRON_CHEST, CCSTags.IC_GOLD_CHEST, CCSTags.IC_DIAMOND_CHEST, CCSTags.IC_OBSIDIAN_CHEST);
+
+        addTagsToTag(CCSTags.CHEST_SOUND, CCSTags.IC_IRON_CHEST_MOUNTED_STORAGE, CCSTags.IC_CRYSTAL_CHEST);
     }
 
     private void addChest(String id) {

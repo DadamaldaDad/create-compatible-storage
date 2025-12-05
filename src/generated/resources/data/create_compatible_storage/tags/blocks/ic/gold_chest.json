@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "ironchest:gold_chest",
+      "required": false
+    },
+    {
+      "id": "ironchest:trapped_gold_chest",
+      "required": false
+    }
+  ]
+}

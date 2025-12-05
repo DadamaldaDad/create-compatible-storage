@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "#create_compatible_storage:ic/dirt_chest",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ic/copper_chest",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ic/iron_chest",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ic/gold_chest",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ic/diamond_chest",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ic/obsidian_chest",
+      "required": false
+    }
+  ]
+}

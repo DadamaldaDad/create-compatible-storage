@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "ironchest:crystal_chest",
+      "required": false
+    },
+    {
+      "id": "ironchest:trapped_crystal_chest",
+      "required": false
+    }
+  ]
+}
