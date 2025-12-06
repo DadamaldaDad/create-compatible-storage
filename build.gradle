@@ -282,6 +282,7 @@ modrinth {
         optional.project("another-furniture")
         optional.project("ars-nouveau")
         optional.project("iron-chests")
+        optional.project("goety")
     }
 }
 
@@ -313,6 +314,7 @@ curseforge {
             optionalDependency "another-furniture"
             optionalDependency "ars-nouveau"
             optionalDependency "iron-chests"
+            optionalDependency "goety"
         }
     }
 }
