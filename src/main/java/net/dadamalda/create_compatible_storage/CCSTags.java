@@ -55,6 +55,8 @@ public class CCSTags {
     public static TagKey<Block> IC_DIAMOND_CHEST = tag("create_compatible_storage:ic/diamond_chest");
     public static TagKey<Block> IC_OBSIDIAN_CHEST = tag("create_compatible_storage:ic/obsidian_chest");
 
+    public static TagKey<Block> NC_NETHER_CHEST_MOUNTED_STORAGE = tag("create_compatible_storage:nc/nether_chest_mounted_storage");
+
     public static TagKey<Block> tag(String path) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.parse(path));
     }

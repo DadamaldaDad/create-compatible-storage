@@ -186,6 +186,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addBlocksToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 "farmersdelight:basket");
 
+        addBlocksToTag(CCSTags.NC_NETHER_CHEST_MOUNTED_STORAGE, "netherchested:nether_chest");
+
         addBlocksToTag(CCSTags.IC_CRYSTAL_CHEST, "ironchest:crystal_chest", "ironchest:trapped_crystal_chest");
         addBlocksToTag(CCSTags.IC_DIRT_CHEST, "ironchest:dirt_chest", "ironchest:trapped_dirt_chest");
         addBlocksToTag(CCSTags.IC_COPPER_CHEST, "ironchest:copper_chest", "ironchest:trapped_copper_chest");

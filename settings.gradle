@@ -6,6 +6,10 @@ pluginManagement {
             url = 'https://maven.minecraftforge.net/'
         }
         maven { url = 'https://maven.parchmentmc.org' }
+        maven {
+            name = "Fuzs Mod Resources"
+            url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+        }
     }
 }
 

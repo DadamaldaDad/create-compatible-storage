@@ -32,6 +32,10 @@ public class CCSMountedStorageTypes {
             .associateBlockTag(CCSTags.IC_CRYSTAL_CHEST)
             .register();
 
+    public static final RegistryEntry<NetherChestMountedStorageType> NETHER_CHEST = REGISTRATE.mountedItemStorage("nether_chest", NetherChestMountedStorageType::new)
+            .associateBlockTag(CCSTags.NC_NETHER_CHEST_MOUNTED_STORAGE)
+            .register();
+
     @Deprecated
     public static final RegistryEntry<SoundMountedStorageType> SOUND = REGISTRATE.mountedItemStorage("sound", SoundMountedStorageType::new)
             .register();
