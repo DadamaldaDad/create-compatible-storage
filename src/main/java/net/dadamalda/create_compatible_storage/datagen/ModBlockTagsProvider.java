@@ -123,7 +123,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                     "lolmcv:"+wood_type+"_trapped_chest"
             ));
 
-            addBlocksToTag(CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS, "woodworks:"+wood_type+"_chest", "woodworks:trapped_"+wood_type+"_chest");
+            addBlocksToTag(CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS,
+                    "woodworks:"+wood_type+"_chest", "woodworks:trapped_"+wood_type+"_chest",
+                    "quark:"+wood_type+"_chest", "quark:"+wood_type+"_trapped_chest"
+                    );
 
             addBlocksToTag(CCSTags.FD_CABINETS, "farmersdelight:"+wood_type+"_cabinet");
 
@@ -167,6 +170,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                     "quark:"+chest_type+"_chest",
                     "quark:"+chest_type+"_trapped_chest"
             ));
+            addBlocksToTag(CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS,
+                    "quark:"+chest_type+"_chest", "quark:"+chest_type+"_trapped_chest");
         });
 
         STONE_CHEST_STONE_TYPES.forEach(stone_type -> {

@@ -24,7 +24,10 @@ public class WoodGoodCompat {
                     "woodworks:chest", "woodworks:trapped_chest",
                     "lolmcv:chest", "lolmcv:trapped_chest");
 
-            addTag(CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS, woodType, "woodworks:chest", "woodworks:trapped_chest");
+            addTag(CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS, woodType,
+                    "woodworks:chest", "woodworks:trapped_chest",
+                    "quark:chest", "quark:trapped_chest"
+            );
 
             addTag(CCSTags.FD_CABINETS, woodType, "farmersdelight:cabinet");
 
