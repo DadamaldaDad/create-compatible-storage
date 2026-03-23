@@ -246,6 +246,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addTagsToTag(CCSTags.IC_IRON_CHEST_MOUNTED_STORAGE,
                 CCSTags.IC_DIRT_CHEST, CCSTags.IC_COPPER_CHEST, CCSTags.IC_IRON_CHEST, CCSTags.IC_GOLD_CHEST, CCSTags.IC_DIAMOND_CHEST, CCSTags.IC_OBSIDIAN_CHEST);
 
+        addBlocksToTag(CCSTags.HX_COFFER_MOUNTED_STORAGE,
+                "hexerei:coffer");
+
         addTagsToTag(CCSTags.CHEST_SOUND, CCSTags.IC_IRON_CHEST_MOUNTED_STORAGE, CCSTags.IC_CRYSTAL_CHEST);
     }
 

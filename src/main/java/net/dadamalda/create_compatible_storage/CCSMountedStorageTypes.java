@@ -32,6 +32,10 @@ public class CCSMountedStorageTypes {
             .associateBlockTag(CCSTags.IC_CRYSTAL_CHEST)
             .register();
 
+    public static final RegistryEntry<CofferMountedStorageType> COFFER = REGISTRATE.mountedItemStorage("coffer", CofferMountedStorageType::new)
+            .associateBlockTag(CCSTags.HX_COFFER_MOUNTED_STORAGE)
+            .register();
+
     @Deprecated
     public static final RegistryEntry<SoundMountedStorageType> SOUND = REGISTRATE.mountedItemStorage("sound", SoundMountedStorageType::new)
             .register();
