@@ -35,6 +35,8 @@ public abstract class MountedItemStorageMixin {
             translationKey = isSingle ? "container.chest" : "container.chestDouble";
         } else if (state.is(CCSTags.SHULKER_BOXES)) {
             translationKey = "container.shulkerBox";
+        } else if (state.is(CCSTags.BARREL_NAME)) {
+            translationKey = "container.barrel";
             // Farmer's Delight
         } else if (state.is(CCSTags.FD_CABINETS)) {
             translationKey = "farmersdelight.container.cabinet";

@@ -120,13 +120,22 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                     "woodworks:"+wood_type+"_chest",
                     "woodworks:trapped_"+wood_type+"_chest",
                     "lolmcv:"+wood_type+"_chest",
-                    "lolmcv:"+wood_type+"_trapped_chest"
+                    "lolmcv:"+wood_type+"_trapped_chest",
+                    "carved_wood:"+wood_type+"_chest",
+                    "carved_wood:trapped_"+wood_type+"_chest"
             ));
 
             addBlocksToTag(CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS,
                     "woodworks:"+wood_type+"_chest", "woodworks:trapped_"+wood_type+"_chest",
                     "quark:"+wood_type+"_chest", "quark:"+wood_type+"_trapped_chest"
                     );
+
+            addBlocksToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
+                    "carved_wood:"+wood_type+"_barrel");
+            addBlocksToTag(CCSTags.BARREL_SOUND,
+                    "carved_wood:"+wood_type+"_barrel");
+            addBlocksToTag(CCSTags.BARREL_NAME,
+                    "carved_wood:"+wood_type+"_barrel");
 
             addBlocksToTag(CCSTags.FD_CABINETS, "farmersdelight:"+wood_type+"_cabinet");
 

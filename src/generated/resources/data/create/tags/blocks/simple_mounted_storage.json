@@ -1,6 +1,50 @@
 {
   "values": [
     {
+      "id": "carved_wood:oak_barrel",
+      "required": false
+    },
+    {
+      "id": "carved_wood:spruce_barrel",
+      "required": false
+    },
+    {
+      "id": "carved_wood:birch_barrel",
+      "required": false
+    },
+    {
+      "id": "carved_wood:jungle_barrel",
+      "required": false
+    },
+    {
+      "id": "carved_wood:acacia_barrel",
+      "required": false
+    },
+    {
+      "id": "carved_wood:dark_oak_barrel",
+      "required": false
+    },
+    {
+      "id": "carved_wood:crimson_barrel",
+      "required": false
+    },
+    {
+      "id": "carved_wood:warped_barrel",
+      "required": false
+    },
+    {
+      "id": "carved_wood:mangrove_barrel",
+      "required": false
+    },
+    {
+      "id": "carved_wood:bamboo_barrel",
+      "required": false
+    },
+    {
+      "id": "carved_wood:cherry_barrel",
+      "required": false
+    },
+    {
       "id": "#create_compatible_storage:fd/cabinets",
       "required": false
     },

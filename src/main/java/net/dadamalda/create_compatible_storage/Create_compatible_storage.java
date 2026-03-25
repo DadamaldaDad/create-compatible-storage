@@ -50,6 +50,7 @@ public class Create_compatible_storage {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(CCSNetwork::register);
+        event.enqueueWork(CCSMovementBehaviours::register);
     }
 
     private void gatherData(final GatherDataEvent event) {

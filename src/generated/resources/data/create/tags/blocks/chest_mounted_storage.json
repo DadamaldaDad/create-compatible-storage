@@ -25,6 +25,14 @@
       "required": false
     },
     {
+      "id": "carved_wood:oak_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:trapped_oak_chest",
+      "required": false
+    },
+    {
       "id": "quark:spruce_chest",
       "required": false
     },
@@ -46,6 +54,14 @@
     },
     {
       "id": "lolmcv:spruce_trapped_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:spruce_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:trapped_spruce_chest",
       "required": false
     },
     {
@@ -73,6 +89,14 @@
       "required": false
     },
     {
+      "id": "carved_wood:birch_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:trapped_birch_chest",
+      "required": false
+    },
+    {
       "id": "quark:jungle_chest",
       "required": false
     },
@@ -94,6 +118,14 @@
     },
     {
       "id": "lolmcv:jungle_trapped_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:jungle_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:trapped_jungle_chest",
       "required": false
     },
     {
@@ -121,6 +153,14 @@
       "required": false
     },
     {
+      "id": "carved_wood:acacia_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:trapped_acacia_chest",
+      "required": false
+    },
+    {
       "id": "quark:dark_oak_chest",
       "required": false
     },
@@ -142,6 +182,14 @@
     },
     {
       "id": "lolmcv:dark_oak_trapped_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:dark_oak_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:trapped_dark_oak_chest",
       "required": false
     },
     {
@@ -169,6 +217,14 @@
       "required": false
     },
     {
+      "id": "carved_wood:crimson_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:trapped_crimson_chest",
+      "required": false
+    },
+    {
       "id": "quark:warped_chest",
       "required": false
     },
@@ -190,6 +246,14 @@
     },
     {
       "id": "lolmcv:warped_trapped_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:warped_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:trapped_warped_chest",
       "required": false
     },
     {
@@ -217,6 +281,14 @@
       "required": false
     },
     {
+      "id": "carved_wood:mangrove_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:trapped_mangrove_chest",
+      "required": false
+    },
+    {
       "id": "quark:bamboo_chest",
       "required": false
     },
@@ -241,6 +313,14 @@
       "required": false
     },
     {
+      "id": "carved_wood:bamboo_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:trapped_bamboo_chest",
+      "required": false
+    },
+    {
       "id": "quark:cherry_chest",
       "required": false
     },
@@ -262,6 +342,14 @@
     },
     {
       "id": "lolmcv:cherry_trapped_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:cherry_chest",
+      "required": false
+    },
+    {
+      "id": "carved_wood:trapped_cherry_chest",
       "required": false
     },
     {
