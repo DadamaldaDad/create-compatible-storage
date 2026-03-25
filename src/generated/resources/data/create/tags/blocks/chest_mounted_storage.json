@@ -639,6 +639,18 @@
     {
       "id": "stonechest:chest_tuff",
       "required": false
+    },
+    {
+      "id": "hexerei:willow_chest",
+      "required": false
+    },
+    {
+      "id": "hexerei:witch_hazel_chest",
+      "required": false
+    },
+    {
+      "id": "hexerei:mahogany_chest",
+      "required": false
     }
   ]
 }
