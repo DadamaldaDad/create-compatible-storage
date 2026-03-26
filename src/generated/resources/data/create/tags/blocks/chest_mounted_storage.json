@@ -651,6 +651,38 @@
     {
       "id": "hexerei:mahogany_chest",
       "required": false
+    },
+    {
+      "id": "twilightforest:twilight_oak_chest",
+      "required": false
+    },
+    {
+      "id": "twilightforest:canopy_chest",
+      "required": false
+    },
+    {
+      "id": "twilightforest:mangrove_chest",
+      "required": false
+    },
+    {
+      "id": "twilightforest:dark_chest",
+      "required": false
+    },
+    {
+      "id": "twilightforest:time_chest",
+      "required": false
+    },
+    {
+      "id": "twilightforest:transformation_chest",
+      "required": false
+    },
+    {
+      "id": "twilightforest:mining_chest",
+      "required": false
+    },
+    {
+      "id": "twilightforest:sorting_chest",
+      "required": false
     }
   ]
 }

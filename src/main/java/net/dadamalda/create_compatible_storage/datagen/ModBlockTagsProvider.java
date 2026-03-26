@@ -107,6 +107,17 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             "mahogany"
     );
 
+    List<String> TWILIGHT_FOREST_WOOD_TYPES = List.of(
+            "twilight_oak",
+            "canopy",
+            "mangrove",
+            "dark",
+            "time",
+            "transformation",
+            "mining",
+            "sorting"
+    );
+
     public ModBlockTagsProvider(DataGenerator generator, CompletableFuture<HolderLookup.Provider> registries, ExistingFileHelper existingFileHelper) {
         super(generator.getPackOutput(), registries, Create_compatible_storage.MODID, existingFileHelper);
     }
@@ -197,6 +208,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         HEXEREI_WOOD_TYPES.forEach(wood_type -> {
             addChest("hexerei:"+wood_type+"_chest");
+        });
+
+        TWILIGHT_FOREST_WOOD_TYPES.forEach(wood_type -> {
+            addChest("twilightforest:"+wood_type+"_chest");
         });
 
         addBlocksToTag(CCSTags.FD_CABINETS, "mynethersdelight:red_nether_bricks_cabinet", "mynethersdelight:nether_bricks_cabinet",
