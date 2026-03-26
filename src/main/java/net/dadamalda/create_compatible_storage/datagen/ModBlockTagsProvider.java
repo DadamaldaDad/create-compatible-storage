@@ -214,6 +214,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             addChest("twilightforest:"+wood_type+"_chest");
         });
 
+        addChests(List.of(
+                "ars_nouveau:archwood_chest"
+        ));
+
         addBlocksToTag(CCSTags.FD_CABINETS, "mynethersdelight:red_nether_bricks_cabinet", "mynethersdelight:nether_bricks_cabinet",
                 "mynethersdelight:blackstone_bricks_cabinet", "mynethersdelight:powdery_cabinet");
 

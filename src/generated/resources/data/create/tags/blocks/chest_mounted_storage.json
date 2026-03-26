@@ -683,6 +683,10 @@
     {
       "id": "twilightforest:sorting_chest",
       "required": false
+    },
+    {
+      "id": "ars_nouveau:archwood_chest",
+      "required": false
     }
   ]
 }
