@@ -1,3 +1,5 @@
-- Added support for Iron Chests (chest tiers, partial crystal chest support)
-- Fixed a crash with repositories and Create 6.0.7 or higher
-- Set a proper minimum Forge version for clearer error messages
+- Added support for Carved Wood (chest and barrel variants)
+- Made Carved Wood campfire variants smoke on contraptions
+- Added support for Hexerei (chest variants)
+- Added support for Twilight Forest (chest variants)
+- Made archwood chests from Ars Nouveau work on contraptions
