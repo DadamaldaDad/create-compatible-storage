@@ -28,10 +28,14 @@ public class CCSMovementBehaviours {
         );
 
         WOOD_TYPES.forEach((wood_type) -> {
-                MovementBehaviour.REGISTRY.register(
-                        BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("carved_wood", wood_type+"_campfire")),
-                        new CampfireMovementBehaviour()
-                );
+            MovementBehaviour.REGISTRY.register(
+                    BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("carved_wood", wood_type + "_campfire")),
+                    new CampfireMovementBehaviour()
+            );
+            MovementBehaviour.REGISTRY.register(
+                    BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("carved_wood", "soul_"+wood_type+"_campfire")),
+                    new CampfireMovementBehaviour()
+            );
         });
     }
 }
