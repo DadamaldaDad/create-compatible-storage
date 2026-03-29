@@ -149,6 +149,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
             addBlocksToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                     "carved_wood:"+wood_type+"_barrel");
+            addBlocksToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
+                    "carved_wood:"+wood_type+"_barrel");
             addBlocksToTag(CCSTags.BARREL_SOUND,
                     "carved_wood:"+wood_type+"_barrel");
             addBlocksToTag(CCSTags.BARREL_NAME,

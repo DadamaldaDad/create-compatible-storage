@@ -1,7 +1,7 @@
-// 1.20.1	2026-03-29T17:56:35.828935431	Tags for minecraft:block mod id create_compatible_storage
+// 1.20.1	2026-03-29T20:47:18.332889306	Tags for minecraft:block mod id create_compatible_storage
 5f7e0e0e232ddeead45f5a721271c67c438d8cc2 data/create/tags/blocks/chest_mounted_storage.json
 1e0e7fe0e2e3fbf49a51ef302daa44e09927ec16 data/create/tags/blocks/simple_mounted_storage.json
-921bfbb1dd3bfbcb15bf4c68a13611b0d271cb2f data/create/tags/blocks/single_block_inventories.json
+c9893c4a6a6db12b7905e128a4bb74fed9e81188 data/create/tags/blocks/single_block_inventories.json
 bd339de1d74b8c2864faa06ded48c0f783150686 data/create_compatible_storage/tags/blocks/an/repository.json
 c89ddac042d071aaf0dd1e183d12988d534eafbc data/create_compatible_storage/tags/blocks/barrel_name.json
 f5722d6432c545036abb88498626407e919d5aa5 data/create_compatible_storage/tags/blocks/barrel_sound.json
