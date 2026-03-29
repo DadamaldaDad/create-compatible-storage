@@ -657,7 +657,15 @@
       "required": false
     },
     {
+      "id": "twilightforest:twilight_oak_trapped_chest",
+      "required": false
+    },
+    {
       "id": "twilightforest:canopy_chest",
+      "required": false
+    },
+    {
+      "id": "twilightforest:canopy_trapped_chest",
       "required": false
     },
     {
@@ -665,7 +673,15 @@
       "required": false
     },
     {
+      "id": "twilightforest:mangrove_trapped_chest",
+      "required": false
+    },
+    {
       "id": "twilightforest:dark_chest",
+      "required": false
+    },
+    {
+      "id": "twilightforest:dark_trapped_chest",
       "required": false
     },
     {
@@ -673,7 +689,15 @@
       "required": false
     },
     {
+      "id": "twilightforest:time_trapped_chest",
+      "required": false
+    },
+    {
       "id": "twilightforest:transformation_chest",
+      "required": false
+    },
+    {
+      "id": "twilightforest:transformation_trapped_chest",
       "required": false
     },
     {
@@ -681,7 +705,15 @@
       "required": false
     },
     {
+      "id": "twilightforest:mining_trapped_chest",
+      "required": false
+    },
+    {
       "id": "twilightforest:sorting_chest",
+      "required": false
+    },
+    {
+      "id": "twilightforest:sorting_trapped_chest",
       "required": false
     },
     {

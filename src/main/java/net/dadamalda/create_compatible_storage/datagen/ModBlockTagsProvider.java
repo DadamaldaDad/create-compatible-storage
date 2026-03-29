@@ -211,7 +211,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         });
 
         TWILIGHT_FOREST_WOOD_TYPES.forEach(wood_type -> {
-            addChest("twilightforest:"+wood_type+"_chest");
+            addChests(List.of(
+                    "twilightforest:"+wood_type+"_chest",
+                    "twilightforest:"+wood_type+"_trapped_chest"
+            ));
         });
 
         addChests(List.of(
