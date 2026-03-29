@@ -283,6 +283,8 @@ modrinth {
         optional.project("ars-nouveau")
         optional.project("iron-chests")
         optional.project("goety")
+        optional.project("carved-wood")
+        optional.project("hexerei")
     }
 }
 
@@ -315,6 +317,9 @@ curseforge {
             optionalDependency "ars-nouveau"
             optionalDependency "iron-chests"
             optionalDependency "goety"
+            optionalDependency "carved-wood"
+            optionalDependency "hexerei"
+            optionalDependency "the-twilight-forest"
         }
     }
 }
