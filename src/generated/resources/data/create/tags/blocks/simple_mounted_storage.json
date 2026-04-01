@@ -53,6 +53,18 @@
       "required": false
     },
     {
+      "id": "alexscaves:metal_barrel",
+      "required": false
+    },
+    {
+      "id": "alexscaves:rusty_barrel",
+      "required": false
+    },
+    {
+      "id": "alexscaves:gingerbarrel",
+      "required": false
+    },
+    {
       "id": "#create_compatible_storage:sd/drawers",
       "required": false
     },

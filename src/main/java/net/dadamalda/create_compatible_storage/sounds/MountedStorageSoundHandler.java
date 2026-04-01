@@ -38,6 +38,8 @@ public class MountedStorageSoundHandler {
             return MountedStorageSound.FR_COOLER;
         } else if(state.is(CCSTags.WW_CLOSETS)) {
             return MountedStorageSound.WW_CLOSET;
+        } else if(state.is(CCSTags.AC_METAL_BARREL_SOUND)) {
+            return MountedStorageSound.AC_METAL_BARREL;
         } else {
             return MountedStorageSound.UNKNOWN;
         }
@@ -95,6 +97,11 @@ public class MountedStorageSoundHandler {
                     /* getSound("woodworks:block.closet.open") */ SoundEvents.CHEST_OPEN, SoundSource.BLOCKS,
                     0.5F, level.random.nextFloat() * 0.1F + 0.9F
             );
+            case AC_METAL_BARREL -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    getSound("alexscaves:metal_barrel_lid"), SoundSource.BLOCKS,
+                    0.5F, level.random.nextFloat() * 0.1F + 0.9F
+            );
         }
     }
 
@@ -148,6 +155,11 @@ public class MountedStorageSoundHandler {
             case WW_CLOSET -> level.playSound(
                     null, BlockPos.containing(pos),
                     /* getSound("woodworks:block.closet.close") */ SoundEvents.CHEST_CLOSE, SoundSource.BLOCKS,
+                    0.5F, level.random.nextFloat() * 0.1F + 0.9F
+            );
+            case AC_METAL_BARREL -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    getSound("alexscaves:metal_barrel_lid"), SoundSource.BLOCKS,
                     0.5F, level.random.nextFloat() * 0.1F + 0.9F
             );
         }

@@ -232,7 +232,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 CCSTags.FD_CABINETS);
         addBlocksToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
-                "farmersdelight:basket");
+                "farmersdelight:basket",
+                "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel");
 
         addBlocksToTag(CCSTags.IC_CRYSTAL_CHEST, "ironchest:crystal_chest", "ironchest:trapped_crystal_chest");
         addBlocksToTag(CCSTags.IC_DIRT_CHEST, "ironchest:dirt_chest", "ironchest:trapped_dirt_chest");
@@ -260,7 +261,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_COOLERS, CCSTags.FR_DRAWERS,
                 CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES);
         addBlocksToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
-                "ars_nouveau:repository");
+                "ars_nouveau:repository",
+                "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel");
 
         addTagsToTag(CCSTags.SILENT_MOUNTED_STORAGE,
                 CCSTags.FR_MAILBOXES);
@@ -288,6 +290,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         addTagsToTag(CCSTags.IC_IRON_CHEST_MOUNTED_STORAGE,
                 CCSTags.IC_DIRT_CHEST, CCSTags.IC_COPPER_CHEST, CCSTags.IC_IRON_CHEST, CCSTags.IC_GOLD_CHEST, CCSTags.IC_DIAMOND_CHEST, CCSTags.IC_OBSIDIAN_CHEST);
+
+        addBlocksToTag(CCSTags.AC_METAL_BARREL_SOUND, "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel");
+        addBlocksToTag(CCSTags.AC_METAL_BARREL_NAME, "alexscaves:metal_barrel", "alexscaves:rusty_barrel");
+        addBlocksToTag(CCSTags.AC_GINGERBARREL_NAME, "alexscaves:gingerbarrel");
 
         addTagsToTag(CCSTags.CHEST_SOUND, CCSTags.IC_IRON_CHEST_MOUNTED_STORAGE, CCSTags.IC_CRYSTAL_CHEST);
     }

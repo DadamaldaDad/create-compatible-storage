@@ -55,6 +55,10 @@ public class CCSTags {
     public static TagKey<Block> IC_GOLD_CHEST = tag("create_compatible_storage:ic/gold_chest");
     public static TagKey<Block> IC_DIAMOND_CHEST = tag("create_compatible_storage:ic/diamond_chest");
     public static TagKey<Block> IC_OBSIDIAN_CHEST = tag("create_compatible_storage:ic/obsidian_chest");
+    // Alex's Caves
+    public static TagKey<Block> AC_METAL_BARREL_SOUND = tag("create_compatible_storage:ac/metal_barrel_sound");
+    public static TagKey<Block> AC_METAL_BARREL_NAME = tag("create_compatible_storage:ac/metal_barrel_name");
+    public static TagKey<Block> AC_GINGERBARREL_NAME = tag("create_compatible_storage:ac/gingerbarrel_name");
 
     public static TagKey<Block> tag(String path) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.parse(path));

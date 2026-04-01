@@ -92,6 +92,10 @@ public abstract class MountedItemStorageMixin {
             translationKey = "ironchest.container.diamond_chest";
         } else if (state.is(CCSTags.IC_OBSIDIAN_CHEST)) {
             translationKey = "ironchest.container.obsidian_chest";
+        } else if (state.is(CCSTags.AC_METAL_BARREL_NAME)) {
+            translationKey = "block.alexscaves.metal_barrel";
+        } else if (state.is(CCSTags.AC_GINGERBARREL_NAME)) {
+            translationKey = "block.alexscaves.gingerbarrel";
         }
         if(!translationKey.isEmpty()) {
             cir.setReturnValue(

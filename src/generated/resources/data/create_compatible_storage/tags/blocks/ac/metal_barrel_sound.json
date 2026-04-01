@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "alexscaves:metal_barrel",
+      "required": false
+    },
+    {
+      "id": "alexscaves:rusty_barrel",
+      "required": false
+    },
+    {
+      "id": "alexscaves:gingerbarrel",
+      "required": false
+    }
+  ]
+}
