@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "alexscaves:gingerbread_door",
+      "required": false
+    },
+    {
+      "id": "alexscaves:frosted_gingerbread_door",
+      "required": false
+    }
+  ]
+}

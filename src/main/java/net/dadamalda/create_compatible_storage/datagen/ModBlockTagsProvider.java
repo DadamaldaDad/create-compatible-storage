@@ -243,6 +243,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addBlocksToTag(CCSTags.IC_DIAMOND_CHEST, "ironchest:diamond_chest", "ironchest:trapped_diamond_chest");
         addBlocksToTag(CCSTags.IC_OBSIDIAN_CHEST, "ironchest:obsidian_chest", "ironchest:trapped_obsidian_chest");
 
+        addBlocksToTag(CCSTags.AC_GINGERBREAD_DOORS,
+                "alexscaves:gingerbread_door", "alexscaves:frosted_gingerbread_door");
+
         addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS,
                 CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,  CCSTags.SD_BOOKSHELVES_WITH_DOOR, CCSTags.SD_DRAWERS_WITH_DOOR,
@@ -294,6 +297,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addBlocksToTag(CCSTags.AC_METAL_BARREL_SOUND, "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel");
         addBlocksToTag(CCSTags.AC_METAL_BARREL_NAME, "alexscaves:metal_barrel", "alexscaves:rusty_barrel");
         addBlocksToTag(CCSTags.AC_GINGERBARREL_NAME, "alexscaves:gingerbarrel");
+
+        addTagsToTag(CCSTags.BRITTLE, CCSTags.AC_GINGERBREAD_DOORS);
 
         addTagsToTag(CCSTags.CHEST_SOUND, CCSTags.IC_IRON_CHEST_MOUNTED_STORAGE, CCSTags.IC_CRYSTAL_CHEST);
     }

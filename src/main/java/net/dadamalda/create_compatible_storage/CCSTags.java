@@ -12,6 +12,7 @@ public class CCSTags {
     public static TagKey<Block> CHEST_MOUNTED_STORAGE = tag("create:chest_mounted_storage");
     public static TagKey<Block> SIMPLE_MOUNTED_STORAGE = tag("create:simple_mounted_storage");
     public static TagKey<Block> SINGLE_BLOCK_INVENTORIES = tag("create:single_block_inventories");
+    public static TagKey<Block> BRITTLE = tag("create:brittle");
     // Generic
     public static TagKey<Block> SILENT_MOUNTED_STORAGE = tag("create_compatible_storage:silent_mounted_storage");
     public static TagKey<Block> UNCOOPERATIVE_MOUNTED_STORAGE = tag("create_compatible_storage:uncooperative_mounted_storage");
@@ -59,6 +60,7 @@ public class CCSTags {
     public static TagKey<Block> AC_METAL_BARREL_SOUND = tag("create_compatible_storage:ac/metal_barrel_sound");
     public static TagKey<Block> AC_METAL_BARREL_NAME = tag("create_compatible_storage:ac/metal_barrel_name");
     public static TagKey<Block> AC_GINGERBARREL_NAME = tag("create_compatible_storage:ac/gingerbarrel_name");
+    public static TagKey<Block> AC_GINGERBREAD_DOORS = tag("create_compatible_storage:ac/gingerbread_doors");
 
     public static TagKey<Block> tag(String path) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.parse(path));

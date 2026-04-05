@@ -1,16 +1,21 @@
 package net.dadamalda.create_compatible_storage;
 
+import com.simibubi.create.api.behaviour.interaction.MovingInteractionBehaviour;
 import com.simibubi.create.api.behaviour.movement.MovementBehaviour;
+import com.simibubi.create.api.contraption.BlockMovementChecks;
+import com.simibubi.create.api.registry.SimpleRegistry;
 import com.simibubi.create.content.contraptions.behaviour.CampfireMovementBehaviour;
+import net.dadamalda.create_compatible_storage.contraption_behaviours.GingerbreadDoorMovingInteraction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.fml.ModList;
 
 import java.util.List;
 
-public class CCSMovementBehaviours {
+public class CCSContraptionBehaviours {
     public static void register() {
         if(ModList.get().isLoaded("carved_wood")) registerCarvedWood();
+        if(ModList.get().isLoaded("alexscaves")) registerAlexsCaves();
     }
 
     public static void registerCarvedWood() {
@@ -37,5 +42,10 @@ public class CCSMovementBehaviours {
                     new CampfireMovementBehaviour()
             );
         });
+    }
+
+    public static void registerAlexsCaves() {
+        MovingInteractionBehaviour.REGISTRY.registerProvider(SimpleRegistry.Provider.forBlockTag(CCSTags.AC_GINGERBREAD_DOORS, new GingerbreadDoorMovingInteraction()));
+        BlockMovementChecks.registerAttachedCheck(new GingerbreadDoorMovingInteraction());
     }
 }
