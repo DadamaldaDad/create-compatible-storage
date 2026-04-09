@@ -118,6 +118,26 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             "sorting"
     );
 
+    List<String> COLOUR_SUFFIXES = List.of(
+            "",
+            "_white",
+            "_light_gray",
+            "_gray",
+            "_black",
+            "_brown",
+            "_red",
+            "_orange",
+            "_yellow",
+            "_lime",
+            "_green",
+            "_cyan",
+            "_light_blue",
+            "_blue",
+            "_purple",
+            "_magenta",
+            "_pink"
+    );
+
     public ModBlockTagsProvider(DataGenerator generator, CompletableFuture<HolderLookup.Provider> registries, ExistingFileHelper existingFileHelper) {
         super(generator.getPackOutput(), registries, Create_compatible_storage.MODID, existingFileHelper);
     }
@@ -217,6 +237,17 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                     "twilightforest:"+wood_type+"_chest",
                     "twilightforest:"+wood_type+"_trapped_chest"
             ));
+        });
+
+        COLOUR_SUFFIXES.forEach(suffix -> {
+            addBlocksToTag(CCSTags.ISB_IRON_SHULKER_BOX_MOUNTED_STORAGE,
+                    "ironshulkerbox:copper_shulker_box"+suffix,
+                    "ironshulkerbox:iron_shulker_box"+suffix,
+                    "ironshulkerbox:gold_shulker_box"+suffix,
+                    "ironshulkerbox:diamond_shulker_box"+suffix,
+                    "ironshulkerbox:obsidian_shulker_box"+suffix,
+                    "ironshulkerbox:crystal_shulker_box"+suffix
+                    );
         });
 
         addChests(List.of(

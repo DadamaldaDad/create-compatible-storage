@@ -32,6 +32,10 @@ public class CCSMountedStorageTypes {
             .associateBlockTag(CCSTags.IC_CRYSTAL_CHEST)
             .register();
 
+    public static final RegistryEntry<IronShulkerBoxMountedStorageType> IRON_SHULKER_BOX = REGISTRATE.mountedItemStorage("iron_shulker_box", IronShulkerBoxMountedStorageType::new)
+            .associateBlockTag(CCSTags.ISB_IRON_SHULKER_BOX_MOUNTED_STORAGE)
+            .register();
+
     @Deprecated
     public static final RegistryEntry<SoundMountedStorageType> SOUND = REGISTRATE.mountedItemStorage("sound", SoundMountedStorageType::new)
             .register();

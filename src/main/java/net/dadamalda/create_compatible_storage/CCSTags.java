@@ -56,6 +56,8 @@ public class CCSTags {
     public static TagKey<Block> IC_GOLD_CHEST = tag("create_compatible_storage:ic/gold_chest");
     public static TagKey<Block> IC_DIAMOND_CHEST = tag("create_compatible_storage:ic/diamond_chest");
     public static TagKey<Block> IC_OBSIDIAN_CHEST = tag("create_compatible_storage:ic/obsidian_chest");
+    // Iron Shulker Boxes
+    public static TagKey<Block> ISB_IRON_SHULKER_BOX_MOUNTED_STORAGE = tag("create_compatible_storage:isb/iron_shulker_box_mounted_storage");
     // Alex's Caves
     public static TagKey<Block> AC_METAL_BARREL_SOUND = tag("create_compatible_storage:ac/metal_barrel_sound");
     public static TagKey<Block> AC_METAL_BARREL_NAME = tag("create_compatible_storage:ac/metal_barrel_name");
