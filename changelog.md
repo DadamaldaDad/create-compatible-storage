@@ -1,5 +1,4 @@
-- Added support for Carved Wood (chest and barrel variants)
-- Made Carved Wood campfire variants smoke on contraptions
-- Added support for Hexerei (chest variants)
-- Added support for Twilight Forest (chest variants)
-- Made archwood chests from Ars Nouveau work on contraptions
+- Added support for Alex's Caves (gingerbarrel, metal/rusty barrel)
+- Added support for Iron Shulker Boxes (all shulker boxes)
+- Alex's Caves gingerbread doors can now be opened on contraptions
+- Cabinets with countertops from Storage Delight now work on contraptions
