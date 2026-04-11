@@ -1,8 +1,8 @@
-// 1.20.1	2026-04-09T21:25:53.406981599	Tags for minecraft:block mod id create_compatible_storage
+// 1.20.1	2026-04-11T11:34:52.873300721	Tags for minecraft:block mod id create_compatible_storage
 92b2bb353bcd4419791f30d032eb93c7ba0b9240 data/create/tags/blocks/brittle.json
 5f7e0e0e232ddeead45f5a721271c67c438d8cc2 data/create/tags/blocks/chest_mounted_storage.json
 7b05ff599f6d2951d3824c5bd56d3ef7194a483e data/create/tags/blocks/simple_mounted_storage.json
-ed8c709e2b07c5c3bd060c20a5d4b95cd893e656 data/create/tags/blocks/single_block_inventories.json
+d0d6d51f17592c3e0ffe2f674684cc1a2bf07cad data/create/tags/blocks/single_block_inventories.json
 c741df0ecf91cbfc82ebd1bc822972029b659eb0 data/create_compatible_storage/tags/blocks/ac/gingerbarrel_name.json
 2b260f6b0a9fcd5012514ed0c27bcff786abbee8 data/create_compatible_storage/tags/blocks/ac/gingerbread_doors.json
 f4670fc41b7e37496742b5b355c7d2e22f584547 data/create_compatible_storage/tags/blocks/ac/metal_barrel_name.json

@@ -293,7 +293,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addTagsToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
                 CCSTags.SILENT_MOUNTED_STORAGE, CCSTags.BARREL_SOUND, CCSTags.SD_CABINET_SOUND,
                 CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_COOLERS, CCSTags.FR_DRAWERS,
-                CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES);
+                CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES,
+                CCSTags.IC_IRON_CHEST_MOUNTED_STORAGE, CCSTags.IC_CRYSTAL_CHEST,
+                CCSTags.ISB_IRON_SHULKER_BOX_MOUNTED_STORAGE);
         addBlocksToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
                 "ars_nouveau:repository",
                 "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel");

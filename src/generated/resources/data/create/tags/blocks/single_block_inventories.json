@@ -77,6 +77,18 @@
       "required": false
     },
     {
+      "id": "#create_compatible_storage:ic/iron_chest_mounted_storage",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ic/crystal_chest",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:isb/iron_shulker_box_mounted_storage",
+      "required": false
+    },
+    {
       "id": "ars_nouveau:repository",
       "required": false
     },
