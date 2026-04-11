@@ -93,6 +93,10 @@
       "required": false
     },
     {
+      "id": "#create_compatible_storage:sd/cabinets_with_countertops",
+      "required": false
+    },
+    {
       "id": "#another_furniture:drawers",
       "required": false
     },

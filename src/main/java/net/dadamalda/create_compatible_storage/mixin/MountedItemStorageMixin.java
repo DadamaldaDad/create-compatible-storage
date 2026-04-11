@@ -55,6 +55,8 @@ public abstract class MountedItemStorageMixin {
             translationKey = "container.storagedelight.drawer_door";
         } else if (state.is(CCSTags.SD_DRAWERS)) {
             translationKey = "container.storagedelight.drawer";
+        } else if (state.is(CCSTags.SD_CABINETS_WITH_COUNTERTOPS)) {
+            translationKey = "container.storagedelight.cabinet_countertop";
             // Furniture Refurbished
         } else if (state.is(CCSTags.FR_DRAWERS)) {
             translationKey = "container.refurbished_furniture.drawer";

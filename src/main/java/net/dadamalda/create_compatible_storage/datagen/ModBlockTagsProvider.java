@@ -186,6 +186,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             addBlocksToTag(CCSTags.SD_DRAWERS_WITH_BOOKS, "storagedelight:"+wood_type+"_drawer_with_books");
             addBlocksToTag(CCSTags.SD_DRAWERS_WITH_DOOR, "storagedelight:"+wood_type+"_drawer_with_door");
             addBlocksToTag(CCSTags.SD_DRAWERS, "storagedelight:"+wood_type+"_drawer");
+            addBlocksToTag(CCSTags.SD_CABINETS_WITH_COUNTERTOPS,
+                    "storagedelight:"+wood_type+"_cabinet_with_polished_deepslate_countertop",
+                    "storagedelight:"+wood_type+"_cabinet_with_polished_andesite_countertop",
+                    "storagedelight:"+wood_type+"_cabinet_with_polished_tuff_countertop"
+            );
 
             addBlocksToTag(CCSTags.FR_DRAWERS, "refurbished_furniture:"+wood_type+"_drawer");
             addBlocksToTag(CCSTags.FR_KITCHEN_DRAWERS, "refurbished_furniture:"+wood_type+"_kitchen_drawer");
@@ -279,7 +284,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS,
-                CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,  CCSTags.SD_BOOKSHELVES_WITH_DOOR, CCSTags.SD_DRAWERS_WITH_DOOR,
+                CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,  CCSTags.SD_BOOKSHELVES_WITH_DOOR, CCSTags.SD_DRAWERS_WITH_DOOR, CCSTags.SD_CABINETS_WITH_COUNTERTOPS,
                 CCSTags.AF_DRAWERS,
                 CCSTags.FR_COOLERS, CCSTags.FR_CRATES, CCSTags.FR_MAILBOXES);
         addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
@@ -292,6 +297,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         addTagsToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
                 CCSTags.SILENT_MOUNTED_STORAGE, CCSTags.BARREL_SOUND, CCSTags.SD_CABINET_SOUND,
+                CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS, CCSTags.SD_BOOKSHELVES_WITH_DOOR, CCSTags.SD_DRAWERS_WITH_DOOR, CCSTags.SD_CABINETS_WITH_COUNTERTOPS,
                 CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_COOLERS, CCSTags.FR_DRAWERS,
                 CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES,
                 CCSTags.IC_IRON_CHEST_MOUNTED_STORAGE, CCSTags.IC_CRYSTAL_CHEST,
@@ -309,7 +315,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 "ars_nouveau:repository");
 
         addTagsToTag(CCSTags.BARREL_SOUND,
-                CCSTags.FD_CABINETS, CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS, CCSTags.AF_DRAWERS);
+                CCSTags.FD_CABINETS,
+                CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS, CCSTags.SD_CABINETS_WITH_COUNTERTOPS,
+                CCSTags.AF_DRAWERS);
 
         addTagsToTag(CCSTags.SD_CABINET_SOUND,
                 CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,
