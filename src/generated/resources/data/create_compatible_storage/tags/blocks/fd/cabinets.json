@@ -45,6 +45,78 @@
       "required": false
     },
     {
+      "id": "abnormals_delight:maple_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:rosewood_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:morado_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:yucca_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:laurel_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:aspen_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:kousa_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:grimwood_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:willow_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:pine_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:plum_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:wisteria_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:driftwood_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:river_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:poise_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:holly_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:chestnut_cabinet",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:pine_cabinet",
+      "required": false
+    },
+    {
       "id": "mynethersdelight:red_nether_bricks_cabinet",
       "required": false
     },

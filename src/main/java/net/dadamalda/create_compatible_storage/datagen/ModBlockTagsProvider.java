@@ -216,6 +216,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             ));
 
             addBlocksToTag(CCSTags.UNCOOPERATIVE_STATIONARY_CHESTS, namespace+":"+id+"_chest", namespace+":trapped_"+id+"_chest");
+
+            addBlocksToTag(CCSTags.FD_CABINETS, "abnormals_delight:"+id+"_cabinet");
         });
 
         QUARK_CHEST_TYPES.forEach((chest_type) -> {
