@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "vinery:dark_cherry_cabinet",
+      "required": false
+    },
+    {
+      "id": "vinery:dark_cherry_drawer",
+      "required": false
+    },
+    {
+      "id": "vinery:dark_cherry_barrel",
+      "required": false
+    },
+    {
+      "id": "vinery:storage_pot",
+      "required": false
+    }
+  ]
+}

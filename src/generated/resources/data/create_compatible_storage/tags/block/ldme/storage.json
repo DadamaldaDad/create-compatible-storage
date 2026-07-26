@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "meadow:pine_cabinet",
+      "required": false
+    },
+    {
+      "id": "meadow:pine_wall_cabinet",
+      "required": false
+    },
+    {
+      "id": "meadow:stove_tiles",
+      "required": false
+    }
+  ]
+}

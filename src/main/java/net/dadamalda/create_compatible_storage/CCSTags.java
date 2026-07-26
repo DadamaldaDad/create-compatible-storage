@@ -68,6 +68,26 @@ public class CCSTags {
     public static TagKey<Block> LDF_DRESSERS = tag("create_compatible_storage:ldf/dressers");
     public static TagKey<Block> LDF_CABINETS = tag("create_compatible_storage:ldf/cabinets");
     public static TagKey<Block> LDF_COFFERS = tag("create_compatible_storage:ldf/coffers");
+    // Let's Do Bakery
+    public static TagKey<Block> LDBA_CABINETS = tag("create_compatible_storage:ldba/cabinets");
+    // Let's Do Brewery
+    public static TagKey<Block> LDBR_CABINETS = tag("create_compatible_storage:ldbr/cabinets");
+    // Let's Do Vinery
+    public static TagKey<Block> LDVI_STORAGE = tag("create_compatible_storage:ldvi/storage");
+    // Let's Do Meadow
+    public static TagKey<Block> LDME_STORAGE = tag("create_compatible_storage:ldme/storage");
+    // Let's Do Farm & Charm
+    public static TagKey<Block> LDFAC_STORAGE = tag("create_compatible_storage:ldfac/storage");
+    // Let's Do Herbal Brews
+    public static TagKey<Block> LDHB_STORAGE = tag("create_compatible_storage:ldhb/storage");
+    // Let's Do Candlelight
+    public static TagKey<Block> LDCL_CABINETS = tag("create_compatible_storage:ldcl/cabinets");
+    public static TagKey<Block> LDCL_DRAWERS = tag("create_compatible_storage:ldcl/drawers");
+    public static TagKey<Block> LDCL_SIDEBOARDS = tag("create_compatible_storage:ldcl/sideboards");
+    // Let's Do Beach Party
+    public static TagKey<Block> LDBP_CABINETS = tag("create_compatible_storage:ldbp/cabinets");
+    // Let's Do Alpine Whispers
+    public static TagKey<Block> LDAW_CABINETS = tag("create_compatible_storage:ldaw/cabinets");
 
     public static TagKey<Block> tag(String path) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.parse(path));

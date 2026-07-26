@@ -121,6 +121,50 @@
       "required": false
     },
     {
+      "id": "#create_compatible_storage:ldba/cabinets",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldbr/cabinets",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldvi/storage",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldme/storage",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldfac/storage",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldhb/storage",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldcl/cabinets",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldcl/drawers",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldcl/sideboards",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldbp/cabinets",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldaw/cabinets",
+      "required": false
+    },
+    {
       "id": "ars_nouveau:repository",
       "required": false
     },

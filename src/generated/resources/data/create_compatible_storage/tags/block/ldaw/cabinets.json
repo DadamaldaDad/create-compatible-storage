@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "alpinewhispers:arolla_pine_cabinet",
+      "required": false
+    },
+    {
+      "id": "alpinewhispers:arolla_pine_wall_cabinet",
+      "required": false
+    }
+  ]
+}
