@@ -1,0 +1,92 @@
+{
+  "values": [
+    {
+      "id": "furniture:acacia_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:arolla_pine_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:aspen_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:baobab_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:birch_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:cherry_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:chestnut_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:cypress_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:dark_cherry_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:dark_oak_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:ebony_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:fan_palm_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:fir_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:jungle_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:larch_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:mangrove_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:oak_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:palm_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:pine_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:spruce_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:swamp_cypress_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:swamp_oak_cabinet",
+      "required": false
+    }
+  ]
+}

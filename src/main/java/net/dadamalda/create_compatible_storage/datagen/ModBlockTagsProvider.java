@@ -97,6 +97,18 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             "mahogany"
     );
 
+    List<String> LDF_DRESSER_WOOD_TYPES = List.of(
+            "acacia", "aspen", "baobab", "birch", "cherry", "chestnut", "cypress",
+            "dark_cherry", "dark_oak", "ebony", "fan_palm", "fir", "jungle", "larch",
+            "mangrove", "oak", "palm", "spruce", "swamp_cypress", "swamp_oak"
+    );
+
+    List<String> LDF_CABINET_WOOD_TYPES = List.of(
+            "acacia", "arolla_pine", "aspen", "baobab", "birch", "cherry", "chestnut", "cypress",
+            "dark_cherry", "dark_oak", "ebony", "fan_palm", "fir", "jungle", "larch",
+            "mangrove", "oak", "palm", "pine", "spruce", "swamp_cypress", "swamp_oak"
+    );
+
     List<String> TWILIGHT_FOREST_WOOD_TYPES = List.of(
             "twilight_oak",
             "canopy",
@@ -265,6 +277,12 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addBlocksToTag(CCSTags.AC_GINGERBREAD_DOORS,
                 "alexscaves:gingerbread_door", "alexscaves:frosted_gingerbread_door");
 
+        LDF_DRESSER_WOOD_TYPES.forEach(wood_type ->
+                addBlocksToTag(CCSTags.LDF_DRESSERS, "furniture:" + wood_type + "_dresser"));
+        LDF_CABINET_WOOD_TYPES.forEach(wood_type ->
+                addBlocksToTag(CCSTags.LDF_CABINETS, "furniture:" + wood_type + "_cabinet"));
+        addBlocksToTag(CCSTags.LDF_COFFERS, "furniture:coffer");
+
         addTagsToTag(CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
                 CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS,
                 CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,  CCSTags.SD_BOOKSHELVES_WITH_DOOR, CCSTags.SD_DRAWERS_WITH_DOOR, CCSTags.SD_CABINETS_WITH_COUNTERTOPS,
@@ -274,6 +292,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addTagsToTag(CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
                 "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
                 "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables");
+        addTagsToTag(CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
+                CCSTags.LDF_DRESSERS, CCSTags.LDF_CABINETS, CCSTags.LDF_COFFERS);
 
         addTagsToTag(CCSTags.UNCOOPERATIVE_STATIONARY_STORAGE,
                 CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
@@ -286,7 +306,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_COOLERS, CCSTags.FR_DRAWERS,
                 CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES,
                 CCSTags.IC_IRON_CHEST_MOUNTED_STORAGE, CCSTags.IC_CRYSTAL_CHEST,
-                CCSTags.ISB_IRON_SHULKER_BOX_MOUNTED_STORAGE);
+                CCSTags.ISB_IRON_SHULKER_BOX_MOUNTED_STORAGE,
+                CCSTags.LDF_DRESSERS, CCSTags.LDF_CABINETS, CCSTags.LDF_COFFERS);
         addBlocksToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
                 "ars_nouveau:repository",
                 "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel");

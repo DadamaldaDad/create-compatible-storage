@@ -87,6 +87,18 @@
     {
       "id": "#handcrafted:side_tables",
       "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldf/dressers",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldf/cabinets",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldf/coffers",
+      "required": false
     }
   ]
 }
