@@ -288,7 +288,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS,
                 CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,  CCSTags.SD_BOOKSHELVES_WITH_DOOR, CCSTags.SD_DRAWERS_WITH_DOOR, CCSTags.SD_CABINETS_WITH_COUNTERTOPS,
                 CCSTags.AF_DRAWERS,
-                CCSTags.FR_COOLERS, CCSTags.FR_CRATES, CCSTags.FR_MAILBOXES);
+                CCSTags.FR_COOLERS, CCSTags.FR_CRATES, CCSTags.FR_MAILBOXES,
+                CCSTags.LDV_CABINET, CCSTags.LDV_DRAWER, CCSTags.LDV_STORAGE_POT, CCSTags.LDV_BARRELS);
         addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
                 "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables");
@@ -303,7 +304,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.FR_STORAGE_CABINETS, CCSTags.FR_COOLERS, CCSTags.FR_DRAWERS,
                 CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES,
                 CCSTags.IC_IRON_CHEST_MOUNTED_STORAGE, CCSTags.IC_CRYSTAL_CHEST,
-                CCSTags.ISB_IRON_SHULKER_BOX_MOUNTED_STORAGE);
+                CCSTags.ISB_IRON_SHULKER_BOX_MOUNTED_STORAGE,
+                CCSTags.LDV_CABINET, CCSTags.LDV_DRAWER, CCSTags.LDV_STORAGE_POT, CCSTags.LDV_BARRELS);
         addBlocksToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
                 "ars_nouveau:repository",
                 "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel");
@@ -319,7 +321,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addTagsToTag(CCSTags.BARREL_SOUND,
                 CCSTags.FD_CABINETS,
                 CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS, CCSTags.SD_CABINETS_WITH_COUNTERTOPS,
-                CCSTags.AF_DRAWERS);
+                CCSTags.AF_DRAWERS,
+                CCSTags.LDV_BARRELS);
+        addTagsToTag(CCSTags.BARREL_NAME,
+                CCSTags.LDV_BARRELS);
 
         addTagsToTag(CCSTags.SD_CABINET_SOUND,
                 CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,
@@ -340,6 +345,12 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addBlocksToTag(CCSTags.AC_METAL_BARREL_SOUND, "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel");
         addBlocksToTag(CCSTags.AC_METAL_BARREL_NAME, "alexscaves:metal_barrel", "alexscaves:rusty_barrel");
         addBlocksToTag(CCSTags.AC_GINGERBARREL_NAME, "alexscaves:gingerbarrel");
+
+        addBlocksToTag(CCSTags.LDV_CABINET, "vinery:dark_cherry_cabinet");
+        addBlocksToTag(CCSTags.LDV_DRAWER, "vinery:dark_cherry_drawer");
+        addBlocksToTag(CCSTags.LDV_STORAGE_POT, "vinery:storage_pot");
+        addBlocksToTag(CCSTags.LDV_BARRELS, "vinery:dark_cherry_barrel",
+                "nethervinery:crimson_barrel", "nethervinery:warped_barrel");
 
         addTagsToTag(CCSTags.BRITTLE, CCSTags.AC_GINGERBREAD_DOORS);
 

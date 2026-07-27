@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "vinery:dark_cherry_barrel",
+      "required": false
+    },
+    {
+      "id": "nethervinery:crimson_barrel",
+      "required": false
+    },
+    {
+      "id": "nethervinery:warped_barrel",
+      "required": false
+    }
+  ]
+}

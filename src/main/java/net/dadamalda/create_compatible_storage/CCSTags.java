@@ -64,6 +64,11 @@ public class CCSTags {
     public static TagKey<Block> AC_METAL_BARREL_NAME = tag("create_compatible_storage:ac/metal_barrel_name");
     public static TagKey<Block> AC_GINGERBARREL_NAME = tag("create_compatible_storage:ac/gingerbarrel_name");
     public static TagKey<Block> AC_GINGERBREAD_DOORS = tag("create_compatible_storage:ac/gingerbread_doors");
+    // Let's Do Vinery
+    public static TagKey<Block> LDV_CABINET = tag("create_compatible_storage:ldv/cabinet");
+    public static TagKey<Block> LDV_DRAWER = tag("create_compatible_storage:ldv/drawer");
+    public static TagKey<Block> LDV_STORAGE_POT = tag("create_compatible_storage:ldv/storage_pot");
+    public static TagKey<Block> LDV_BARRELS = tag("create_compatible_storage:ldv/barrels");
 
     public static TagKey<Block> tag(String path) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.parse(path));

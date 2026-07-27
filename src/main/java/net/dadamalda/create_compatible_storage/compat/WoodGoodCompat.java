@@ -6,9 +6,12 @@ import net.mehvahdjukaar.moonlight.api.resources.pack.ResourceSink;
 import net.mehvahdjukaar.moonlight.api.set.wood.WoodType;
 import net.mehvahdjukaar.moonlight.api.set.wood.WoodTypeRegistry;
 import net.mehvahdjukaar.moonlight.api.util.Utils;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
+
+import java.util.Objects;
 
 public class WoodGoodCompat {
     private static DynamicTagHelper helper;
@@ -29,7 +32,12 @@ public class WoodGoodCompat {
                     "quark:chest", "quark:trapped_chest"
             );
 
-            addTag(CCSTags.FD_CABINETS, woodType, "farmersdelight:cabinet");
+            if(
+                    !Objects.equals(woodType.id, ResourceLocation.parse("vinery:dark_cherry")) &&
+                            !Objects.equals(woodType.id, ResourceLocation.parse("beachparty:palm"))
+            ) {
+                addTag(CCSTags.FD_CABINETS, woodType, "farmersdelight:cabinet");
+            }
 
             addTag(CCSTags.SD_CABINET_SOUND, woodType, "storagedelight:single_door_cabinet", "storagedelight:cabinet_with_glass_doors",
                     "storagedelight:glass_cabinet", "storagedelight:bookshelf_with_door");

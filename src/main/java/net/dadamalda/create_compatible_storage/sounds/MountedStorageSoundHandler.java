@@ -40,6 +40,12 @@ public class MountedStorageSoundHandler {
             return MountedStorageSound.WW_CLOSET;
         } else if(state.is(CCSTags.AC_METAL_BARREL_SOUND)) {
             return MountedStorageSound.AC_METAL_BARREL;
+        } else if(state.is(CCSTags.LDV_CABINET)) {
+            return MountedStorageSound.LDV_CABINET;
+        } else if(state.is(CCSTags.LDV_DRAWER)) {
+            return MountedStorageSound.LDV_DRAWER;
+        } else if(state.is(CCSTags.LDV_STORAGE_POT)) {
+            return MountedStorageSound.LDV_STORAGE_POT;
         } else {
             return MountedStorageSound.UNKNOWN;
         }
@@ -101,6 +107,21 @@ public class MountedStorageSoundHandler {
                     null, BlockPos.containing(pos),
                     getSound("alexscaves:metal_barrel_lid"), SoundSource.BLOCKS,
                     0.5F, level.random.nextFloat() * 0.1F + 0.9F
+            );
+            case LDV_CABINET -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    getSound("vinery:cabinet_open"), SoundSource.BLOCKS,
+                    1.0F, 1.1F
+            );
+            case LDV_DRAWER -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    getSound("vinery:drawer_open"), SoundSource.BLOCKS,
+                    1.0F, 1.1F
+            );
+            case LDV_STORAGE_POT -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    SoundEvents.BRUSH_GENERIC, SoundSource.BLOCKS,
+                    1.0F, 1.1F
             );
         }
     }

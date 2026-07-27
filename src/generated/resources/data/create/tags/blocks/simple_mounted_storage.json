@@ -113,6 +113,22 @@
       "required": false
     },
     {
+      "id": "#create_compatible_storage:ldv/cabinet",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldv/drawer",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldv/storage_pot",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldv/barrels",
+      "required": false
+    },
+    {
       "id": "#handcrafted:desks",
       "required": false
     },
