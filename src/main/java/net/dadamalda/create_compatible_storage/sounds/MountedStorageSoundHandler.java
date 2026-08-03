@@ -46,6 +46,8 @@ public class MountedStorageSoundHandler {
             return MountedStorageSound.LDV_DRAWER;
         } else if(state.is(CCSTags.LDV_STORAGE_POT)) {
             return MountedStorageSound.LDV_STORAGE_POT;
+        } else if(state.is(CCSTags.LDBP_PALM_CABINET)) {
+            return MountedStorageSound.LDBP_PALM_CABINET;
         } else {
             return MountedStorageSound.UNKNOWN;
         }
@@ -123,6 +125,11 @@ public class MountedStorageSoundHandler {
                     SoundEvents.BRUSH_GENERIC, SoundSource.BLOCKS,
                     1.0F, 1.1F
             );
+            case LDBP_PALM_CABINET -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    SoundEvents.BAMBOO_WOOD_TRAPDOOR_OPEN, SoundSource.BLOCKS,
+                    1.0F, 1.1F
+            );
         }
     }
 
@@ -182,6 +189,11 @@ public class MountedStorageSoundHandler {
                     null, BlockPos.containing(pos),
                     getSound("alexscaves:metal_barrel_lid"), SoundSource.BLOCKS,
                     0.5F, level.random.nextFloat() * 0.1F + 0.9F
+            );
+            case LDBP_PALM_CABINET -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    SoundEvents.BAMBOO_WOOD_TRAPDOOR_OPEN, SoundSource.BLOCKS,
+                    1.0F, 1.1F
             );
         }
     }

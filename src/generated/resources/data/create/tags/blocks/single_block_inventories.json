@@ -125,6 +125,10 @@
       "required": false
     },
     {
+      "id": "#create_compatible_storage:ldbp/palm_cabinet",
+      "required": false
+    },
+    {
       "id": "ars_nouveau:repository",
       "required": false
     },

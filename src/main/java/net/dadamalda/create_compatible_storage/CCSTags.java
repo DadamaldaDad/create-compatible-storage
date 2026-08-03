@@ -69,6 +69,8 @@ public class CCSTags {
     public static TagKey<Block> LDV_DRAWER = tag("create_compatible_storage:ldv/drawer");
     public static TagKey<Block> LDV_STORAGE_POT = tag("create_compatible_storage:ldv/storage_pot");
     public static TagKey<Block> LDV_BARRELS = tag("create_compatible_storage:ldv/barrels");
+    // Let's Do Beach Party
+    public static TagKey<Block> LDBP_PALM_CABINET = tag("create_compatible_storage:ldbp/palm_cabinet");
 
     public static TagKey<Block> tag(String path) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.parse(path));

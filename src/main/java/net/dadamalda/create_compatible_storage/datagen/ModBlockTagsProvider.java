@@ -289,7 +289,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,  CCSTags.SD_BOOKSHELVES_WITH_DOOR, CCSTags.SD_DRAWERS_WITH_DOOR, CCSTags.SD_CABINETS_WITH_COUNTERTOPS,
                 CCSTags.AF_DRAWERS,
                 CCSTags.FR_COOLERS, CCSTags.FR_CRATES, CCSTags.FR_MAILBOXES,
-                CCSTags.LDV_CABINET, CCSTags.LDV_DRAWER, CCSTags.LDV_STORAGE_POT, CCSTags.LDV_BARRELS);
+                CCSTags.LDV_CABINET, CCSTags.LDV_DRAWER, CCSTags.LDV_STORAGE_POT, CCSTags.LDV_BARRELS,
+                CCSTags.LDBP_PALM_CABINET);
         addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
                 "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables");
@@ -305,7 +306,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.FR_KITCHEN_DRAWERS, CCSTags.FR_CRATES,
                 CCSTags.IC_IRON_CHEST_MOUNTED_STORAGE, CCSTags.IC_CRYSTAL_CHEST,
                 CCSTags.ISB_IRON_SHULKER_BOX_MOUNTED_STORAGE,
-                CCSTags.LDV_CABINET, CCSTags.LDV_DRAWER, CCSTags.LDV_STORAGE_POT, CCSTags.LDV_BARRELS);
+                CCSTags.LDV_CABINET, CCSTags.LDV_DRAWER, CCSTags.LDV_STORAGE_POT, CCSTags.LDV_BARRELS,
+                CCSTags.LDBP_PALM_CABINET);
         addBlocksToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
                 "ars_nouveau:repository",
                 "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel");
@@ -351,6 +353,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addBlocksToTag(CCSTags.LDV_STORAGE_POT, "vinery:storage_pot");
         addBlocksToTag(CCSTags.LDV_BARRELS, "vinery:dark_cherry_barrel",
                 "nethervinery:crimson_barrel", "nethervinery:warped_barrel");
+
+        addBlocksToTag(CCSTags.LDBP_PALM_CABINET, "beachparty:palm_cabinet");
 
         addTagsToTag(CCSTags.BRITTLE, CCSTags.AC_GINGERBREAD_DOORS);
 
