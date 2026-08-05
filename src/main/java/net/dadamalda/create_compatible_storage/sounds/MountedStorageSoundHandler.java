@@ -48,6 +48,14 @@ public class MountedStorageSoundHandler {
             return MountedStorageSound.LDV_STORAGE_POT;
         } else if(state.is(CCSTags.LDBP_PALM_CABINET)) {
             return MountedStorageSound.LDBP_PALM_CABINET;
+        } else if(state.is(CCSTags.LDBA_CABINETS)) {
+            return MountedStorageSound.LDBA_CABINET;
+        } else if(state.is(CCSTags.LDBA_DRAWER)) {
+            return MountedStorageSound.LDBA_DRAWER;
+        } else if(state.is(CCSTags.LDBR_CABINETS)) {
+            return MountedStorageSound.LDBR_CABINET;
+        } else if(state.is(CCSTags.LDBR_DRAWER)) {
+            return MountedStorageSound.LDBR_DRAWER;
         } else {
             return MountedStorageSound.UNKNOWN;
         }
@@ -128,6 +136,26 @@ public class MountedStorageSoundHandler {
             case LDBP_PALM_CABINET -> level.playSound(
                     null, BlockPos.containing(pos),
                     SoundEvents.BAMBOO_WOOD_TRAPDOOR_OPEN, SoundSource.BLOCKS,
+                    1.0F, 1.1F
+            );
+            case LDBA_CABINET -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    getSound("bakery:cabinet_open"), SoundSource.BLOCKS,
+                    1.0F, 1.1F
+            );
+            case LDBA_DRAWER -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    getSound("bakery:drawer_open"), SoundSource.BLOCKS,
+                    1.0F, 1.1F
+            );
+            case LDBR_CABINET -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    getSound("brewery:cabinet_open"), SoundSource.BLOCKS,
+                    1.0F, 1.1F
+            );
+            case LDBR_DRAWER -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    getSound("brewery:drawer_open"), SoundSource.BLOCKS,
                     1.0F, 1.1F
             );
         }

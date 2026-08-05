@@ -65,6 +65,10 @@
       "required": false
     },
     {
+      "id": "brewery:sideboard",
+      "required": false
+    },
+    {
       "id": "#create_compatible_storage:sd/drawers",
       "required": false
     },
@@ -130,6 +134,22 @@
     },
     {
       "id": "#create_compatible_storage:ldbp/palm_cabinet",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldba/cabinets",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldba/drawer",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldbr/cabinets",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldbr/drawer",
       "required": false
     },
     {

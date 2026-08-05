@@ -71,6 +71,12 @@ public class CCSTags {
     public static TagKey<Block> LDV_BARRELS = tag("create_compatible_storage:ldv/barrels");
     // Let's Do Beach Party
     public static TagKey<Block> LDBP_PALM_CABINET = tag("create_compatible_storage:ldbp/palm_cabinet");
+    // Let's Do Bakery
+    public static TagKey<Block> LDBA_CABINETS = tag("create_compatible_storage:ldba/cabinets");
+    public static TagKey<Block> LDBA_DRAWER = tag("create_compatible_storage:ldba/drawer");
+    // Let's Do Brewery
+    public static TagKey<Block> LDBR_CABINETS = tag("create_compatible_storage:ldbr/cabinets");
+    public static TagKey<Block> LDBR_DRAWER = tag("create_compatible_storage:ldbr/drawer");
 
     public static TagKey<Block> tag(String path) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.parse(path));

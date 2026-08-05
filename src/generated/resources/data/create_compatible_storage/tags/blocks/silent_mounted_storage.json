@@ -39,6 +39,10 @@
     {
       "id": "ars_nouveau:repository",
       "required": false
+    },
+    {
+      "id": "brewery:sideboard",
+      "required": false
     }
   ]
 }

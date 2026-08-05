@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "bakery:cabinet",
+      "required": false
+    },
+    {
+      "id": "bakery:wall_cabinet",
+      "required": false
+    }
+  ]
+}

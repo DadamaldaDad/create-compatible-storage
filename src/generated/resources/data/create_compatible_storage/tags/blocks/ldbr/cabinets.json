@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "brewery:cabinet",
+      "required": false
+    },
+    {
+      "id": "brewery:wall_cabinet",
+      "required": false
+    }
+  ]
+}

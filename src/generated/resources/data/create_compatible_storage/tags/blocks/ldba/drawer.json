@@ -1,0 +1,8 @@
+{
+  "values": [
+    {
+      "id": "bakery:drawer",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "values": [
+    {
+      "id": "brewery:drawer",
+      "required": false
+    }
+  ]
+}

@@ -271,7 +271,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.FD_CABINETS);
         addBlocksToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 "farmersdelight:basket",
-                "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel");
+                "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel",
+                "brewery:sideboard");
 
         addBlocksToTag(CCSTags.IC_CRYSTAL_CHEST, "ironchest:crystal_chest", "ironchest:trapped_crystal_chest");
         addBlocksToTag(CCSTags.IC_DIRT_CHEST, "ironchest:dirt_chest", "ironchest:trapped_dirt_chest");
@@ -290,7 +291,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.AF_DRAWERS,
                 CCSTags.FR_COOLERS, CCSTags.FR_CRATES, CCSTags.FR_MAILBOXES,
                 CCSTags.LDV_CABINET, CCSTags.LDV_DRAWER, CCSTags.LDV_STORAGE_POT, CCSTags.LDV_BARRELS,
-                CCSTags.LDBP_PALM_CABINET);
+                CCSTags.LDBP_PALM_CABINET,
+                CCSTags.LDBA_CABINETS, CCSTags.LDBA_DRAWER,
+                CCSTags.LDBR_CABINETS, CCSTags.LDBR_DRAWER);
         addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
                 "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables");
@@ -319,6 +322,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables");
         addBlocksToTag(CCSTags.SILENT_MOUNTED_STORAGE,
                 "ars_nouveau:repository");
+        addBlocksToTag(CCSTags.SILENT_MOUNTED_STORAGE, "brewery:sideboard");
 
         addTagsToTag(CCSTags.BARREL_SOUND,
                 CCSTags.FD_CABINETS,
@@ -355,6 +359,12 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 "nethervinery:crimson_barrel", "nethervinery:warped_barrel");
 
         addBlocksToTag(CCSTags.LDBP_PALM_CABINET, "beachparty:palm_cabinet");
+
+        addBlocksToTag(CCSTags.LDBA_CABINETS, "bakery:cabinet", "bakery:wall_cabinet");
+        addBlocksToTag(CCSTags.LDBA_DRAWER, "bakery:drawer");
+
+        addBlocksToTag(CCSTags.LDBR_CABINETS, "brewery:cabinet", "brewery:wall_cabinet");
+        addBlocksToTag(CCSTags.LDBR_DRAWER, "brewery:drawer");
 
         addTagsToTag(CCSTags.BRITTLE, CCSTags.AC_GINGERBREAD_DOORS);
 
