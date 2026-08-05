@@ -129,6 +129,10 @@
       "required": false
     },
     {
+      "id": "#create_compatible_storage:ldm/shelf",
+      "required": false
+    },
+    {
       "id": "ars_nouveau:repository",
       "required": false
     },

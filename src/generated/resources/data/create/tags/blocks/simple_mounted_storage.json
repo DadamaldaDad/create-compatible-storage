@@ -153,6 +153,10 @@
       "required": false
     },
     {
+      "id": "#create_compatible_storage:ldm/shelf",
+      "required": false
+    },
+    {
       "id": "#handcrafted:desks",
       "required": false
     },

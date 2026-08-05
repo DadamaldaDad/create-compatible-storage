@@ -56,6 +56,8 @@ public class MountedStorageSoundHandler {
             return MountedStorageSound.LDBR_CABINET;
         } else if(state.is(CCSTags.LDBR_DRAWER)) {
             return MountedStorageSound.LDBR_DRAWER;
+        } else if(state.is(CCSTags.LDM_SHELF)) {
+            return MountedStorageSound.LDM_SHELF;
         } else {
             return MountedStorageSound.UNKNOWN;
         }
@@ -156,6 +158,11 @@ public class MountedStorageSoundHandler {
             case LDBR_DRAWER -> level.playSound(
                     null, BlockPos.containing(pos),
                     getSound("brewery:drawer_open"), SoundSource.BLOCKS,
+                    1.0F, 1.1F
+            );
+            case LDM_SHELF -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    getSound("meadow:cabinet_open"), SoundSource.BLOCKS,
                     1.0F, 1.1F
             );
         }

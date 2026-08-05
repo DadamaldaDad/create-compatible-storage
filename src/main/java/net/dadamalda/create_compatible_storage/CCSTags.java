@@ -77,6 +77,8 @@ public class CCSTags {
     // Let's Do Brewery
     public static TagKey<Block> LDBR_CABINETS = tag("create_compatible_storage:ldbr/cabinets");
     public static TagKey<Block> LDBR_DRAWER = tag("create_compatible_storage:ldbr/drawer");
+    // Let's Do Meadow
+    public static TagKey<Block> LDM_SHELF = tag("create_compatible_storage:ldm/shelf");
 
     public static TagKey<Block> tag(String path) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.parse(path));

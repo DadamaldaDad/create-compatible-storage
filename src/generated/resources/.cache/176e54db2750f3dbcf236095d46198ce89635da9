@@ -1,8 +1,8 @@
-// 1.20.1	2026-08-05T22:06:40.536744445	Tags for minecraft:block mod id create_compatible_storage
+// 1.20.1	2026-08-05T22:17:50.562942711	Tags for minecraft:block mod id create_compatible_storage
 92b2bb353bcd4419791f30d032eb93c7ba0b9240 data/create/tags/blocks/brittle.json
 5f7e0e0e232ddeead45f5a721271c67c438d8cc2 data/create/tags/blocks/chest_mounted_storage.json
-82ed3e851028dd4476546b66a87d3be6cd81fbb0 data/create/tags/blocks/simple_mounted_storage.json
-e421132ba73269251412b93b9ba5b30a37b441f5 data/create/tags/blocks/single_block_inventories.json
+1b7562c8ec8a8d5a3968defd692b5eb2237becf7 data/create/tags/blocks/simple_mounted_storage.json
+2132bb8d5bb7bceba1c37732f10d139b8fed2e2f data/create/tags/blocks/single_block_inventories.json
 c741df0ecf91cbfc82ebd1bc822972029b659eb0 data/create_compatible_storage/tags/blocks/ac/gingerbarrel_name.json
 2b260f6b0a9fcd5012514ed0c27bcff786abbee8 data/create_compatible_storage/tags/blocks/ac/gingerbread_doors.json
 f4670fc41b7e37496742b5b355c7d2e22f584547 data/create_compatible_storage/tags/blocks/ac/metal_barrel_name.json
@@ -33,6 +33,7 @@ eaa37fdd4a2621a12b5ef295b82edff0dda43999 data/create_compatible_storage/tags/blo
 5e11c20e73d59128845ec05015f12d229f24896e data/create_compatible_storage/tags/blocks/ldbp/palm_cabinet.json
 2b10bed1e1e9ce7f97dcf65dd873bf9de0e6c8d0 data/create_compatible_storage/tags/blocks/ldbr/cabinets.json
 6d4994b60a759f6f1207bd11785b8206978702bf data/create_compatible_storage/tags/blocks/ldbr/drawer.json
+2fac78fc0aaad41854761acd74d464eb52941a81 data/create_compatible_storage/tags/blocks/ldm/shelf.json
 b6099dcaa705ada004ac25deb1c709a42ffdb004 data/create_compatible_storage/tags/blocks/ldv/barrels.json
 7e5be5d3bdc2af0f4880e35a66d84fa6f5c208b7 data/create_compatible_storage/tags/blocks/ldv/cabinet.json
 6de0d85fa938131b4ed72cb754f75286bfb8f139 data/create_compatible_storage/tags/blocks/ldv/drawer.json

@@ -293,7 +293,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.LDV_CABINET, CCSTags.LDV_DRAWER, CCSTags.LDV_STORAGE_POT, CCSTags.LDV_BARRELS,
                 CCSTags.LDBP_PALM_CABINET,
                 CCSTags.LDBA_CABINETS, CCSTags.LDBA_DRAWER,
-                CCSTags.LDBR_CABINETS, CCSTags.LDBR_DRAWER);
+                CCSTags.LDBR_CABINETS, CCSTags.LDBR_DRAWER,
+                CCSTags.LDM_SHELF);
         addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
                 "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables");
@@ -310,7 +311,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.IC_IRON_CHEST_MOUNTED_STORAGE, CCSTags.IC_CRYSTAL_CHEST,
                 CCSTags.ISB_IRON_SHULKER_BOX_MOUNTED_STORAGE,
                 CCSTags.LDV_CABINET, CCSTags.LDV_DRAWER, CCSTags.LDV_STORAGE_POT, CCSTags.LDV_BARRELS,
-                CCSTags.LDBP_PALM_CABINET);
+                CCSTags.LDBP_PALM_CABINET,
+                CCSTags.LDM_SHELF);
         addBlocksToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
                 "ars_nouveau:repository",
                 "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel");
@@ -365,6 +367,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         addBlocksToTag(CCSTags.LDBR_CABINETS, "brewery:cabinet", "brewery:wall_cabinet");
         addBlocksToTag(CCSTags.LDBR_DRAWER, "brewery:drawer");
+
+        addBlocksToTag(CCSTags.LDM_SHELF, "meadow:shelf");
 
         addTagsToTag(CCSTags.BRITTLE, CCSTags.AC_GINGERBREAD_DOORS);
 
