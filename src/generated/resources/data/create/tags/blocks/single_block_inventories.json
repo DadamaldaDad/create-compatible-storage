@@ -133,6 +133,22 @@
       "required": false
     },
     {
+      "id": "#create_compatible_storage:ldcl/cabinets",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldcl/drawers",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldf/cabinets",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldf/coffer",
+      "required": false
+    },
+    {
       "id": "ars_nouveau:repository",
       "required": false
     },
@@ -146,6 +162,10 @@
     },
     {
       "id": "alexscaves:gingerbarrel",
+      "required": false
+    },
+    {
+      "id": "candlelight:sideboard",
       "required": false
     }
   ]

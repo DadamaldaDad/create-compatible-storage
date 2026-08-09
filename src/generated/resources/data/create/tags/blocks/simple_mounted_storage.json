@@ -69,6 +69,10 @@
       "required": false
     },
     {
+      "id": "candlelight:sideboard",
+      "required": false
+    },
+    {
       "id": "#create_compatible_storage:sd/drawers",
       "required": false
     },
@@ -154,6 +158,22 @@
     },
     {
       "id": "#create_compatible_storage:ldm/shelf",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldcl/cabinets",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldcl/drawers",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldf/cabinets",
+      "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ldf/coffer",
       "required": false
     },
     {

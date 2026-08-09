@@ -7,6 +7,10 @@
     {
       "id": "#create_compatible_storage:ic/crystal_chest",
       "required": false
+    },
+    {
+      "id": "candlelight:sideboard",
+      "required": false
     }
   ]
 }

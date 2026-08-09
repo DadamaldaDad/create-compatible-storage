@@ -1,0 +1,48 @@
+{
+  "values": [
+    {
+      "id": "candlelight:oak_drawer",
+      "required": false
+    },
+    {
+      "id": "candlelight:spruce_drawer",
+      "required": false
+    },
+    {
+      "id": "candlelight:birch_drawer",
+      "required": false
+    },
+    {
+      "id": "candlelight:jungle_drawer",
+      "required": false
+    },
+    {
+      "id": "candlelight:acacia_drawer",
+      "required": false
+    },
+    {
+      "id": "candlelight:dark_oak_drawer",
+      "required": false
+    },
+    {
+      "id": "candlelight:crimson_drawer",
+      "required": false
+    },
+    {
+      "id": "candlelight:warped_drawer",
+      "required": false
+    },
+    {
+      "id": "candlelight:mangrove_drawer",
+      "required": false
+    },
+    {
+      "id": "candlelight:bamboo_drawer",
+      "required": false
+    },
+    {
+      "id": "candlelight:cherry_drawer",
+      "required": false
+    }
+  ]
+}

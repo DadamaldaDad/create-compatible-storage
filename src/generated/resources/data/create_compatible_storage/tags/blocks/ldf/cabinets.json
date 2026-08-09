@@ -1,0 +1,92 @@
+{
+  "values": [
+    {
+      "id": "furniture:oak_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:oak_dresser",
+      "required": false
+    },
+    {
+      "id": "furniture:spruce_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:spruce_dresser",
+      "required": false
+    },
+    {
+      "id": "furniture:birch_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:birch_dresser",
+      "required": false
+    },
+    {
+      "id": "furniture:jungle_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:jungle_dresser",
+      "required": false
+    },
+    {
+      "id": "furniture:acacia_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:acacia_dresser",
+      "required": false
+    },
+    {
+      "id": "furniture:dark_oak_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:dark_oak_dresser",
+      "required": false
+    },
+    {
+      "id": "furniture:crimson_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:crimson_dresser",
+      "required": false
+    },
+    {
+      "id": "furniture:warped_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:warped_dresser",
+      "required": false
+    },
+    {
+      "id": "furniture:mangrove_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:mangrove_dresser",
+      "required": false
+    },
+    {
+      "id": "furniture:bamboo_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:bamboo_dresser",
+      "required": false
+    },
+    {
+      "id": "furniture:cherry_cabinet",
+      "required": false
+    },
+    {
+      "id": "furniture:cherry_dresser",
+      "required": false
+    }
+  ]
+}

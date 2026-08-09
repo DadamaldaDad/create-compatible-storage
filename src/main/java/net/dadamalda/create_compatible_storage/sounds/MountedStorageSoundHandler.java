@@ -58,6 +58,14 @@ public class MountedStorageSoundHandler {
             return MountedStorageSound.LDBR_DRAWER;
         } else if(state.is(CCSTags.LDM_SHELF)) {
             return MountedStorageSound.LDM_SHELF;
+        } else if(state.is(CCSTags.LDCL_CABINETS)) {
+            return MountedStorageSound.LDCL_CABINET;
+        } else if(state.is(CCSTags.LDCL_DRAWERS)) {
+            return MountedStorageSound.LDCL_DRAWER;
+        } else if(state.is(CCSTags.LDF_CABINETS)) {
+            return MountedStorageSound.LDF_CABINET;
+        } else if(state.is(CCSTags.LDF_COFFER)) {
+            return MountedStorageSound.LDF_COFFER;
         } else {
             return MountedStorageSound.UNKNOWN;
         }
@@ -165,6 +173,26 @@ public class MountedStorageSoundHandler {
                     getSound("meadow:cabinet_open"), SoundSource.BLOCKS,
                     1.0F, 1.1F
             );
+            case LDCL_CABINET -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    getSound("candlelight:cabinet_open"), SoundSource.BLOCKS,
+                    1.0F, 1.1F
+            );
+            case LDCL_DRAWER -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    getSound("candlelight:drawer_open"), SoundSource.BLOCKS,
+                    1.0F, 1.1F
+            );
+            case LDF_CABINET -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    getSound("furniture:cabinet_open"), SoundSource.BLOCKS,
+                    1.0F, 1.1F
+            );
+            case LDF_COFFER -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    getSound("furniture:coffer_open"), SoundSource.BLOCKS,
+                    1.0F, 1.1F
+            );
         }
     }
 
@@ -228,6 +256,16 @@ public class MountedStorageSoundHandler {
             case LDBP_PALM_CABINET -> level.playSound(
                     null, BlockPos.containing(pos),
                     SoundEvents.BAMBOO_WOOD_TRAPDOOR_OPEN, SoundSource.BLOCKS,
+                    1.0F, 1.1F
+            );
+            case LDF_CABINET -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    getSound("furniture:cabinet_close"), SoundSource.BLOCKS,
+                    1.0F, 1.1F
+            );
+            case LDF_COFFER -> level.playSound(
+                    null, BlockPos.containing(pos),
+                    getSound("furniture:coffer_close"), SoundSource.BLOCKS,
                     1.0F, 1.1F
             );
         }

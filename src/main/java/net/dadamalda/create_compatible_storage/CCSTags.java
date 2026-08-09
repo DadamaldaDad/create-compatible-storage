@@ -79,6 +79,12 @@ public class CCSTags {
     public static TagKey<Block> LDBR_DRAWER = tag("create_compatible_storage:ldbr/drawer");
     // Let's Do Meadow
     public static TagKey<Block> LDM_SHELF = tag("create_compatible_storage:ldm/shelf");
+    // Let's Do Candlelight
+    public static TagKey<Block> LDCL_CABINETS = tag("create_compatible_storage:ldcl/cabinets");
+    public static TagKey<Block> LDCL_DRAWERS = tag("create_compatible_storage:ldcl/drawers");
+    // Let's Do Furniture
+    public static TagKey<Block> LDF_CABINETS = tag("create_compatible_storage:ldf/cabinets");
+    public static TagKey<Block> LDF_COFFER = tag("create_compatible_storage:ldf/coffer");
 
     public static TagKey<Block> tag(String path) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.parse(path));
