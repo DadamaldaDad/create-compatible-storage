@@ -71,6 +71,10 @@
     {
       "id": "#create_compatible_storage:ldv/barrels",
       "required": false
+    },
+    {
+      "id": "#chipped:barrel",
+      "required": false
     }
   ]
 }

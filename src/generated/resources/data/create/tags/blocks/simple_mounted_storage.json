@@ -203,6 +203,10 @@
     {
       "id": "#handcrafted:side_tables",
       "required": false
+    },
+    {
+      "id": "#chipped:barrel",
+      "required": false
     }
   ]
 }

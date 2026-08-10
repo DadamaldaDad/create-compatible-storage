@@ -167,6 +167,10 @@
     {
       "id": "candlelight:sideboard",
       "required": false
+    },
+    {
+      "id": "#chipped:barrel",
+      "required": false
     }
   ]
 }

@@ -306,7 +306,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.LDF_CABINETS, CCSTags.LDF_COFFER);
         addTagsToTag(CCSTags.SIMPLE_MOUNTED_STORAGE,
                 "handcrafted:desks", "handcrafted:nightstands", "handcrafted:counters",
-                "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables");
+                "handcrafted:cupboards", "handcrafted:drawers", "handcrafted:shelves", "handcrafted:side_tables",
+                "chipped:barrel");
 
         addTagsToTag(CCSTags.UNCOOPERATIVE_STATIONARY_STORAGE,
                 CCSTags.UNCOOPERATIVE_MOUNTED_STORAGE,
@@ -328,6 +329,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 "ars_nouveau:repository",
                 "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel",
                 "candlelight:sideboard");
+        addTagsToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
+                "chipped:barrel");
 
         addTagsToTag(CCSTags.SILENT_MOUNTED_STORAGE,
                 CCSTags.FR_MAILBOXES);
@@ -343,8 +346,12 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.SD_DRAWERS, CCSTags.SD_SMALL_DRAWERS, CCSTags.SD_DRAWERS_WITH_BOOKS, CCSTags.SD_CABINETS_WITH_COUNTERTOPS,
                 CCSTags.AF_DRAWERS,
                 CCSTags.LDV_BARRELS);
+        addTagsToTag(CCSTags.BARREL_SOUND,
+                "chipped:barrel");
         addTagsToTag(CCSTags.BARREL_NAME,
                 CCSTags.LDV_BARRELS);
+        addTagsToTag(CCSTags.BARREL_NAME,
+                "chipped:barrel");
 
         addTagsToTag(CCSTags.SD_CABINET_SOUND,
                 CCSTags.SD_CABINET_VARIANTS, CCSTags.SD_GLASS_CABINETS,
