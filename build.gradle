@@ -290,6 +290,14 @@ modrinth {
         optional.project("carved-wood")
         optional.project("hexerei")
         optional.project("alexs-caves")
+        optional.project("chipped")
+        optional.project("lets-do-candlelight-farmcharm-compat")
+        optional.project("lets-do-furniture")
+        optional.project("lets-do-vinery")
+        optional.project("lets-do-brewery-farmcharm-compat")
+        optional.project("lets-do-bakery-farmcharm-compat")
+        optional.project("lets-do-meadow")
+        optional.project("lets-do-beachparty")
     }
 }
 
@@ -327,6 +335,14 @@ curseforge {
             optionalDependency "hexerei"
             optionalDependency "the-twilight-forest"
             optionalDependency "alexs-caves"
+            optionalDependency "chipped"
+            optionalDependency "lets-do-candlelight-farm-charm-compat"
+            optionalDependency "lets-do-furniture"
+            optionalDependency "lets-do-vinery"
+            optionalDependency "lets-do-brewery-farm-charm-compat"
+            optionalDependency "lets-do-bakery-farm-charm-compat"
+            optionalDependency "lets-do-meadow"
+            optionalDependency "lets-do-beachparty"
         }
     }
 }
