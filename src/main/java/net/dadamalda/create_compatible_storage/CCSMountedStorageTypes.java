@@ -36,6 +36,10 @@ public class CCSMountedStorageTypes {
             .associateBlockTag(CCSTags.ISB_IRON_SHULKER_BOX_MOUNTED_STORAGE)
             .register();
 
+    public static final RegistryEntry<CrateMountedStorageType> CRATE = REGISTRATE.mountedItemStorage("crate", CrateMountedStorageType::new)
+            .associateBlockTag(CCSTags.IE_CRATES)
+            .register();
+
     @Deprecated
     public static final RegistryEntry<SoundMountedStorageType> SOUND = REGISTRATE.mountedItemStorage("sound", SoundMountedStorageType::new)
             .register();

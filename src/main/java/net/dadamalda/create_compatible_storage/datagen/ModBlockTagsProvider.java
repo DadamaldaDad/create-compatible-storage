@@ -367,7 +367,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 CCSTags.LDBP_PALM_CABINET,
                 CCSTags.LDM_SHELF,
                 CCSTags.LDCL_CABINETS, CCSTags.LDCL_DRAWERS,
-                CCSTags.LDF_CABINETS, CCSTags.LDF_COFFER);
+                CCSTags.LDF_CABINETS, CCSTags.LDF_COFFER,
+                CCSTags.IE_CRATES);
         addBlocksToTag(CCSTags.SINGLE_BLOCK_INVENTORIES,
                 "ars_nouveau:repository",
                 "alexscaves:metal_barrel", "alexscaves:rusty_barrel", "alexscaves:gingerbarrel",
@@ -383,6 +384,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addBlocksToTag(CCSTags.SILENT_MOUNTED_STORAGE,
                 "ars_nouveau:repository");
         addBlocksToTag(CCSTags.SILENT_MOUNTED_STORAGE, "brewery:sideboard");
+        addTagsToTag(CCSTags.SILENT_MOUNTED_STORAGE, CCSTags.IE_CRATES);
 
         addTagsToTag(CCSTags.BARREL_SOUND,
                 CCSTags.FD_CABINETS,
@@ -433,6 +435,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addBlocksToTag(CCSTags.LDF_COFFER, "furniture:coffer");
 
         addBlocksToTag(CCSTags.LDM_SHELF, "meadow:shelf");
+
+        addBlocksToTag(CCSTags.IE_CRATES, "immersiveengineering:crate", "immersiveengineering:reinforced_crate");
 
         addTagsToTag(CCSTags.BRITTLE, CCSTags.AC_GINGERBREAD_DOORS);
 

@@ -43,6 +43,10 @@
     {
       "id": "brewery:sideboard",
       "required": false
+    },
+    {
+      "id": "#create_compatible_storage:ie/crates",
+      "required": false
     }
   ]
 }

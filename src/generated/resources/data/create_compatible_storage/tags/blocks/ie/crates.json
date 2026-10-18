@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "immersiveengineering:crate",
+      "required": false
+    },
+    {
+      "id": "immersiveengineering:reinforced_crate",
+      "required": false
+    }
+  ]
+}

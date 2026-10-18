@@ -85,6 +85,8 @@ public class CCSTags {
     // Let's Do Furniture
     public static TagKey<Block> LDF_CABINETS = tag("create_compatible_storage:ldf/cabinets");
     public static TagKey<Block> LDF_COFFER = tag("create_compatible_storage:ldf/coffer");
+    // Immersive Engineering
+    public static TagKey<Block> IE_CRATES = tag("create_compatible_storage:ie/crates");
 
     public static TagKey<Block> tag(String path) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.parse(path));
