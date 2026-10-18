@@ -300,6 +300,9 @@ modrinth {
         optional.project("lets-do-bakery-farmcharm-compat")
         optional.project("lets-do-meadow")
         optional.project("lets-do-beachparty")
+        optional.project("terrafirmacraft")
+        optional.project("arborfirmacraft-afc")
+        optional.project("immersiveengineering")
     }
 }
 
@@ -347,6 +350,10 @@ curseforge {
             optionalDependency "lets-do-bakery-farm-charm-compat"
             optionalDependency "lets-do-meadow"
             optionalDependency "lets-do-beachparty"
+            optionalDependency "terrafirmacraft"
+            optionalDependency "arborfirmacraft"
+            optionalDependency "beneath"
+            optionalDependency "immersive-engineering"
         }
     }
 }
