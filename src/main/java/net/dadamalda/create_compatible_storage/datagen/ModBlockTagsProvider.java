@@ -118,6 +118,40 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             "sorting"
     );
 
+    List<String> TFC_WOOD_TYPES = List.of(
+            "tfc,acacia",
+            "tfc,ash",
+            "tfc,aspen",
+            "tfc,birch",
+            "tfc,blackwood",
+            "tfc,douglas_fir",
+            "tfc,hickory",
+            "tfc,kapok",
+            "tfc,mangrove",
+            "tfc,maple",
+            "tfc,oak",
+            "tfc,palm",
+            "tfc,pine",
+            "tfc,rosewood",
+            "tfc,sequoia",
+            "tfc,spruce",
+            "tfc,sycamore",
+            "tfc,cedar",
+            "tfc,willow",
+            "afc,baobab",
+            "afc,eucalyptus",
+            "afc,mahogany",
+            "afc,hevea",
+            "afc,tualang",
+            "afc,teak",
+            "afc,cypress",
+            "afc,fig",
+            "afc,ironwood",
+            "afc,ike",
+            "beneath,crimson",
+            "beneath,warped"
+    );
+
     List<String> COLOUR_SUFFIXES = List.of(
             "",
             "_white",
@@ -249,6 +283,15 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             addChests(List.of(
                     "twilightforest:"+wood_type+"_chest",
                     "twilightforest:"+wood_type+"_trapped_chest"
+            ));
+        });
+
+        TFC_WOOD_TYPES.forEach(wood_type -> {
+            String namespace = wood_type.split(",")[0];
+            String id = wood_type.split(",")[1];
+            addChests(List.of(
+                    namespace+":wood/chest/"+id,
+                    namespace+":wood/trapped_chest/"+id
             ));
         });
 
